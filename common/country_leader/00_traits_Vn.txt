@@ -1,0 +1,2241 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+leader_traits = {
+	nazirevisionism = {
+		random = no
+		political_power_factor = 0.05
+		stability_factor = -0.08
+		consumer_goods_factor = -0.025
+		neutrality_acceptance = 25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	JAP_CC = {
+		random = no
+		political_power_factor = 0.25
+		political_advisor_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+		tank_manufacturer_cost_factor = -0.25
+		naval_manufacturer_cost_factor = -0.25
+		aircraft_manufacturer_cost_factor = -0.25
+		materiel_manufacturer_cost_factor = -0.25
+		industrial_concern_cost_factor = -0.25
+		air_chief_cost_factorr = -0.25
+		navy_chief_cost_factor = -0.25
+		army_chief_cost_factor = -0.25
+		high_command_cost_factor = -0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_CMC = {
+		random = no
+		political_power_factor = -0.2
+		land_doctrine_cost_factor = -0.15
+		experience_gain_army_unit_factor = 0.15
+		army_morale_factor =0.15
+		army_org_factor = 0.15
+		breakthrough_factor = 0.1
+		army_core_attack_factor =0.1
+		army_core_defence_factor = 0.1
+		conscription_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	warrior_code = {
+		random = no
+		ai_call_ally_desire_factor = -40
+		ai_join_ally_desire_factor = -30
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_Lords = {
+		random = no
+		stability_factor = 0.08
+		political_power_factor = 0.15
+		democratic_drift = 0.04
+		neutrality_drift = 0.02
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_Lords_2 = {
+		random = no
+		stability_factor = 0.08
+		political_power_factor = 0.18
+		democratic_drift = 0.05
+		neutrality_drift = 0.01
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_lower_house = {
+		random = no
+		stability_factor = 0.1
+		political_power_factor = 0.05
+		democratic_drift = 0.01
+		socialist_drift = 0.03
+		communism_drift = 0.02
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_lower_house_2 = {
+		random = no
+		stability_factor = 0.15
+		political_power_factor = 0.08
+		democratic_drift = 0.03
+		socialist_drift = 0.04
+		communism_drift = 0.03
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MEME_soy_milkism_tra = {
+		random = no
+		political_power_factor = 2
+		stability_factor = 2
+		war_support_factor = 2
+		operation_coup_government_cost = -1
+		command_power_gain_mult = 1
+		subversive_activites_upkeep = -1
+		training_time_factor = -0.9
+		equipment_capture = 1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_Authorized_Soviets_ideas= {
+		random = no
+		political_power_factor = 0.15
+		mobilization_speed = 0.2
+		stability_factor = 0.08
+		communism_drift = 0.01
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SOV_political_correctness = {
+		random = no
+		political_power_factor = 0.25
+		communism_drift = 0.05
+		drift_defence_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Central_Organization_Department = {
+		sprite = 13
+		random = no
+		political_power_gain = 0.35
+		political_power_cost = -0.1
+		defensive_war_stability_factor = 0.05
+		mobilization_speed = 0.1
+		drift_defence_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	foreign_ministry = {
+		sprite = 13
+		random = no
+		opinion_gain_monthly_factor = 0.05
+		improve_relations_maintain_cost_factor = -0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	foreign_ministry = {
+		sprite = 13
+		random = no
+		opinion_gain_monthly_factor = 0.05
+		improve_relations_maintain_cost_factor = -0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Executive_Yuan = {
+		sprite = 13
+		random = no
+		political_power_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Minister_of_Defense = {
+		sprite = 13
+		random = no
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.08
+		army_morale_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Anti_communism = {
+		sprite = 13
+		random = no
+		communism_acceptance = -50
+		socialist_acceptance = -25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Minister_of_Finance = {
+		sprite = 13
+		random = no
+		consumer_goods_factor = -0.1
+		production_speed_industrial_complex_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Member_of_the_Central_Executive_Committee = {
+		sprite = 13
+		random = no
+		political_power_factor = 0.1
+		political_power_cost = -0.25
+		political_advisor_cost_factor = -0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_The_Central_Military_Commission = {
+		sprite = 13
+		random = no
+		mobilization_speed = 0.15
+		training_time_factor = -0.15
+		invasion_preparation = -0.15
+		experience_gain_army_unit_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Minister_of_Finance_2 = {
+		sprite = 13
+		random = no
+		consumer_goods_factor = -0.05
+		production_speed_industrial_complex_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Minister_of_Education = {
+		sprite = 13
+		random = no
+		stability_factor = 0.05
+		research_speed_factor = 0.08
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Legislative_Yuan = {
+		sprite = 13
+		random = no
+		stability_factor = 0.05
+		economy_cost_factor = -0.15
+		trade_laws_cost_factor = -0.15
+		mobilization_laws_cost_factor = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Asian_Ministry_of_Foreign_Affairs = {
+		sprite = 13
+		random = no
+		opinion_gain_monthly_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Stocks = {
+		sprite = 13
+		random = no
+		consumer_goods_factor = -0.1
+		trade_opinion_factor = 0.15
+		license_purchase_cost = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_executive_yuan_CH = {
+		random = no
+		political_power_factor = 0.08
+		stability_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_control_yuan_characters_tra = {
+		random = no
+		consumer_goods_factor = -0.1
+		stability_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Firmly_democratic = {
+		random = no
+		democratic_drift = 0.05
+		stability_factor = 0.05
+		political_advisor_cost_factor = -0.15
+		trade_laws_cost_factor = -0.15
+		mobilization_laws_cost_factor = -0.15
+		economy_cost_factor = -0.15
+		theorist_cost_factor = -0.15
+		min_export  = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_chiang_kaishek_democratic = {
+		random = no
+		democratic_drift = 0.02
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_fuck_nit = {
+		random = no
+		neutrality_drift = -0.1
+		political_power_cost = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Educational_leaders = {
+		random = no
+		democratic_drift = 0.05
+		research_speed_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Trust_Board = {
+		random = no
+		consumer_goods_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Generally_through_diplomats = {
+		random = no
+		trade_opinion_factor = 0.05
+		opinion_gain_monthly_factor = 0.15
+		opinion_gain_monthly_same_ideology_factor = 0.5
+		opinion_gain_monthly_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_Permanent_Chairman = {
+		random = no
+		justify_war_goal_time = -0.25
+		generate_wargoal_tension = -0.25
+		fascism_drift = 0.10
+		neutrality_acceptance = 15
+		fascism_acceptance = 50
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_control_yuan_right = {
+		random = no
+		stability_weekly = 0.003
+		consumer_goods_factor = -0.08
+		drift_defence_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_executive_yuan_right = {
+		random = no
+		political_advisor_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+		mobilization_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROC_ECE = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.05
+		production_speed_rail_way_factor =0.1
+		production_speed_industrial_complex_factor =0.1
+		production_speed_infrastructure_factor =0.1
+		economy_cost_factor = -0.15
+		trade_laws_cost_factor = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROC_court = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.2
+		stability_factor =0.08
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROC_diplomacy = {
+		random = no
+		sprite = 13
+		trade_opinion_factor = 0.05
+		opinion_gain_monthly_factor = 0.15
+		opinion_gain_monthly_same_ideology_factor = 0.5
+		improve_relations_maintain_cost_factor = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROC_finance = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.1
+		consumer_goods_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROC_culture = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.15
+		stability_factor = 0.05
+		war_stability_factor = 0.08
+		drift_defence_factor = 0.1
+		research_speed_factor = 0.05
+		socialist_drift = 0.1
+		democratic_drift = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROC_chiarman = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		stability_factor = 0.08
+		war_stability_factor = 0.08
+		mobilization_speed = 0.1
+		political_advisor_cost_factor = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROC_military_chiarman = {
+		random = no
+		experience_gain_army = 0.12
+		army_org_factor = 0.1
+		army_morale_factor = 0.15
+		experience_gain_army_factor = 0.08
+		military_leader_cost_factor = -0.5
+		max_command_power = 30
+		command_power_gain_mult = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROC_defend = {
+		random = no
+		sprite = 15
+		operative_slot = 1
+		intelligence_agency_defense = 0.15
+		agency_upgrade_time = -0.15
+		civilian_intel_to_others = -15
+		army_intel_to_others = -15
+		navy_intel_to_others = -15
+		airforce_intel_to_others = -15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_Minister_of_Economy = {
+		random = no
+		sprite = 14
+		production_speed_rail_way_factor = 0.1
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_arms_factory_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		industrial_capacity_factory = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_Worker_organizers = {
+		random = no
+		sprite = 13
+		production_speed_buildings_factor = 0.04
+		industrial_capacity_factory = 0.04
+		mobilization_speed = 0.15
+		training_time_factor = -0.05
+		conscription = 0.005
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_Minister_of_Armaments = {
+		random = no
+		sprite = 12
+		production_speed_arms_factory_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_supply_node_factor = 0.1
+		production_speed_bunker_factor = 0.1
+		production_speed_coastal_bunker_factor = 0.1
+		conversion_cost_civ_to_mil_factor = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_MRUP = {
+		random = no
+		sprite = 13
+		global_building_slots_factor = 0.10
+		production_speed_infrastructure_factor = 0.10
+		industry_repair_factor = 0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_CPE = {
+		random = no
+		sprite = 13
+		local_factories = 0.08
+		production_speed_buildings_factor = 0.1
+		industrial_capacity_factory = 0.08
+		local_resources_factor = 0.1
+		consumer_goods_factor = -0.05
+		political_power_cost = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_diplomacy = {
+		random = no
+		sprite = 13
+		opinion_gain_monthly_same_ideology_factor = 1.0
+		opinion_gain_monthly_factor = 0.15
+		trade_opinion_factor = 0.1
+		justify_war_goal_time = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_Anarchist = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.15
+		socialist_drift = 0.05
+		conscription = 0.01
+		war_support_factor = 0.05
+		stability_factor = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_Interior = {
+		random = no
+		sprite = 15
+		justify_war_goal_time = -0.15
+		drift_defence_factor = 0.15
+		operative_slot = 1
+		agency_upgrade_time = -0.1
+		resistance_target = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_Jacobins = {
+		random = no
+		sprite = 13
+		communism_drift = 0.15
+		conscription_factor = -0.1
+		stability_factor = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_left_democratic = {
+		random = no
+		sprite = 13
+		socialist_drift = 0.05
+		democratic_drift = 0.02
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_right_democratic = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_Proletarian_cultural_faction = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.03
+		planning_speed = 0.1
+		army_speed_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_Proletarian_cultural_COM = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.07
+		stability_factor = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_Sorrellism = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.1
+		neutrality_drift = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_newsocialism = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.1
+		fascism_drift = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_PCFKT = {
+		random = no
+		sprite = 13
+		local_resources_factor = 0.15
+		production_speed_infrastructure_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_PCZLF = {
+		random = no
+		sprite = 13
+		local_resources_factor = 0.1
+		production_speed_fuel_silo_factor = 0.15
+		production_speed_synthetic_refinery_factor = 0.15
+		fuel_gain_factor = 0.4
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_PC = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.15
+		communism_drift = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_PCR = {
+		random = no
+		sprite = 13
+		land_reinforce_rate = 0.05
+		production_speed_radar_station_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_finance = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		production_speed_industrial_complex_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_PCAMRY = {
+		random = no
+		sprite = 13
+		production_speed_arms_factory_factor = 0.1
+		production_speed_coastal_bunker_factor = 0.15
+		production_speed_bunker_factor = 0.15
+		production_speed_anti_air_building_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_PCD = {
+		random = no
+		sprite = 13
+		production_speed_arms_factory_factor = 0.1
+		industrial_capacity_factory = 0.1
+		license_production_speed = 0.1
+		license_purchase_cost = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_PCN = {
+		random = no
+		sprite = 13
+		stability_factor = 0.08
+		political_power_factor = 0.05
+		compliance_gain = 0.015
+		resistance_damage_to_garrison = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_PCINT = {
+		random = no
+		sprite = 13
+		industrial_capacity_factory = 0.08
+		line_change_production_efficiency_factor = 0.03
+		production_factory_efficiency_gain_factor = 0.03
+		production_factory_max_efficiency_factor = 0.08
+		local_factories = 0.1
+		global_building_slots_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_PCFRAM = {
+		random = no
+		sprite = 13
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		local_resources_factor = 0.1
+		conscription_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRC_PCcommander = {
+		random = no
+		sprite = 16
+		army_org_factor = 0.1
+		army_morale_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRA_State_journalist = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.15
+		fascism_acceptance = 10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRA_Revival_leader = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.1
+		industrial_capacity_factory = 0.1
+		surrender_limit = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRA_Great_helmsman = {
+		random = no
+		sprite = 13
+		ai_focus_defense_factor = 0.3
+		ai_join_ally_desire_factor = -100
+		operative_slot = 1
+		resistance_target = -0.15
+		non_core_manpower = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_big_brother = {
+		random = no
+		sprite = 13
+		stability_factor = 0.1
+		political_power_gain = 0.15
+		drift_defence_factor = 0.2
+		foreign_subversive_activites = -0.15
+		operative_slot = 1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRCXI_JZXJP = {
+		random = no
+		sprite = 13
+		stability_factor = 0.1
+		political_power_gain = 0.15
+		production_speed_buildings_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Chairman_of_Electrification = {
+		sprite = 13
+		random = no
+		production_speed_rail_way_factor = 0.15
+		production_speed_industrial_complex_factor = 0.15
+		production_speed_infrastructure_factor = 0.15
+		consumer_goods_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Chief_of_the_Intelligence_Section = {#陈赓
+		sprite = 15
+		operative_slot = 1
+		operation_cost = -0.15
+		own_operative_intel_extraction_rate = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Military_intelligence_officer = {#李德
+		sprite = 15
+		army_intel_decryption_bonus = 15
+		army_intel_to_others = -15
+		decryption_power = 15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Political_commissar = {#李竹声，卢福坦
+		sprite = 13
+		political_power_gain = 0.1
+		army_morale_factor = 0.05
+		party_popularity_stability_factor = 0.05
+		mobilization_speed = 0.1
+		drift_defence_factor = 0.1
+		conscription_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Propaganda_Commissioner_and_Correspondent = {#王明
+		sprite = 13
+		political_power_gain = 0.1
+		land_reinforce_rate = 0.07
+		communism_drift = 0.05
+		party_popularity_stability_factor = 0.15
+		mobilization_speed = 0.15
+		drift_defence_factor = 0.1
+		boost_ideology_mission_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Propaganda_and_cadre_education = {#张闻天
+		sprite = 13
+		war_support_factor = 0.1
+		research_speed_factor = 0.05
+		political_advisor_cost_factor = -0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Advocacy_and_social_activist = {#博古
+		sprite = 13
+		research_speed_factor = 0.02
+		mobilization_speed = 0.15
+		conscription_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Political_speculation = {#张国焘
+		sprite = 13
+		political_power_gain = 0.15
+		stability_factor = -0.05
+		stability_weekly = -0.001
+		surrender_limit = -0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Judicial_work = {#习仲勋
+		sprite = 13
+		political_power_factor = 0.1
+		party_popularity_stability_factor = 0.15
+		foreign_subversive_activites = -0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Economic_reformer = {#陈云
+		sprite = 13
+		min_export = 0.1
+		consumer_goods_factor = -0.15
+		economy_cost_factor = -0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Silent_doers = {#邓小平
+		sprite = 13
+		consumer_goods_factor = -0.05
+		political_power_factor = 0.15
+		production_speed_buildings_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Educator_and_social_activist = {#黄炎培
+		sprite = 13
+		political_power_gain = 0.1
+		party_popularity_stability_factor = 0.05
+		research_speed_factor = 0.1
+		mobilization_speed = 0.15
+		conscription_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_land_reformist = {#刘少奇
+		sprite = 13
+		global_building_slots_factor = 0.1
+		local_resources_factor = 0.1
+		conscription_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Base_area_construction = {#刘志丹
+		sprite = 13
+		command_power_gain_mult = 0.15
+		resistance_growth_on_our_occupied_states = 0.15
+		resistance_target_on_our_occupied_states = 0.15
+		resistance_damage_to_garrison_on_our_occupied_states = 0.15
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Minister_of_Transport = {#章伯均
+		sprite = 13
+		land_reinforce_rate = 0.02
+		army_speed_factor = 0.15
+		planning_speed = 0.10
+		org_loss_when_moving = -0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Democrats = {#张澜
+		sprite = 13
+		political_power_gain = 0.1
+		opinion_gain_monthly_factor = 0.05
+		stability_factor = 0.05
+		socialist_drift = 0.08
+		democratic_drift = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Zhang_Lan_supporter = {#张澜支持者
+		sprite = 13
+		socialist_drift = 0.04
+		democratic_drift = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Zhang_Lan_supporter_A = {#张澜支持者
+		sprite = 13
+		socialist_drift = 0.04
+		democratic_drift = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_mao_ze_dong_supporter = {#毛泽东支持者
+		sprite = 13
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_mao_ze_dong_supporter_A = {#毛泽东支持者
+		sprite = 13
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_mao_ze_dong_supporter_B = {#毛泽东支持者
+		sprite = 13
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_wang_ming_supporter = {#王明支持者
+		sprite = 13
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_wang_ming_supporter_A = {#王明支持者
+		sprite = 13
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_wang_ming_supporter_B = {#王明支持者
+		sprite = 13
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_prince_of_terror = {
+		sprite = 13
+		resistance_damage_to_garrison = -0.25
+		foreign_subversive_activites = -0.3
+		non_core_manpower = 0.1
+		occupation_cost = -0.25
+		compliance_gain = 0.01
+		resistance_target = -0.25
+		resistance_growth = -0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_Great_commander = {
+		political_power_gain = 0.15
+		war_support_factor = 0.1
+		stability_factor = 0.1
+		communism_drift = 0.1
+		drift_defence_factor = 0.25
+		army_attack_factor = 0.1
+		breakthrough_factor = 0.1
+		army_org_factor = 0.1
+		army_morale_factor = 0.1
+		max_command_power = 20
+		command_power_gain_mult = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRC_BIG_Marshal = {
+		political_power_factor = 0.15
+		war_support_factor = 0.1
+		army_attack_factor = 0.15
+		breakthrough_factor = 0.15
+		army_org_factor = 0.1
+		army_morale_factor = 0.15
+		max_command_power = 35
+		command_power_gain_mult = 0.15
+		conscription = 0.01
+		mobilization_speed = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_nationalism_lighthouse_tradit = {
+		random = no
+		political_power_factor = 0.15
+		subversive_activites_upkeep= -0.5
+		opinion_gain_monthly_same_ideology_factor = 0.15
+		drift_defence_factor = 0.15
+		fascism_drift = 0.1
+		war_support_factor = 0.15
+		stability_factor = 0.15
+		conscription = 0.01
+		send_volunteer_size = 12
+		fascism_acceptance = 15
+		enemy_justify_war_goal_time = 0.5
+		industrial_capacity_factory = 0.1
+		subjects_autonomy_gain = 0.15
+		send_volunteer_divisions_required = -1
+		operation_coup_government_outcome = 0.25
+		operation_coup_government_cost = -0.25
+		boost_ideology_mission_factor = 0.15
+		propaganda_mission_factor = 0.15
+	}
+	ITA_The_sea_sails_by_the_helmsman = {
+		random = no
+		political_power_factor = 0.15
+		drift_defence_factor = 0.15
+		industrial_capacity_factory = 0.05
+		fascism_drift = 0.1
+		conscription = 0.01
+		subjects_autonomy_gain = 0.15
+		training_time_factor = -0.1
+		army_morale_factor = 0.1
+	}
+	SPR_Great_mentor = {
+		random = no
+		political_power_factor = 0.15
+		drift_defence_factor = 0.15
+		industrial_capacity_factory = 0.1
+		fascism_drift = 0.1
+		occupation_cost = -0.5
+		subjects_autonomy_gain = 0.15
+		mobilization_laws_cost_factor= -0.25
+		trade_laws_cost_factor= -0.25
+		economy_cost_factor= -0.25
+		political_advisor_cost_factor = -0.5
+	}
+	FRA_Institute_of_Social_History = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		research_speed_factor = 0.07
+		communism_drift = 0.05
+	}
+	FRA_Armaments_and_cities = {
+		random = no
+		sprite = 14
+		production_speed_infrastructure_factor = 0.1
+		production_speed_arms_factory_factor = 0.1
+		production_speed_buildings_factor = 0.05
+		global_building_slots_factor = 0.1
+		industrial_capacity_factory = 0.05
+	}
+	FRA_Health_and_population = {
+		random = no
+		sprite = 14
+		production_speed_infrastructure_factor = 0.05
+		monthly_population = 0.2
+		global_building_slots_factor = 0.05
+	}
+	FRA_ambitious_union_boss = {
+		random = no
+		sprite = 13
+
+		master_ideology_drift = 0.1
+		consumer_goods_factor = -0.1
+		industrial_capacity_factory = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRA_silent_workhorse = {
+		random = yes
+		sprite = 13
+		master_ideology_drift = 0.1
+		political_power_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRA_Revolutionary_engineer = {
+		random = yes
+		sprite = 14
+		master_ideology_drift = 0.05
+		production_speed_buildings_factor = 0.12
+		global_building_slots_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRA_Labor_and_social_security = {
+		random = no
+		sprite = 14
+		industrial_capacity_factory = 0.05
+		monthly_population = 0.05
+		consumer_goods_factor = -0.05
+	}
+	FRA_Anarcho_pacifism = {
+		random = no
+		sprite = 13
+		socialist_drift = 0.1
+		stability_factor = 0.1
+		stability_weekly_factor = 0.05
+		war_support_weekly = -0.005
+		civil_war_involvement_tension = 0.1
+	}
+	FRA_Anarcho_feminism = {
+		random = no
+		sprite = 13
+		socialist_drift = 0.1
+		conscription = 0.015
+		stability_weekly_factor = -0.05
+	}
+	FRA_Literary_standard_bearer = {
+		random = no
+		sprite = 13
+		master_ideology_drift = 0.1
+		political_power_gain = 0.1
+		foreign_subversive_activites = -0.25
+		research_speed_factor = 0.15
+		army_speed_factor = 0.1
+		planning_speed= 0.1
+	}
+	FRA_trade_unionist = { #Unlocks Rally Workers 
+		random = no
+		sprite = 10 
+		#power_balance_daily = -0.003
+		socialist_drift = 0.05	
+		production_factory_max_efficiency_factor = 0.05
+		production_lack_of_resource_penalty_factor = -0.3
+	}
+	FRA_Popular_Front_theorist = { 
+		random = no
+		sprite = 13
+		socialist_drift = 0.05
+		political_power_gain = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		production_lack_of_resource_penalty_factor = -0.1
+	}
+	JAP_Minister_of_Finance = { 
+		random = no
+		sprite = 13
+		political_power_gain = 0.15
+		production_factory_max_efficiency_factor = 0.05
+	}
+	JAP_Minister_for_Foreign_Affairs = { 
+		random = no
+		sprite = 13
+		political_power_gain = 0.05
+		master_ideology_drift = 0.05
+		improve_relations_maintain_cost_factor = -0.1
+		guarantee_cost = -0.1
+	}
+	JAP_Secretary_State_Commerce = { 
+		random = no
+		sprite = 13 
+		research_speed_factor = 0.02
+		local_resources_factor = 0.1
+		trade_opinion_factor = 0.1
+		trade_laws_cost_factor = -0.1
+	}
+	GER_People_Community = { 
+		random = no
+		mobilization_speed = 0.15
+		conscription_factor = 0.15
+		foreign_subversive_activites = -0.25
+		surrender_limit = 0.15
+	}
+	GER_savior_Germany = { 
+		random = no
+		fascism_drift = 0.05
+		army_core_attack_factor = 0.15
+		army_core_defence_factor = 0.15
+		stability_factor  = 0.15
+		opinion_gain_monthly_same_ideology_factor = 1.0
+		drift_defence_factor = 0.5
+	}
+	GER_Leader_Aryans = { 
+		random = no
+		fascism_drift = 0.05
+		political_power_factor = 0.05
+		justify_war_goal_time = -0.25
+		party_popularity_stability_factor = 0.15
+		war_stability_factor= 0.15
+		foreign_subversive_activites = -0.25
+	}
+	GER_brilliant_genius = { 
+		random = no
+		research_time_factor = -0.05
+		research_speed_factor = 0.05
+			tank_manufacturer_cost_factor = -0.15
+			naval_manufacturer_cost_factor = -0.15
+			aircraft_manufacturer_cost_factor = -0.15
+			materiel_manufacturer_cost_factor = -0.15
+			industrial_concern_cost_factor = -0.15
+	}
+	GER_leader_of_the_party_and_the_people = { 
+		random = no
+		political_power_factor = 0.05
+		party_popularity_stability_factor = 0.15
+		war_support_factor= 0.15
+		drift_defence_factor = 0.15
+		consumer_goods_factor = -0.08
+	}
+	GER_Navigato_masses = { 
+		random = no
+		fascism_drift = 0.05
+		political_power_factor = 0.1
+		production_speed_buildings_factor = 0.05
+		mobilization_speed= 0.15
+		drift_defence_factor = 0.15
+		training_time_factor = -0.1
+	}
+	GER_People_designer = { 
+		random = no
+		fascism_drift = 0.05
+		production_speed_buildings_factor = 0.05
+		global_building_slots_factor = 0.1
+		industry_air_damage_factor= -0.1
+		research_speed_factor = 0.02
+	}
+	GER_Great_helmsman = { 
+		random = no
+		political_power_factor = 0.1
+		drift_defence_factor = 0.15
+		surrender_limit = 0.15
+		max_surrender_limit_offset = 0.15
+		justify_war_goal_time = -0.25
+		conscription = 0.025
+	}
+	GER_German_Labour_Front = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		communism_drift = -0.05
+		democratic_drift = -0.05
+		socialist_drift = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_Organization_Todd_leader = {
+		random = no
+		sprite = 13
+		production_factory_max_efficiency_factor =0.1
+		production_speed_arms_factory_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_Market_economy_school = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		trade_opinion_factor = 0.15
+		democratic_acceptance = 5
+		min_export = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_autarky = {
+		random = no
+		sprite = 13
+		global_building_slots_factor = 0.15
+		production_speed_buildings_factor = 0.1
+		max_fuel_factor = 0.25
+		fuel_gain_factor = 0.25
+		min_export = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_Armament_rearmament = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.08
+		production_factory_max_efficiency_factor =0.1
+		production_speed_arms_factory_factor = 0.05
+		conversion_cost_civ_to_mil_factor = -0.5
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_German_architect = {
+		random = no
+		sprite = 13
+		production_speed_buildings_factor = 0.05
+		global_building_slots_factor =0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_German_architect = {
+		random = no
+		sprite = 13
+		production_speed_buildings_factor = 0.05
+		global_building_slots_factor =0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FRA_Militia_leader= {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.1
+		resistance_damage_to_garrison_on_our_occupied_states = 0.15
+		resistance_target_on_our_occupied_states = 0.15
+		resistance_decay_on_our_occupied_states = -0.15
+		high_command_cost_factor = -0.25
+		conscription = 0.005
+	}
+	FRA_National_unity_labor = {
+		random = no
+		sprite = 10
+
+		industrial_capacity_factory = 0.05
+		party_popularity_stability_factor = 0.15
+		consumer_goods_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_inheritor_of_the_mantle_of_lenin = {
+		random = no
+		political_power_cost = -0.05
+		global_building_slots_factor = 0.1
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		breakthrough_factor = 0.1
+		justify_war_goal_time = -0.5
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_the_faithful_servant_of_lenin = {
+		random = no
+		political_power_cost = -0.05
+		production_speed_buildings_factor = 0.1
+		compliance_gain = 0.1
+		resistance_damage_to_garrison = -0.1
+		resistance_target = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_inheritor_of_the_mantle_of_lenin_2 = {
+		random = no
+		political_power_cost = -0.05
+		global_building_slots_factor = 0.1
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		breakthrough_factor = 0.1
+		justify_war_goal_time = -0.5
+		research_speed_factor = 0.07
+		local_resources_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_the_faithful_servant_of_lenin_2 = {
+		random = no
+		political_power_cost = -0.25
+		production_speed_buildings_factor = 0.1
+		compliance_gain = 0.1
+		resistance_damage_to_garrison = -0.1
+		resistance_target = -0.1
+		required_garrison_factor = -0.1
+		military_leader_cost_factor = -0.25
+		experience_gain_factor= 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_inheritor_of_the_mantle_of_lenin_3 = {
+		random = no
+		political_power_cost = -0.05
+		global_building_slots_factor = 0.1
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		breakthrough_factor = 0.1
+		justify_war_goal_time = -0.5
+		party_popularity_stability_factor = 0.15
+		mobilization_speed = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_the_faithful_servant_of_lenin_3 = {
+		random = no
+		political_power_cost = -0.05
+		production_speed_buildings_factor = 0.1
+		compliance_gain = 0.1
+		resistance_damage_to_garrison = -0.1
+		resistance_target = -0.1
+		party_popularity_stability_factor = 0.15
+		mobilization_speed = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_inheritor_of_the_mantle_of_lenin_4 = {
+		random = no
+		political_power_cost = -0.05
+		global_building_slots_factor = 0.1
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		breakthrough_factor = 0.1
+		justify_war_goal_time = -0.5
+		party_popularity_stability_factor = 0.15
+		mobilization_speed = 0.15
+		research_speed_factor = 0.07
+		local_resources_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_the_faithful_servant_of_lenin_4 = {
+		random = no
+		political_power_cost = -0.25
+		production_speed_buildings_factor = 0.1
+		compliance_gain = 0.1
+		resistance_damage_to_garrison = -0.1
+		resistance_target = -0.1
+		party_popularity_stability_factor = 0.15
+		mobilization_speed = 0.15
+		required_garrison_factor = -0.1
+		military_leader_cost_factor = -0.25
+		experience_gain_factor= 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_great_commander = {
+		random = no
+		army_org_factor = 0.1
+		army_morale_factor = 0.1
+		land_reinforce_rate = 0.05
+		military_leader_cost_factor = -0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_architect_of_communism = {
+		random = no
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		local_resources_factor = 0.05
+		industrial_capacity_dockyard = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CHI_father_of_nations = {
+		random = no
+		political_advisor_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+		mobilization_laws_cost_factor = -0.25
+		annex_cost_factor = -0.5
+		puppet_cost_factor = -0.5
+		compliance_gain = 0.1
+		resistance_target = -0.1
+		conscription_factor = 0.25
+		non_core_manpower = 0.25
+		required_garrison_factor = -0.2
+		war_stability_factor = 0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_Fascist_revolutionary_teacher = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		annex_cost_factor = -0.1
+		army_morale_factor = 0.1
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		subversive_activites_upkeep = -0.5
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_Fascist_revolutionary_teacher_advisor = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		fascism_drift = 0.1
+		mobilization_speed = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_House_of_Lords = {
+		random = no
+		sprite = 13
+		political_advisor_cost_factor = -0.25
+		consumer_goods_factor = -0.1
+		neutrality_drift = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_Communications_Engineer = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.07
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_minister_of_justice = {
+		random = no
+		sprite = 13
+		compliance_growth = 0.05
+		resistance_growth = -0.1
+	}
+	JAP_Mussolini_of_the_East = {
+		random = no
+		sprite = 13
+		party_popularity_stability_factor = 0.1
+		war_support_factor = 0.1
+		mobilization_speed = 0.15
+		conscription = 0.015
+		socialist_drift = 0.03
+	}
+	JAP_Left_wing_pan_Asianists = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		subversive_activites_upkeep = -0.25
+		socialist_drift = 0.03
+		socialist_acceptance = 10
+		communism_acceptance = 10
+	}
+	JAP_Supporters_National_Socialism = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		production_factory_max_efficiency_factor = 0.05
+		global_building_slots_factor = 0.1
+		fascism_drift = 0.03
+	}
+	JAP_Left_wing_pan_Asianists = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		subversive_activites_upkeep = -0.25
+		socialist_drift = 0.03
+		socialist_acceptance = 15
+		communism_acceptance = 15
+	}
+	JAP_Supporters_communist = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		army_morale_factor = 0.1
+		party_popularity_stability_factor = 0.05
+		communism_drift = 0.03
+		communism_acceptance = 20
+	}
+	JAP_Silent_doers = {
+		random = no
+		sprite = 13
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		local_resources_factor = 0.1
+	}
+	JAP_Revolutionaries_imperial_army = {
+		random = no
+		sprite = 13
+		army_org_factor = 0.1
+		army_morale_factor = 0.1
+		conscription = 0.01
+	}
+	JAP_Intelligence_Bureau_of_the_Military_Commission= {
+		random = no
+		sprite = 15
+		operative_slot = 1
+		agency_upgrade_time = -0.15
+		army_intel_decryption_bonus = 0.15
+	}
+	JAP_cult_personality_name= {
+		random = no
+		sprite = 13
+		drift_defence_factor = 0.25
+		political_power_factor = 0.2
+		annex_cost_factor = -1
+		army_morale_factor = 0.1
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		subversive_activites_upkeep = -0.5
+		conscription = 0.02
+		party_popularity_stability_factor = 0.25
+		training_time_factor = -0.1
+		mobilization_speed = 0.25
+		compliance_gain = 0.01
+	}
+	JAP_hirohito_hdp_tt= {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		stability_factor = 0.4
+	}
+	PRC_red_army_weakened_t= {
+		random = no
+		sprite = 13
+		army_org_regain = -0.1
+				training_time_factor = 0.2
+				land_reinforce_rate = -0.01
+	}
+	PRC_revolutionary_military_commission_t= {
+		random = no
+		sprite = 13
+		max_command_power = 20
+		planning_speed = 0.1
+		max_planning = 0.1
+		command_power_gain_mult = 0.1
+		experience_gain_army_unit_factor = 0.05
+	}
+	PRC_central_military_commission_t= {
+		random = no
+		sprite = 13
+		max_command_power = 40
+				command_power_gain_mult = 0.2
+				planning_speed = 0.15
+		max_planning = 0.15
+		experience_gain_army_unit_factor = 0.15
+	}
+	PRC_peoples_volunteer_army_t= {
+		random = no
+		sprite = 13
+		send_volunteer_size = 10
+				send_volunteers_tension = -1
+				send_volunteer_divisions_required = -1
+	}
+	revolutionary_educator = {
+		random = no
+		sprite = 13
+		party_popularity_stability_factor = 0.15
+		research_speed_factor = 0.05
+		communism_drift= 0.05
+	}
+	CHI_political_commissar = {
+		random = no
+		sprite = 13
+		communism_drift = 0.05
+		political_power_factor = 0.05
+		production_speed_buildings_factor = 0.05
+	}
+	CHI_political_commissar = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.03
+		stability_factor = 0.05
+		democratic_drift = 0.05
+		democratic_acceptance = 15
+	}
+	MAN_Fascist_revolutionary_teacher_advisor = {
+		random = no
+		sprite = 13
+		subversive_activites_upkeep = -0.25
+		fascism_drift = 0.05
+		mobilization_speed = 0.1
+		war_support_factor = 0.1
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+		targeted_modifier = {
+			tag = FRA
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+		targeted_modifier = {
+			tag = USA
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+		targeted_modifier = {
+			tag = FRA
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+		targeted_modifier = {
+			tag = GER
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+		targeted_modifier = {
+			tag = ENG
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+		targeted_modifier = {
+			tag = WHR
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+	}
+	MAN_Political_philosopher_religion = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		research_speed_factor = 0.08
+		stability_factor = 0.1
+	}
+	MAN_Left_wing_pan_Asianists = {
+		random = no
+		sprite = 13
+		training_time_factor = -0.1
+		subversive_activites_upkeep = -0.25
+		party_popularity_stability_factor = 0.15
+		conscription_factor = 0.1
+	}
+	MAN_Supporters_communist = {
+		random = no
+		sprite = 13
+		communism_drift = 0.05
+		consumer_goods_factor = -0.1
+		local_resources_factor = 0.1
+		non_core_manpower = 0.08
+	}
+	MAN_Supporters_National_Socialism = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.05
+		stability_weekly = 0.002
+		war_stability_factor = 0.15
+		production_speed_buildings_factor = 0.05
+	}
+	MAN_Supporters_National_Socialism = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.05
+		stability_weekly = 0.002
+		war_stability_factor = 0.15
+		production_speed_buildings_factor = 0.05
+	}
+	MAN_Revolutionaries_imperial_army = {
+		random = no
+		sprite = 13
+		army_org_factor = 0.1
+		army_morale_factor = 0.1
+		army_attack_factor = 0.075
+		army_defence_factor = 0.075
+	}
+	MAN_Propaganda_Restoration = {
+		random = no
+		sprite = 13
+		drift_defence_factor = 0.25
+		party_popularity_stability_factor = 0.25
+		war_stability_factor = 0.25
+		recruitable_population = 0.02
+		foreign_subversive_activites= -0.5
+		enemy_justify_war_goal_time = 0.5
+	}
+	MAN_Chief_of_the_Financial_Headquarters = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		custom_modifier_tooltip = MAN_Chief_of_the_Financial_Headquarters_tt
+		targeted_modifier = {
+			tag = JAP
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+	}
+	MAN_Social_reformer_and_Minister_of_Education = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.05
+		political_power_factor = 0.1
+		stability_factor = 0.1
+		research_speed_factor = 0.05
+	}
+	MAN_Attorney_General_of_the_Ministry_Justice = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		improve_relations_maintain_cost_factor = -0.5
+		resistance_decay = 0.05
+	}
+	MAN_Minister_of_Traffic = {
+		random = no
+		sprite = 13
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		SUPPLY_FACTOR = 0.1
+	}
+	MAN_Ministry_of_Industry = {
+		random = no
+		sprite = 10
+		industrial_capacity_factory = 0.1
+		global_building_slots_factor = 0.1
+	}
+	MAN_Chief_of_the_Secret_Service = {
+		random = no
+		sprite = 15
+		operative_slot = 1
+		new_operative_slot_bonus = 1
+		agency_upgrade_time = -0.15
+		resistance_damage_to_garrison = -0.1
+	}
+	MAN_xuantong_trait = {
+		random = no
+		sprite = 15
+		stability_factor = 0.2
+	}
+	MAN_Fascist_line_cult_of_personality = {
+		random = no
+		sprite = 15
+		fascism_acceptance = 25
+		fascism_drift = 0.05
+		army_morale_factor = 0.1
+		foreign_subversive_activites = -0.5
+		party_popularity_stability_factor = 0.25
+		war_stability_factor = 0.25
+		war_support_factor = 0.15
+		mobilization_laws_cost_factor = -0.5
+		economy_cost_factor = -0.5
+	}
+	MAN_democratic_ladder_trait = {
+		random = no
+		sprite = 15
+		democratic_acceptance = 25
+		democratic_drift = 0.05
+		stability_factor = 0.4
+		political_power_factor = 0.15
+		political_advisor_cost_factor = -0.5
+		trade_laws_cost_factor = -0.5
+		army_core_defence_factor = 0.1
+	}
+	CHI_cult_of_personality_trait = {
+		random = no
+		party_popularity_stability_factor = 0.1
+		war_support_factor = 0.05
+	}
+	CHI_personal_leadership_trait = {
+		random = no
+		party_popularity_stability_factor = 0.15
+		war_support_factor = 0.1
+		military_leader_cost_factor = -0.5
+		max_command_power = 0.2
+		command_power_gain_mult = 0.1
+	}
+	CHIWL_The_great_leader_nation_trait = {
+		random = no
+		party_popularity_stability_factor = 0.25
+		war_support_factor = 0.15
+		military_leader_cost_factor = -0.5
+		max_command_power = 0.2
+		command_power_gain_mult = 0.1
+		consumer_goods_factor = -0.15
+	}
+	JAP_Great_compromiser = {
+		random = no
+		sprite = 13
+		communism_drift = 0.05
+		stability_factor = 0.15
+		political_advisor_cost_factor = -0.25
+	}
+	JAP_Leader_of_Fukumoto_theory = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		party_popularity_stability_factor = 0.1
+		research_speed_factor = 0.05
+		consumer_goods_factor = -0.05
+	}
+	JAP_Fanatical_communists = {
+		random = no
+		sprite = 13
+		communism_drift = 0.02
+		war_support_factor = 0.1
+		subversive_activites_upkeep = -0.5
+		army_morale_factor = 0.05
+	}
+	JAP_Fanatical_communists = {
+		random = no
+		sprite = 13
+		communism_drift = 0.02
+		war_support_factor = 0.1
+		subversive_activites_upkeep = -0.5
+		army_morale_factor = 0.05
+	}
+	JAP_Federation_of_Trade_Unions = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		production_factory_max_efficiency_factor = 0.05
+		research_speed_factor = 0.02
+	}
+	JAP_Farmers_Union = {
+		random = no
+		sprite = 13
+		local_resources_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		global_building_slots_factor = 0.15
+	}
+	JAP_Socialist_social_sciences = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		research_speed_factor = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		communism_drift = 0.05
+	}
+	JAP_Marxist_Economics = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.05
+		production_factory_max_efficiency_factor = 0.1
+		production_speed_buildings_factor = 0.05
+		communism_drift = 0.05
+	}
+	JAP_Worker_jurist = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.05
+		party_popularity_stability_factor = 0.15
+		resistance_target = -0.05
+		communism_drift = 0.02
+	}
+	JAP_Marxist_philosopher = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.05
+		conscription_factor = 0.1
+		global_building_slots_factor = 0.1
+	}
+	JAP_Science_Council = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.08
+		consumer_goods_factor = -0.1
+		local_resources_factor = 0.05
+	}
+	JAP_Institute_of_Economic_Research = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.05
+		production_speed_infrastructure_factor = 0.1
+		production_speed_industrial_complex_factor = 0.1
+		industry_repair_factor = 0.1
+	}
+	JAP_tried_and_tested_Communist_Party = {
+		random = no
+		research_speed_factor = 0.05
+		industrial_capacity_factory = 0.05
+		party_popularity_stability_factor = 0.1
+	}
+	JAP_Revolutionary_Parliament = {
+		random = no
+		sprite = 13
+		political_power_factor = -0.25
+		party_popularity_stability_factor = -0.1
+		military_leader_cost_factor = -0.5
+		army_core_attack_factor = 0.15
+		army_core_defence_factor = 0.15
+	}
+	JAP_Housekeeping_and_publicity_work = {
+		random = no
+		sprite = 15
+		operative_slot = 1
+		boost_ideology_mission_factor = 0.25
+		propaganda_mission_factor = 0.25
+		army_morale_factor = 0.1
+	}
+	JAP_People_democratic_theorist = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		party_popularity_stability_factor = 0.1
+		political_advisor_cost_factor = -0.25
+	}
+	JAP_Farmers_Union_2 = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		production_speed_infrastructure_factor = 0.1
+		conscription_factor = 0.15
+	}
+	JAP_Socialist_ritic = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		research_speed_factor = 0.05
+		socialist_drift = 0.05
+	}
+	JAP_Marxist_economist= {
+		random = no
+		sprite = 13
+		production_factory_max_efficiency_factor = 0.1
+		production_speed_buildings_factor = 0.05
+		research_speed_factor = 0.02
+	}
+	JAP_Socialist_novelist= {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		stability_factor = 0.1
+		research_speed_factor = 0.02
+		socialist_drift = 0.05
+	}
+	JAP_Feminist_activist= {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		conscription = 0.01
+		production_factory_max_efficiency_factor = 0.05
+	}
+	JAP_Giants_of_thought= {
+		random = no
+		sprite = 13
+		stability_factor = 0.15
+		research_speed_factor = 0.02
+		socialist_drift = 0.05
+	}
+	JAP_Giants_of_thought_leader= {
+		random = no
+		sprite = 13
+		stability_factor = 0.1
+		war_support_factor = 0.1
+		army_core_defence_factor = 0.1
+		army_core_attack_factor = 0.1
+		
+	}
+	JAP_Trade_union_activist= {
+		random = no
+		sprite = 13
+		local_resources_factor = 0.1
+		conscription_factor = 0.15
+		research_speed_factor = 0.05
+		socialist_drift = 0.05
+	}
+	JAP_communism_union_activist= {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		consumer_goods_factor = -0.1
+		production_speed_buildings_factor = 0.05
+		communism_drift = 0.05
+	}
+	JAP_Anarcho_communist_activist= {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		party_popularity_stability_factor = 0.1
+		consumer_goods_factor = -0.15
+	}
+	JAP_transnational_anarchist = {
+		random = no
+		sprite = 13
+		global_building_slots_factor = 0.1
+		conscription_factor = 0.15
+		non_core_manpower = 0.08
+	}
+	JAP_democracy_Historian = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.15
+		research_speed_factor = 0.05
+		democratic_drift = 0.02
+		socialist_drift = 0.02
+	}
+	JAP_obu_Historiography = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		research_speed_factor = 0.02
+		production_factory_max_efficiency_factor = 0.05
+		conscription_factor = 0.15
+	}
+	JAP_obu_Historiography = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		production_factory_max_efficiency_factor = 0.1
+		democratic_drift = 0.05
+	}
+	JAP_Minister_of_Economy = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		production_factory_max_efficiency_factor = 0.1
+		democratic_drift = 0.05
+	}
+	JAP_Enlightenment_jurist = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		research_speed_factor = 0.02
+		party_popularity_stability_factor = 0.1
+		resistance_target = -0.05
+		neutrality_drift = -0.05
+	}
+	JAP_Democratic_Socialists = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		stability_factor = 0.1
+		socialist_drift = 0.05
+	}
+	JAP_Social_democrats = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		democratic_drift = 0.05
+	}
+	JAP_Anarcho_syndicalist = {
+		random = no
+		sprite = 13
+		industrial_capacity_factory = 0.1
+		global_building_slots_factor = 0.1
+		research_speed_factor = 0.05
+	}
+	JAP_revolution_government_leaders = {
+		random = no
+		political_power_factor = 0.15
+	}
+	JAP_Anarchist_Emperor_traits = {
+		random = no
+		political_power_factor = 0.1
+		stability_factor = 0.25
+		neutrality_drift = 0.01
+		neutrality_acceptance = 25
+	}
+	JAP_local_government_traits = {
+		random = no
+		extra_trade_to_overlord_factor = 1.0
+		overlord_trade_cost_factor = -0.9
+		research_sharing_per_country_bonus_factor = 0.25
+		cic_to_overlord_factor = 0.5
+		mic_to_overlord_factor = 0.5
+		autonomy_gain_trade_factor = -0.75
+	}
+	JAP_tried_and_tested_Communist_Party_strong = {
+		random = no
+		research_speed_factor = 0.05
+		industrial_capacity_factory = 0.05
+		party_popularity_stability_factor = 0.2
+		war_support_factor = 0.2
+		conscription = 0.02
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+	}
+}

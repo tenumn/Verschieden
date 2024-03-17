@@ -1,0 +1,3 @@
+﻿l_simp_chinese:
+ RULE_OPTION_RANDOMVN:0 "Verschieden mod 行为"
+ RULE_OPTION_RANDOMVN_AI_DESC:0 "AI会在游戏开始时跟随Verschieden mod决定其游戏计划并尝试执行。"

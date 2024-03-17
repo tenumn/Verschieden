@@ -1,0 +1,612 @@
+
+PRC_VN_anti_japwar_decisions = {
+	PRC_Kuomintang_salaries = {
+		activation = {
+			has_completed_focus = PRC_Anti_Japanese_mobilization
+			is_in_faction_with = CHI
+			NOT = {
+				custom_trigger_tooltip = {
+					tooltip = PRC_Kuomintang_salaries_tooltip
+					has_completed_focus = PRC_jixu_land_reform
+				}
+			}
+			if = {
+				limit = {date > 1938.1.1}
+				has_war_with = JAP
+			}
+			}
+			icon = generic_motorized
+		available = {
+			or = {
+				NOT = {is_in_faction_with = CHI}
+				custom_trigger_tooltip = {
+					tooltip = PRC_Kuomintang_salaries_tooltip
+					has_completed_focus = PRC_jixu_land_reform
+				}
+				AND = {
+					date > 1938.1.1
+					NOT ={ has_war_with = JAP }
+				}
+			}
+			}
+		visible = {
+		}
+		is_good = yes
+		days_mission_timeout = 30
+		cancel_trigger = {
+		}
+		timeout_effect = {
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 500 producer = CHI }
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				producer = CHI
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				producer = CHI
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = food_equipment_1
+				producer = CHI
+				amount = 200
+			}
+				}
+		complete_effect = {
+			}
+		}
+
+	PRC_The_triumph_of_the_small_cart = {
+		
+		icon = generic_coastal_fortification
+		available = {
+			has_completed_focus = PRC_peoples_war
+		}
+		visible = {
+			has_completed_focus = PRC_peoples_war
+		}
+		days_remove = 150
+		fire_only_once = yes
+		custom_cost_trigger = {
+			command_power > 49
+		}
+		custom_cost_text = decision_cost_CP_50
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+				}
+			}
+			modifier = {
+				SUPPLY_FACTOR = 0.25
+				SUPPLY_NODE_RANGE = 0.25
+				supply_consumption_factor = -0.25
+				out_of_supply_factor = -0.25
+				org_loss_when_moving = -0.25
+				local_supplies = 0.25
+				no_supply_grace = 240
+			}
+		}
+	PRC_Targeted_offense = {
+		available = {
+			has_completed_focus = PRC_pertinence
+		}
+		icon = generic_protection
+		available = {
+			NOT = {
+				has_country_flag = has_decision_PRC_Targeted_offense
+			}
+		}
+		visible = {
+		has_completed_focus = PRC_pertinence
+			has_war_with = JAP
+			FROM = {
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+				any_neighbor_state = {
+					OR = {
+					is_controlled_by = PRC
+					is_controlled_by = SHX
+					is_controlled_by = HBJ
+					}
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+				any_neighbor_state = {
+					OR = {
+					is_controlled_by = PRC
+					is_controlled_by = SHX
+					is_controlled_by = HBJ
+					}
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				FROM = {
+					OR ={
+						is_controlled_by = JAP
+						is_controlled_by = MAN
+						is_controlled_by = MEN
+					}
+					any_neighbor_state = {
+						OR = {
+						is_controlled_by = PRC
+						is_controlled_by = SHX
+					is_controlled_by = HBJ
+						}
+					}
+				}
+				   } 
+		   }
+		   
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 90
+		days_re_enable = 70
+		custom_cost_trigger = {
+			command_power > 34
+		}
+		custom_cost_text = decision_cost_CP_35
+		complete_effect = {
+			set_country_flag = has_decision_PRC_Targeted_offense
+			hidden_effect = {
+				add_command_power = -35
+				}
+				FROM = {
+					add_dynamic_modifier = {
+						modifier = PRC_Large_scale_offensive
+						scope = PRC
+						days = 90
+								}
+				}
+			}
+		remove_effect = {
+			clr_country_flag = has_decision_PRC_Targeted_offense
+		FROM = {
+			remove_dynamic_modifier ={ modifier = PRC_Large_scale_offensive }
+					}
+			}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	PRC_Infiltration_behind_enemy_lines = {
+		
+		icon = infiltrate_state
+		available = {
+		}
+		visible = {
+			has_war_with = JAP
+			FROM = {
+				NOT = {has_state_flag = PRC_Infiltration_behind_enemy_lines_flag}
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+				any_neighbor_state = {
+					OR = {
+					is_controlled_by = PRC
+					is_controlled_by = SHX
+					is_controlled_by = HBJ
+					has_state_flag = PRC_Infiltration_behind_enemy_lines_flag
+					}
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				FROM = {
+					NOT = {has_state_flag = PRC_Infiltration_behind_enemy_lines_flag}
+					OR ={
+						is_controlled_by = JAP
+						is_controlled_by = MAN
+						is_controlled_by = MEN
+					}
+					any_neighbor_state = {
+						OR = {
+						is_controlled_by = PRC
+						is_controlled_by = SHX
+					is_controlled_by = HBJ
+						has_state_flag = PRC_Infiltration_behind_enemy_lines_flag
+						}
+					}
+				}
+				   } 
+		   }
+		target_trigger = {
+			FROM = {
+				NOT = {has_state_flag = PRC_Infiltration_behind_enemy_lines_flag}
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+				any_neighbor_state = {
+					OR = {
+					is_controlled_by = PRC
+					is_controlled_by = SHX
+					is_controlled_by = HBJ
+					has_state_flag = PRC_Infiltration_behind_enemy_lines_flag
+					}
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 20
+		custom_cost_trigger = {
+			command_power > 4
+		}
+		custom_cost_text = decision_cost_CP_15
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
+			remove_effect = {
+		FROM = {
+			add_resistance = 5
+			add_compliance = -5
+			add_resistance_target= 10
+		set_state_flag = PRC_Infiltration_behind_enemy_lines_flag
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	PRC_Establish_base_areas_behind_enemy_lines = {
+		icon = FIN_weapon_caches
+		available = {
+			has_completed_focus = PRC_anti_japanese_expedition_VN
+		}
+		visible = {
+			has_war_with = JAP
+			FROM = {
+				has_state_flag = PRC_Infiltration_behind_enemy_lines_flag
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				FROM = {
+					has_state_flag = PRC_Infiltration_behind_enemy_lines_flag
+					OR ={
+						is_controlled_by = JAP
+						is_controlled_by = MAN
+						is_controlled_by = MEN
+					}
+				}
+			  } 
+		   }
+		target_trigger = {
+			FROM = {
+				has_state_flag = PRC_Infiltration_behind_enemy_lines_flag
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 25
+		custom_cost_trigger = {
+			command_power > 14
+		}
+		custom_cost_text = decision_cost_CP_25
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+		}
+		remove_effect = {
+		FROM = {
+			add_resistance = 5
+			add_compliance = -5
+			add_resistance_target= 20
+		set_state_flag = PRC_Establish_base_areas_behind_enemy_flag
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	PRC_Destruction_of_plant_facilities = {
+		icon = generic_scorched_earth
+		available = {
+			has_completed_focus = PRC_anti_japanese_expedition_big
+		}
+		visible = {
+			has_war_with = JAP
+			FROM = {
+				has_state_flag = PRC_Establish_base_areas_behind_enemy_flag
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				FROM = {
+					has_state_flag = PRC_Establish_base_areas_behind_enemy_flag
+					OR ={
+						is_controlled_by = JAP
+						is_controlled_by = MAN
+						is_controlled_by = MEN
+					}
+				}
+			  } 
+		   }
+		target_trigger = {
+			FROM = {
+				has_state_flag = PRC_Establish_base_areas_behind_enemy_flag
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 25
+		days_re_enable = 70
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+		remove_effect = {
+		FROM = {
+			add_resistance = 5
+			add_compliance = -5
+			damage_building = {
+				type = infrastructure#建筑
+				damage = 4.0
+				}
+			damage_building = {
+				type = industrial_complex
+				damage = 4.0
+				}
+			damage_building = {
+				type = arms_factory
+				damage = 4.0
+				}
+			damage_building = {
+				type = air_base
+				damage = 4.0
+				}
+			damage_building = {
+				type = anti_air_building
+				damage = 4.0
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	PRC_Mobilization_of_partisans = {
+		icon = SWI_consolidate_council_power
+		available = {
+			has_completed_focus = PRC_anti_japanese_expedition_big
+		}
+		visible = {
+			has_war_with = JAP
+			FROM = {
+				has_state_flag = PRC_Establish_base_areas_behind_enemy_flag
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				FROM = {
+					has_state_flag = PRC_Establish_base_areas_behind_enemy_flag
+					OR ={
+						is_controlled_by = JAP
+						is_controlled_by = MAN
+						is_controlled_by = MEN
+					}
+				}
+			}
+		   }
+		target_trigger = {
+			FROM = {
+				has_state_flag = PRC_Establish_base_areas_behind_enemy_flag
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 15
+		days_re_enable = 55
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+		remove_effect = {
+		FROM = {
+			add_resistance = 10
+			add_compliance = -5
+			add_resistance_target= 10
+			damage_building = {
+				type = infrastructure#建筑
+				damage = 1.5
+				}
+			damage_building = {
+				type = industrial_complex
+				damage = 1.5
+				}
+			damage_building = {
+				type = arms_factory
+				damage = 1.5
+				}
+			damage_building = {
+				type = air_base
+				damage = 1.5
+				}
+			damage_building = {
+				type = anti_air_building
+				damage = 1.5
+				}
+				if = {
+					limit = {NOT ={has_dynamic_modifier = PRC_youjiduidangdihuodong}}
+					resistance > 59
+					add_dynamic_modifier = {
+									modifier = PRC_youjiduidangdihuodong
+									scope = JAP
+								}
+				}
+			set_state_flag = PRC_Mobilization_of_partisans_flag
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	PRC_Mobilization_of_partisans_2 = {
+		icon = SWI_consolidate_council_power
+		available = {
+			has_completed_focus = PRC_anti_japanese_expedition_big
+		}
+		visible = {
+			has_war_with = JAP
+			FROM = {
+				has_state_flag = PRC_Mobilization_of_partisans_flag
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				FROM = {
+					has_state_flag = PRC_Mobilization_of_partisans_flag
+					OR ={
+						is_controlled_by = JAP
+						is_controlled_by = MAN
+						is_controlled_by = MEN
+					}
+				}
+			}
+		   }
+		target_trigger = {
+			FROM = {
+				has_state_flag = PRC_Mobilization_of_partisans_flag
+				OR ={
+					is_controlled_by = JAP
+					is_controlled_by = MAN
+					is_controlled_by = MEN
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 35
+		days_re_enable = 235
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+		remove_effect = {
+		FROM = {
+			add_resistance = 10
+			add_compliance = -5
+			add_resistance_target= 10
+			damage_building = {
+				type = infrastructure#建筑
+				damage = 1.5
+				}
+			damage_building = {
+				type = industrial_complex
+				damage = 1.5
+				}
+			damage_building = {
+				type = arms_factory
+				damage = 1.5
+				}
+			damage_building = {
+				type = air_base
+				damage = 1.5
+				}
+			damage_building = {
+				type = anti_air_building
+				damage = 1.5
+				}
+				custom_effect_tooltip = PRC_anti_japanese_expedition_VNyjd_2_tt
+				hidden_effect = {
+					create_unit = { 
+						division = "name = \"游击队\" division_template = \"游击队\" start_experience_factor = 0.1" 
+						owner = PRC
+						allow_spawning_on_enemy_provs = yes
+								}
+						create_unit = { 
+						division = "name = \"游击队\" division_template = \"游击队\" start_experience_factor = 0.1" 
+						owner = PRC
+						allow_spawning_on_enemy_provs = yes
+								}
+						create_unit = { 
+						division = "name = \"游击队\" division_template = \"游击队\" start_experience_factor = 0.1" 
+						owner = PRC
+						allow_spawning_on_enemy_provs = yes
+								}
+						create_unit = { 
+						division = "name = \"游击队\" division_template = \"游击队\" start_experience_factor = 0.1" 
+						owner = PRC
+						allow_spawning_on_enemy_provs = yes
+								}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

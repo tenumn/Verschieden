@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_resources_strip"
+		textureFile = "gfx/interface/resources_strip.dds"
+		noOfFrames = 7
+	}
+	spriteType = {
+		name = "GFX_missing_resources_strip"
+		textureFile = "gfx/interface/missing_resources_strip.dds"
+		noOfFrames = 7
+	}
+}

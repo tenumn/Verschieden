@@ -1,0 +1,131 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_industrial_expansion_tech_1_medium"
+		texturefile = "gfx/interface/technologies/industrial_expansion_tech_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_industrial_expansion_tech_2_medium"
+		texturefile = "gfx/interface/technologies/industrial_expansion_tech_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_industrial_expansion_tech_3_medium"
+		texturefile = "gfx/interface/technologies/industrial_expansion_tech_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_industrial_expansion_tech_4_medium"
+		texturefile = "gfx/interface/technologies/industrial_expansion_tech_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_industrial_expansion_tech_5_medium"
+		texturefile = "gfx/interface/technologies/industrial_expansion_tech_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_food_equipment_1"
+		texturefile = "gfx/interface/technologies/food_equipment_1.png"
+	}
+	spriteType = {
+		name = "GFX_food_equipment"
+		texturefile = "gfx/interface/technologies/food_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_food_equipmen_medium"
+		texturefile = "gfx/interface/technologies/food_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_food_equipmen_1_medium"
+		texturefile = "gfx/interface/technologies/food_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_tech_food_medium"
+		texturefile = "gfx/interface/technologies/food_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_tech_food"
+		texturefile = "gfx/interface/technologies/food_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_tech_food_1_medium"
+		texturefile = "gfx/interface/technologies/food_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_tech_food_equipmen_medium"
+		texturefile = "gfx/interface/technologies/food_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_tech_food_equipmen_1_medium"
+		texturefile = "gfx/interface/technologies/food_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_concentrated_industry6_medium"
+		texturefile = "gfx/interface/technologies/concentrated_industry5.dds"
+	}
+	SpriteType = {
+		name = "GFX_dispersed_industry6_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry5.dds"
+	}
+	SpriteType = {
+		name = "GFX_concentrated_industry7_medium"
+		texturefile = "gfx/interface/technologies/concentrated_industry5.dds"
+	}
+	SpriteType = {
+		name = "GFX_dispersed_industry7_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry5.dds"
+	}
+	SpriteType = {
+		name = "GFX_fuel_refining6_medium"
+		texturefile = "gfx/interface/technologies/fuel_refining5.dds"
+	}
+	SpriteType = {
+		name = "GFX_modern_oil_processing2_medium"
+		texturefile = "gfx/interface/technologies/modern_oil_processing.dds"
+	}
+	SpriteType = {
+		name = "GFX_modern_rubber_processing1_medium"
+		texturefile = "gfx/interface/technologies/modern_rubber_processing.dds"
+	}
+	SpriteType = {
+		name = "GFX_construction6_medium"
+		texturefile = "gfx/interface/technologies/advanced_conversion.dds"
+	}
+	SpriteType = {
+		name = "GFX_construction7_medium"
+		texturefile = "gfx/interface/technologies/advanced_conversion.dds"
+	}
+	SpriteType = {
+		name = "GFX_excavation6_medium"
+		texturefile = "gfx/interface/technologies/excavation5.dds"
+	}
+	SpriteType = {
+		name = "GFX_excavation7_medium"
+		texturefile = "gfx/interface/technologies/excavation5.dds"
+	}
+	SpriteType = {
+		name = "GFX_advanced_computing_machine1_medium"
+		texturefile = "gfx/interface/technologies/advanced_computing_machine.dds"
+	}
+	SpriteType = {
+		name = "GFX_Broadcast_Tower_Technologies1_medium"
+		texturefile = "gfx/interface/technologies/radio_detection.dds"
+	}
+	SpriteType = {
+		name = "GFX_Broadcast_Tower_Technologies2_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Broadcast_Tower_Technologies3_medium"
+		texturefile = "gfx/interface/technologies/radio.dds"
+	}	
+	SpriteType = {
+		name = "GFX_assembly_line_production2_medium"
+		texturefile = "gfx/interface/technologies/streamlined_line.dds"
+	}
+	SpriteType = {
+		name = "GFX_assembly_line_production3_medium"
+		texturefile = "gfx/interface/technologies/streamlined_line.dds"
+	}
+}

@@ -1,0 +1,559 @@
+ideologies = {
+	
+	democratic = {
+	
+		types = {
+			socialism = {
+				color = { 255 80 130 }
+			}
+#社会民主主义
+			conservatism = {
+				color = { 15 65 195 }
+			}
+#社会保守主义
+		
+			liberalism = {
+				color = { 80 125 245 }
+			}
+#社会自由主义
+			people = {
+				color = { 255 40 90 }
+			}
+#人民阵线政府
+			social_democracy = {
+				color = { 255 80 130 }
+			}
+#社会民主主义
+			Three_Principles_of_the_People = {
+				color = { 245 20 80 }
+			}
+#三民主义
+			Liberal_democracy = {
+				color = { 105 155 255 }
+			}
+#自由民主主义
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_DEMOCRATIC_1"
+			"FACTION_NAME_DEMOCRATIC_2"
+			"FACTION_NAME_DEMOCRATIC_3"
+			"FACTION_NAME_DEMOCRATIC_4"
+			"FACTION_NAME_DEMOCRATIC_5"
+			"FACTION_NAME_DEMOCRATIC_6"
+
+		}
+		
+		color = { 15 65 195 }
+		
+		rules = {
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_create_collaboration_government = no
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_lower_tension = yes
+			can_only_justify_war_on_threat_country = yes
+			can_guarantee_other_ideologies = yes
+		}
+		
+		can_host_government_in_exile = yes
+		
+		war_impact_on_world_tension = 0.25		# no major danger, remember this this the 40s!
+		faction_impact_on_world_tension = 0.1
+		
+		modifiers = {
+			generate_wargoal_tension = 1.00
+			join_faction_tension = 0.80
+			lend_lease_tension = 0.50
+			send_volunteers_tension = 0.50
+			guarantee_tension = 0.25
+			annex_cost_factor = 0.5
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 5.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 5
+			embargo_cost_factor = -0.5
+			embargo_threshold_factor = -0.5
+		}
+		
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+		ai_democratic = yes # uses the democratic AI behaviour
+		ai_ideology_wanted_units_factor = 1.0 
+	}
+
+
+	communism = {
+		
+		types = {
+
+			communist = {
+			}			
+#共产主义
+			Conservative_communism = {
+			}			
+#保守共产主义
+			junta_communism = {
+				color = { 180 50 50 }
+			}
+#军政共产主义
+			Marxist_Leninist = {
+				color = { 160 0 0 }
+			}		
+#马克思列宁主义
+			MEME_soy_milkism = {
+				can_be_randomly_selected = no
+			}			
+#豆爷共产主义
+			marxism = {
+			}
+			
+#先锋队共产主义
+			leninism = {
+				color = { 160 0 10 }
+			}
+#列宁主义
+			stalinism = {
+				color = { 150 10 0 }
+			}	
+#斯大林主义
+			yananmos = {
+				can_be_randomly_selected = no
+				color = { 180 0 50 }
+			}
+#延安模式
+			anti_revisionism = {
+				color = { 155 30 0 }
+			}
+			
+#反修正主义
+			anarchist_communism = {
+				color = { 105 0 20 }
+			}
+#无政府共产主义
+			Trotskyism = {
+				color = { 160 10 50 }
+			}
+#托洛茨基主义
+			Maoism = {
+				color = { 150 0 30 }
+			}
+#毛泽东主义
+			moderatism_communism = {
+				color = { 180 30 60 }
+			}
+#委员会共产主义
+			Market_socialism = {
+				color = { 190 110 120 }
+			}
+#市场社会主义
+			Agrarian_socialism_2 = {
+				color = { 180 40 20 }
+			}
+#农业社会主义
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+		
+		color = { 170 0 0 }
+		
+		war_impact_on_world_tension = 0.75		#Commie less threatening
+		faction_impact_on_world_tension = 0.5
+		
+		ai_communist = yes # uses the commie AI behaviour
+		
+		rules = {
+			can_puppet = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_collaborate = yes
+		}
+		
+		
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+			mobilization_speed = 0.1
+			embargo_threshold_factor = 0.5
+			#Ssocialism_acceptance = 20
+
+			civil_war_involvement_tension = -0.5
+		}
+		
+		faction_modifiers = {
+			
+		}
+
+	}
+
+	socialist = {
+		
+		types = {
+
+			Fascist_republicanism = {
+				can_be_randomly_selected = no
+				color = { 190 30 50 }
+			}
+#墨索里尼主义
+			pallottolaism = {
+				can_be_randomly_selected = no
+			}
+#帕洛特主义
+			Revolutionary_Nationalist_left = {
+				color = { 200 30 20 }
+			}
+#革命民族主义
+			left_social_democracy = {
+				color = { 220 30 60 }
+			}
+#左翼社会民主主义
+			populism = {
+			}
+#左翼民粹主义
+			National_Syndicalism_socialism = {
+				can_be_randomly_selected = no
+				color = { 190 30 50 }
+			}
+#国家工团主义
+			new_democratic = {
+				can_be_randomly_selected = no
+				color = { 220 30 60 }
+			}
+#新民主主义
+
+			anarchism_1 = {
+				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
+				color = { 150 70 70 }
+			}
+			
+#无政府主义
+			Agrarian_socialism = {
+				color = { 210 40 20 }
+			}
+			
+#农业社会主义
+			Communalism = {
+			}
+			
+#公社主义
+			Anarcho_syndicalism = {
+				color = { 180 60 60 }
+			}
+#无政府工团主义
+			Radical_progressiveism = {
+			}
+#激进进步主义
+			socialism_1= {
+			}
+#社会主义
+			ingsoc= {
+				can_be_randomly_selected = no
+			}
+#英格兰社会主义
+			Nuclear_waste= {
+				can_be_randomly_selected = no
+			}
+#核废土
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_Ssocialism_1"
+			"FACTION_NAME_Ssocialism_2"
+			"FACTION_NAME_Ssocialism_3"
+			"FACTION_NAME_Ssocialism_4"
+			"FACTION_NAME_Ssocialism_5"
+		}
+		
+		color = { 220 30 30 }
+		
+		war_impact_on_world_tension = 0.35		#Commie less threatening
+		faction_impact_on_world_tension = 0.25
+		
+		ai_communist = yes # uses the commie AI behaviour
+		
+		rules = {
+			can_puppet = yes
+			can_force_government = no
+			can_send_volunteers = yes
+		}
+		
+		
+		modifiers = {
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			drift_defence_factor = -0.3
+			puppet_cost_factor = -0.5
+			communism_acceptance = 20
+			democratic_acceptance = 10
+			embargo_threshold_factor = 0.5
+		}
+		
+		faction_modifiers = {
+			
+		}
+
+	}
+
+
+	fascism = {
+	
+		types = {
+
+		Theocratic_absolutism_fascism = {
+				can_be_randomly_selected = no
+				color = { 109 39 80 }
+			}
+#神权专制主义
+		
+			nazism = {
+				color = { 89 59 39 }
+			}
+#纳粹/民族社会主义
+			Revolutionary_Nationalist_right = {
+				color = { 149 29 0 }
+			}
+#革命民族主义
+			fascism_ideology = {
+			}
+#家长制民族主义
+			Strasserism = {
+				color = { 149 29 0 }
+			}
+#施特拉塞主义/国家社会主义
+			gen_nazism = {
+				color = { 99 79 49 }
+
+			}
+			
+#还是纳粹，但不清楚gen是什么意思
+			falangism = {
+
+				color = { 149 29 0 }
+			}
+			
+#长枪党法西斯
+			rexism = {
+				color = { 129 109 109 }
+			}
+#雷克斯主义
+			National_Syndicalism = {
+				color = { 149 29 0 }
+			}
+#国家工团主义
+			Integralism  = {#整合主义
+				can_be_randomly_selected = no
+				color = { 110 50 60 }
+			}
+
+			National_Renewal_Front = {
+				color = { 119 49 40 }
+			}
+#民族复兴阵线
+			PRC_Socialism_characteristics = {
+				can_be_randomly_selected = no
+				color = { 149 29 0 }
+			}
+#新时代中国特色社会主义
+			Burgundian_system = {
+				can_be_randomly_selected = no
+				color = { 120 0 120 }
+			}
+#勃艮第体制
+			fascism_militarism = {
+				can_be_randomly_selected = no
+				color = { 149 29 0 }
+			}
+#法西斯军国主义
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_FASCIST_1"
+			"FACTION_NAME_FASCIST_2"
+			"FACTION_NAME_FASCIST_3"
+			"FACTION_NAME_FASCIST_4"
+			"FACTION_NAME_FASCIST_5"
+
+		}
+		
+		color = { 109 39 0 }
+		
+		war_impact_on_world_tension = 1.0			#evil!
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			drift_defence_factor = 0.25
+			justify_war_goal_when_in_major_war_time = -0.80
+			civilian_intel_to_others = 15.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 10.0
+			airforce_intel_to_others = 10.0
+			hidden_modifier = { join_faction_tension = -0.1 }
+			embargo_cost_factor = 1
+			civil_war_involvement_tension = -0.5
+		}
+
+		ai_fascist = yes # uses the fascist AI behaviour
+		ai_ideology_wanted_units_factor = 1.75
+	}
+
+	neutrality = {
+	
+		types = {
+
+			new_socialism  = {
+				can_be_randomly_selected = no
+				color = { 130 90 70 }
+			}	
+#新社会主义
+
+			absolutism  = {
+				can_be_randomly_selected = no
+			}	
+#君主专制主义
+			Theocratic_absolutism = {
+				color = { 150 120 130 }
+				can_be_randomly_selected = no
+			}	
+#神权专制主义	
+			despotism  = {
+			}
+			
+#专制统治
+			oligarchism  = {
+			}
+#寡头政治
+			moderatism = {
+			}
+#温和主义
+			centrism = {
+			}
+#中立主义
+
+			anarchism = {
+				color = { 180 110 110 }
+				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
+#无政府主义临时人民委员会
+			}
+			Patriarchal_dictatorship = {
+				can_be_randomly_selected = no
+				color = { 90 90 90 }
+			}
+#军政府专政，原本是家长制独裁
+			Authoritarian_democracy = {
+				color = { 150 150 160 }
+			}
+#威权民主主义
+			A_free_India= {
+				can_be_randomly_selected = no
+			}
+#革命民粹主义
+			republicanism= {
+				can_be_randomly_selected = no
+				color = { 150 150 160 }
+			}
+#共和主义
+			Kemalism= {
+				can_be_randomly_selected = no
+				color = { 130 130 150 }
+			}
+#凯末尔共和主义
+			Extreme_authoritarianism= {
+				can_be_randomly_selected = no
+				color = { 60 60 60 }
+			}
+#极权主义（极端威权主义）
+			Social_nationalism = {
+				can_be_randomly_selected = no
+				color = { 90 80 70 }
+			}
+#国家民族主义,原本是社会民族主义
+			State_capitalism  = {
+				can_be_randomly_selected = no
+				color = { 160 150 120 }
+			}
+#国家资本主义
+			Trade_liberalism = {
+				can_be_randomly_selected = no
+				color = { 160 150 120 }
+			}
+#贸易自由主义
+			Enterprise_company = {
+				can_be_randomly_selected = no
+				color = { 130 110 100 }
+			}
+#企业统制
+			Deterritorialization = {
+				can_be_randomly_selected = no
+				color = { 220 230 240 }
+			}
+#加速主义
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NONALIGNED_1"
+			"FACTION_NAME_NONALIGNED_2"
+			"FACTION_NAME_NONALIGNED_3"
+			"FACTION_NAME_NONALIGNED_4"
+			"FACTION_NAME_NONALIGNED_5"
+
+		}
+		
+		color = { 90 100 100 }
+		
+		
+		war_impact_on_world_tension = 0.25		#no major danger
+		faction_impact_on_world_tension = 0.1
+		
+		rules = {
+			can_force_government = no
+			can_puppet = yes
+			can_send_volunteers = no
+		}
+		
+		modifiers = {
+			#increased_influence_factor = 0.3 #30% easier to influence
+			generate_wargoal_tension = 0.25
+			join_faction_tension = 0.4
+			lend_lease_tension = 0.4
+			send_volunteers_tension = 0.4
+			guarantee_tension = 0.4
+			drift_defence_factor = -0.3	
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 10.0
+			fascism_acceptance = 25
+		}
+		
+		faction_modifiers = {
+		}
+
+		ai_neutral = yes #
+		ai_ideology_wanted_units_factor = 1.15 
+	}
+
+}
+
+

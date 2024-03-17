@@ -1,0 +1,1528 @@
+characters={
+	PRC_mao_zedong={
+		name=PRC_mao_zedong
+		portraits={
+			army={
+				large="gfx/leaders/PRC/PRC_maozedong_yong.png"
+				small=GFX_portrait_PRC_mao_zedong_small
+			}
+			civilian={
+								large="gfx/leaders/PRC/PRC_maozedong_yong.png"
+				small=GFX_portrait_PRC_mao_zedong_small
+			}
+		}
+		field_marshal={
+			traits={ trait_cautious politically_connected defensive_doctrine }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=yananmos
+			traits={ cornered_fox }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	PRC_red_army_duoqua ={
+		name= PRC_red_army_duoqua
+		portraits={
+			army={
+				large="gfx/leaders/PRC/PRC_red_army_duoquan.png"
+			}
+		}
+	}
+	PRC_zhu_de={
+		name=PRC_zhu_de
+		portraits={
+			army={
+				large="GFX_portrait_prc_zhu_de"
+				small="GFX_idea_PRC_zhu_de"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = PRC_zhu_de
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_chief_morale_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		corps_commander={
+			traits={ infantry_officer organizer }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
+	PRC_chen_yi={
+		name=PRC_chen_yi
+		portraits={
+			army={
+				large="GFX_portrait_prc_chen_yi"
+				small=GFX_portrait_PRC_chen_yi_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = PRC_chen_yi
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_armored_2
+			}
+				cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		corps_commander={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	PRC_peng_dehuai={
+		name=PRC_peng_dehuai
+		portraits={
+			army={
+				large="gfx/leaders/PRC/PRC_peng_de_huai.png"
+				small=GFX_portrait_PRC_peng_dehuai_small
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer trait_mountaineer }
+			skill=4
+			attack_skill=3
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	PRC_daoshangfei={
+		name=邓小平
+		portraits={
+			army={
+				large="gfx/leaders/PRC/PRC_deng_xiaoping.png"
+				small="gfx/leaders/PRC/small/deng_xiao_ping.png"
+			}
+		}
+		corps_commander={
+						traits={ trait_cautious politically_connected defensive_doctrine }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+		advisor={
+			slot = political_advisor
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+		NOT = { has_completed_focus = PRC_Qing_party }
+			}
+		}
+			idea_token = PRC_dong_biwu
+			allowed  = {
+				original_tag  = PRC
+			}
+			traits  = {
+				PRC_Silent_doers
+				#PRC_mao_ze_dong_supporter
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_mao_ze_dong_add_supporter
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip =PRC_mao_ze_dong_decrease_supporter 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+	PRC_liu_bocheng={
+		name="刘伯承"
+		portraits={
+			army={
+				large="gfx/leaders/PRC/portrait_prc_Liu_Bo_Cheng.png"
+				small="gfx/leaders/PRC/portrait_prc_Liu_Bo_Cheng_1.png"
+			}
+		}
+		corps_commander={
+	traits = { infantry_officer trait_mountaineer brilliant_strategist }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 3
+			legacy_id=-1
+		}
+	}
+	PRC_suyu={
+		name="粟裕"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_su_yu.png"
+				small="gfx/leaders/PRC/portrait_prc_su_yu_1.png"
+			}
+		}
+		corps_commander={
+	traits = { fortress_buster brilliant_strategist }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+			legacy_id=-1
+		}
+	}
+	PRC_helong={
+		name= "贺龙"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_he_long.png"
+				small="gfx/leaders/PRC/portrait_prc_he_long_1.png"
+			}
+		}
+		corps_commander={
+	traits = { infantry_officer trait_mountaineer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+			legacy_id=-1
+		}
+	}
+	PRC_yeting={
+		name= "叶挺"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_ye_ting.png"
+				small="gfx/leaders/PRC/portrait_prc_ye_ting_1.png"
+			}
+		}
+		corps_commander={
+	traits = { infantry_officer infantry_officer organizer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+	PRC_luo_ronghuan={
+		name= "罗荣桓"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_luo_rong_huan.png"
+				small="gfx/leaders/PRC/portrait_prc_luo_rong_huan_1.png"
+			}
+		}
+		corps_commander={
+	traits = { organizer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 5
+			legacy_id=-1
+		}
+	}
+	PRC_ye_jianying={
+		name= "叶剑英"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_ye_jian_ying.png"
+				small="gfx/leaders/PRC/portrait_prc_ye_jian_ying_1.png"
+			}
+		}
+		corps_commander={
+	traits = { organizer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+	PRC_nie_rong_zhen={
+		name= "聂荣臻"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_nie_rong_zhen.png"
+				small="gfx/leaders/PRC/portrait_prc_nie_rong_zhen_1.png"
+			}
+		}
+		corps_commander={
+	traits = { bearer_of_artillery }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+			legacy_id=-1
+		}
+	}
+	PRC_nie_rongzhen={
+		name= "聂荣臻"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_nie_rong_zhen.png"
+				small="gfx/leaders/PRC/portrait_prc_nie_rong_zhen_1.png"
+			}
+		}
+		corps_commander={
+	traits = { bearer_of_artillery }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+			legacy_id=-1
+		}
+	}
+	PRC_xu_xiangqian={
+		name= "徐向前"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_xu_xiang_qian.png"
+				small="gfx/leaders/PRC/portrait_prc_xu_xiang_qian_1.png"
+			}
+		}
+		corps_commander={
+	traits = { infantry_officer trait_mountaineer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+	PRC_chengang={
+		name= "陈赓"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_chen_geng.png"
+				small="gfx/leaders/PRC/portrait_prc_chen_geng_1.png"
+			}
+		}
+		corps_commander={
+	traits = { infantry_officer trait_mountaineer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+	PRC_xiao_jingguang={
+		name= "萧劲光"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_xiao_jingguang.png"
+				small="gfx/leaders/PRC/portrait_prc_xiao_jingguang_1.png"
+			}
+		}
+		corps_commander={
+	traits = { }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    maneuvering_skill = 2
+    coordination_skill = 1
+			legacy_id=-1
+		}
+	}
+	PRC_zhang_aiping={
+		name=  "张爱萍"
+		portraits={
+			army={
+			large="gfx/leaders/PRC/portrait_prc_zhang_aiping.png"
+				small="gfx/leaders/PRC/portrait_prc_zhang_aiping_1.png"
+			}
+		}
+		corps_commander={
+	traits = { }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    maneuvering_skill = 1
+    coordination_skill = 2
+			legacy_id=-1
+		}
+	}
+	PRC_lin_biao={
+		name=PRC_lin_biao
+		portraits={
+			army={
+				large="gfx/leaders/PRC/PRC_lin_biao.png"
+				small=GFX_portrait_PRC_lin_biao_small
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer trait_mountaineer }
+			skill=5
+			attack_skill=4
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
+	PRC_kwong_hu={
+		name=PRC_kwong_hu
+		portraits={
+			civilian={
+				large=GFX_portrait_PRC_kwong_hu
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ hawk }
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+
+	PRC_luo_zhao={
+		name=PRC_luo_zhao
+		portraits={
+			civilian={
+				large=GFX_portrait_PRC_luo_zhao
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ financial_expert armaments_organizer }
+			expire="1956.1.1.12"
+			id=-1
+		}
+	}
+	PRC_liang_ma={
+		name=PRC_liang_ma
+		portraits={
+			civilian={
+				large=GFX_portrait_PRC_liang_ma
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={ financial_expert }
+			expire="1949.1.1.12"
+			id=-1
+		}
+	}
+
+
+	### THEORISTS ###
+
+	#Claire Lee Chennault in shared file
+
+	PRC_liu_bocheng_1={
+		name=PRC_liu_bocheng
+		portraits={
+			army={
+				small="GFX_idea_PRC_liu_bocheng"
+			}
+		}
+		advisor={
+			cost = 100
+
+			slot = theorist
+			idea_token = PRC_liu_bocheng_1
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+
+			traits = {
+				military_theorist
+			}
+		}
+	}
+
+	PRC_hsia_tian={
+		name=PRC_hsia_tian
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_2"
+			}
+		}
+		advisor={
+			cost = 100
+
+			slot = theorist
+			idea_token = PRC_hsia_tian
+			ledger = air
+			allowed = {
+				original_tag = PRC
+			}
+
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+	PRC_zhang_wei={
+		name=PRC_zhang_wei
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_2"
+			}
+		}
+		advisor={
+			cost = 100
+
+			slot = theorist
+			idea_token = PRC_zhang_wei
+			ledger = navy
+			allowed = {
+				original_tag = PRC
+			}
+			
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+
+	### ARMY CHIEFS ###
+
+	# Alexander von Falkenhausen in shared file
+
+	# Zhu De up there in this file along with other Unit Leaders
+
+	PRC_su_yu={
+		name=PRC_su_yu
+		portraits={
+			army={
+				small="GFX_idea_PRC_su_yu"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = PRC_su_yu
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	PRC_otto_braun={
+		name=PRC_otto_braun
+		portraits={
+			army={
+				small="GFX_idea_PRC_otto_braun"
+			}
+		}
+		advisor={
+		visible = {
+			NOT = { has_completed_focus = PRC_Qing_party }
+			}
+			slot = army_chief
+			idea_token = PRC_otto_braun
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_chief_old_guard
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	PRC_ma_jin={
+		name=PRC_ma_jin
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_5"
+			}
+		}
+		advisor={	
+			slot = army_chief
+			idea_token = PRC_ma_jin
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### NAVY CHIEFS ###
+
+	PRC_ziao_jingguang={
+		name=PRC_ziao_jingguang
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_1"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = PRC_ziao_jingguang
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	PRC_gao_qiu={
+		name=PRC_gao_qiu
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_2"
+			}
+		}
+		advisor={	
+			slot = navy_chief
+			idea_token = PRC_gao_qiu
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### AIR CHIEFS ###
+
+	# Claire Lee Chennault in shared file
+
+	PRC_fang_zeyi={
+		name=PRC_fang_zeyi
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = PRC_fang_zeyi
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	PRC_gao_gang={
+		name=PRC_gao_gang
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_2"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = PRC_gao_gang
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				air_chief_safety_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### MILITARY HIGH COMMAND ###
+
+	# Chen Yi up there in this file along with other Unit Leaders
+
+	PRC_xu_xiangqian_1={
+		name=PRC_xu_xiangqian
+		portraits={
+			army={
+				small="GFX_idea_PRC_xu_xiangqian"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = PRC_xu_xiangqian_1
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	PRC_nie_rongzhen_1={
+		name=PRC_nie_rongzhen
+		portraits={
+			army={
+				small="gfx/leaders/PRC/portrait_prc_nie_rong_zhen_1.png"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = PRC_nie_rongzhen_1
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	PRC_chen_geng_1={
+		name=PRC_chen_geng
+		portraits={
+			army={
+				small="GFX_idea_PRC_chen_geng"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = PRC_chen_geng_1
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_entrenchment_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	PRC_ye_jianying_1={
+		name=PRC_ye_jianying
+		portraits={
+			army={
+				small="gfx/leaders/PRC/portrait_prc_ye_jian_ying_1.png"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = PRC_ye_jianying_1
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+		}
+	}
+
+	PRC_liang_shen_1={
+		name=PRC_liang_shen
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = PRC_liang_shen_1
+			ledger = air
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				air_air_combat_training_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	PRC_deng_ye_peng={
+		name=邓叶鹏
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_1"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = PRC_deng_ye_peng
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				navy_amphibious_assault_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+
+	### POLITICAL ADVISOR ###
+
+	# Communist Revolutionary auto-generated
+
+	# Kang Sheng in shared file
+
+	# Deng Xiaoping in shared file
+
+	# Luo Ruiqing in shared file
+
+	PRC_lin_bojiu={
+		name=PRC_lin_bojiu
+		portraits={
+			civilian={
+				small="GFX_idea_generic_political_advisor_asia_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRC_lin_bojiu
+			allowed  = {
+				original_tag  = PRC
+			}
+			traits  = {
+				armaments_organizer 
+			}
+		}
+	}
+
+	PRC_zhou_enlai={
+		name=PRC_zhou_enlai
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/zhou_en_lai.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+			}
+		}
+			idea_token = PRC_zhou_enlai
+		visible = {
+			NOT = { has_completed_focus = PRC_Qing_party }
+			}
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		}
+			traits  = {
+				ideological_crusader
+				head_of_intelligence 
+				#PRC_mao_ze_dong_supporter_A
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_mao_ze_dong_add_supporter
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip =PRC_mao_ze_dong_decrease_supporter 
+			}
+		}
+	}
+	PRC_liu_shaoqi={
+		name=PRC_liu_shaoqi
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/liu_shao_qi.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+		NOT = { has_completed_focus = PRC_Qing_party }
+			}
+		}
+			idea_token = PRC_liu_shaoqi
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		}
+			traits  = {
+				PRC_land_reformist
+				#PRC_mao_ze_dong_supporter_B
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_mao_ze_dong_add_supporter
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip =PRC_mao_ze_dong_decrease_supporter 
+			}
+		}
+	}
+
+	PRC_he_yuandang={
+		name=PRC_he_yuandang
+		portraits={
+			civilian={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRC_he_yuandang
+			allowed  = {
+				original_tag  = PRC
+			}
+			traits  = {
+				war_industrialist 
+			}
+		}
+	}
+
+	PRC_dong_biwu={
+		name=PRC_dong_biwu
+		portraits={
+			civilian={
+				small="GFX_idea_PRC_dong_biwu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRC_dong_biwu
+			allowed  = {
+				original_tag  = PRC
+				has_dlc = "Waking the Tiger"
+			}
+			traits  = {
+				popular_figurehead 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+	PRC_bo_gu={
+		name=PRC_bo_gu
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/bo_gu.png"
+			}
+		}
+		advisor={
+		visible = {
+			NOT = { has_completed_focus = PRC_Qing_party }
+			}
+			slot = political_advisor
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+			}
+		}
+			idea_token = PRC_bo_gu
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		}
+			traits  = {
+				PRC_Advocacy_and_social_activist
+				##PRC_mao_ze_dong_supporter
+			}
+			on_add  = {
+			##custom_effect_tooltip = PRC_After_selection
+			##custom_effect_tooltip = PRC_mao_ze_dong_add_supporter
+			}
+			on_remove  = {
+			##custom_effect_tooltip = PRC_After_removal
+			##custom_effect_tooltip =PRC_mao_ze_dong_decrease_supporter 
+			}
+		}
+	}
+	PRC_chen_geng={
+		name=PRC_chen_geng
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/chen_geng.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+		NOT = { has_completed_focus = PRC_Qing_party }
+			}
+		}
+			idea_token = PRC_chen_geng
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		}
+			traits  = {
+				PRC_Chief_of_the_Intelligence_Section
+				##PRC_mao_ze_dong_supporter
+			}
+			on_add  = {
+			##custom_effect_tooltip = PRC_After_selection
+			##custom_effect_tooltip = PRC_mao_ze_dong_add_supporter
+			}
+			on_remove  = {
+			##custom_effect_tooltip = PRC_After_removal
+			##custom_effect_tooltip =PRC_mao_ze_dong_decrease_supporter 
+			}
+		}
+	}
+	PRC_chen_yun={
+		name=PRC_chen_yun
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/chen_yun.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+		NOT = { has_completed_focus = PRC_Qing_party }
+			}
+		}
+			idea_token = PRC_chen_yun
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		}
+			traits  = {
+				PRC_Economic_reformer
+				##PRC_mao_ze_dong_supporter
+			}
+			on_add  = {
+			##custom_effect_tooltip = PRC_After_selection
+			##custom_effect_tooltip = PRC_mao_ze_dong_add_supporter
+			}
+			on_remove  = {
+			##custom_effect_tooltip = PRC_After_removal
+			##custom_effect_tooltip =PRC_mao_ze_dong_decrease_supporter 
+			}
+		}
+	}
+	PRC_huang_yuan_pei={
+		name=PRC_huang_yuan_pei
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/huang_yuan_pei.png"
+			}
+		}
+		advisor={
+			visible = {
+				#NOT = { has_completed_focus = PRC_Qing_party }
+				always = NO
+				}
+			slot = political_advisor
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+			}
+		}
+			idea_token = PRC_huang_yuan_pei
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		}
+			traits  = {
+				PRC_Educator_and_social_activist
+				#PRC_Zhang_Lan_supporter
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_Zhang_Lan_add_supporter
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip =PRC_Zhang_Lan_decrease_supporter 
+			}
+		}
+	}
+	PRC_zhang_bo_jun={
+		name=PRC_zhang_bo_jun
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/zhang_bo_jun.png"
+			}
+		}
+		advisor={
+			visible = {
+				#NOT = { has_completed_focus = PRC_Qing_party }
+				always = NO
+				}
+			slot = political_advisor
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+			}
+		}
+			idea_token = PRC_zhang_bo_jun
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		}
+			traits  = {
+				PRC_Minister_of_Transport
+				#PRC_Zhang_Lan_supporter_A
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_Zhang_Lan_add_supporter
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip =PRC_Zhang_Lan_decrease_supporter 
+			}
+		}
+	}
+	PRC_zhang_lan={
+		name=PRC_zhang_lan
+		portraits={
+			civilian={
+				large="gfx/leaders/PRC/PRC_zhang_lan.png"
+				small="gfx/leaders/PRC/small/zhang_lan.png"
+			}
+		}
+		country_leader={
+			ideology= left_social_democracy
+			traits={}
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+		available = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		}
+		visible = {
+			#NOT = { has_completed_focus = PRC_Qing_party }
+			always = NO
+			}
+			slot = political_advisor
+			idea_token = PRC_zhang_lan
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		}
+			traits  = {
+				PRC_Democrats
+				##PRC_Zhang_Lan_supporter
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_Zhang_Lan_add_supporter_8add
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip = PRC_Zhang_Lan_decrease_supporter_8decrease
+			}
+		}
+	}
+	PRC_li_zhu_sheng={
+		name= PRC_li_zhu_sheng
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/li_zhu_sheng.png"
+			}
+		}
+		advisor={
+		visible = {
+			#NOT = { has_completed_focus = PRC_Qing_party }
+			always = NO
+			}
+			slot = political_advisor
+		available = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		}
+			idea_token = PRC_li_zhu_sheng
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+			}
+		}
+			traits  = {
+				PRC_Political_commissar
+				PRC_wang_ming_supporter
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_wang_ming_add_supporter
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip = PRC_wang_ming_decrease_supporter
+			}
+		}
+	}
+	PRC_lu_fu_tan={
+		name= PRC_lu_fu_tan
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/lu_fu_tan.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRC_lu_fu_tan
+			allowed  = {
+				original_tag  = PRC
+			}
+			visible = {
+				#NOT = { has_completed_focus = PRC_Qing_party }
+				always = NO
+				}
+			available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+		NOT = { has_completed_focus = PRC_Qing_party }
+			}
+		}
+			traits  = {
+				PRC_Political_commissar
+				PRC_wang_ming_supporter_A
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_wang_ming_add_supporter
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip = PRC_wang_ming_decrease_supporter
+			}
+		}
+	}
+	PRC_ottobraun={
+		name= PRC_ottobraun
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/ottobraun.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRC_ottobraun
+			allowed  = {
+				original_tag  = PRC
+			}
+			visible = {
+				#NOT = { has_completed_focus = PRC_Qing_party }
+				always = NO
+				}
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+			}
+		}
+			traits  = {
+				PRC_Military_intelligence_officer
+				PRC_wang_ming_supporter_B
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_wang_ming_add_supporter
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip = PRC_wang_ming_decrease_supporter
+			}
+		}
+	}
+	PRC_liu_zhi_dan={
+		name= PRC_liu_zhi_dan
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/liu_zhi_dan.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRC_liu_zhi_dan
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+			}
+		}
+			traits  = {
+				PRC_Base_area_construction
+				#PRC_wang_ming_supporter
+			}
+			on_add  = {
+			##custom_effect_tooltip = PRC_After_selection
+			##custom_effect_tooltip = PRC_wang_ming_add_supporter
+			}
+			on_remove  = {
+			##custom_effect_tooltip = PRC_After_removal
+			##custom_effect_tooltip = PRC_wang_ming_decrease_supporter
+			}
+		}
+	}
+	PRC_wang_ming={
+		name= PRC_wang_ming
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/wang_ming.png"
+			}
+		}
+		advisor={
+		visible = {
+			NOT = { has_completed_focus = PRC_Qing_party }
+			}
+			slot = political_advisor
+			idea_token = PRC_wang_ming
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		}
+		visible = {
+			#NOT = { has_completed_focus = PRC_Qing_party }
+			always = NO
+			}
+			traits  = {
+				PRC_Propaganda_Commissioner_and_Correspondent
+				#PRC_wang_ming_supporter
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_wang_ming_add_supporter_8add
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip = PRC_wang_ming_decrease_supporter_8decrease
+			}
+		}
+	}
+	PRC_xi_zhong_xun={
+		name= PRC_xi_zhong_xun
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/xi_zhong_xun.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRC_xi_zhong_xun
+			allowed  = {
+				original_tag  = PRC
+			}
+			available = {
+		OR= {
+			AND = {
+				has_completed_focus = PRC_Peoples_court
+				has_country_flag = PRC_party_commands_gun
+				NOT = { has_country_flag = PRC_gun_commands_party }
+			}
+
+			AND = {
+				NOT = {has_country_flag = PRC_party_commands_gun}
+				has_completed_focus = PRC_Civilian_government
+				NOT = { has_completed_focus = PRC_Qing_party }	
+			}
+				}
+			}
+			traits  = {
+				PRC_Judicial_work
+				PRC_liu_shao_qi_supporter
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = #PRC_mao_ze_dong_supporter_two_add
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip = #PRC_mao_ze_dong_supporter_two_decrease
+			}
+		}
+	}
+	PRC_zhang_guo_tao_Vn={
+		name= PRC_zhang_guo_tao_Vn
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/zhang_guo_tao.png"
+				large="gfx/leaders/PRC/PRC_zhang_guotao.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer politically_connected }
+			skill=4
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+		advisor={
+
+		visible = {
+			#NOT = { has_completed_focus = PRC_Qing_party }
+			always = NO
+			}
+			slot = political_advisor
+			idea_token = PRC_zhang_guo_tao_Vn
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		}
+			traits  = {
+				PRC_Political_speculation
+				#PRC_liu_shao_qi_supporter
+			}
+			on_add  = {
+			#custom_effect_tooltip = PRC_After_selection
+			#custom_effect_tooltip = PRC_zhang_guo_tao_add_supporter_8add
+			}
+			on_remove  = {
+			#custom_effect_tooltip = PRC_After_removal
+			#custom_effect_tooltip = PRC_zhang_guo_tao_decrease_supporter_8decrease
+			}
+		}
+	}
+	PRC_zhang_wen_tian={
+		name= PRC_zhang_wen_tian
+		portraits={
+			civilian={
+				small="gfx/leaders/PRC/small/zhang_wen_tian.png"
+			}
+		}
+		advisor={
+		visible = {
+			NOT = { has_completed_focus = PRC_Qing_party }
+			}
+			slot = political_advisor
+			idea_token = PRC_zhang_wen_tian
+			allowed  = {
+				original_tag  = PRC
+			}
+		available = {
+		OR = {
+		NOT = { has_country_flag = PRC_gun_commands_party }
+		has_completed_focus = PRC_Civilian_government
+			}
+		}
+			traits  = {
+				PRC_Propaganda_and_cadre_education
+			}
+			on_add  = {
+			}
+			on_remove  = {
+			}
+		}
+	}
+}

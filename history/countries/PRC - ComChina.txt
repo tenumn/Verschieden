@@ -1,0 +1,449 @@
+﻿capital = 622
+
+set_technology = {
+	tech_trucks =1
+}
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+		tech_support = 1
+		tech_engineers = 1
+		gw_artillery = 1
+}
+	add_ideas = {
+freedom_of_conscience
+WMP_Positive_affirmative_action
+restricted_child_labor
+right_of_assembly
+}
+set_rule = {
+			can_send_volunteers = no
+			can_puppet = no
+			can_declare_war = no
+			can_create_collaboration_government = no
+}
+	set_technology = {
+		tech_mountaineers = 1
+		tech_support = 1
+		tech_engineers = 1
+		artillery_equipment = 1
+	}
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 400
+		producer = PRC
+		}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment_1
+		amount = 200
+		producer = PRC
+		}
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_0
+		amount = 1300
+		producer = PRC
+		}
+	division_template = { 
+		name = "中央红军" 
+		division_names_group = PRC_INF_01 
+		is_locked = no 
+		regiments = { 
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		}
+		support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		  } 
+		}
+	division_template = { 
+		name = "红军" 
+		division_names_group = PRC_INF_01 
+		is_locked = no
+		regiments = { 
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		  } 
+	support = {
+	}
+		}
+	division_template = { 
+		name = "红军-骑兵师" 
+		division_names_group = PRC_INF_01 
+		is_locked = no 
+		regiments = { 
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		  } 
+		}
+	division_template = { 
+		name = "红军-山地步兵" 
+		division_names_group = PRC_INF_01 
+		is_locked = no 
+		regiments = { 
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		  } 
+		}
+PRC = {
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+}
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+}
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"红军\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"红军\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+}
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军-骑兵师\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军-骑兵师\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军-骑兵师\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+
+}
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军-骑兵师\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军-骑兵师\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军-骑兵师\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+
+}
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"红军-山地步兵\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+
+}
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"红军-山地步兵\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+
+}
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"红军-山地步兵\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+
+}
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"红军-山地步兵\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+
+}
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"红军-山地步兵\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+
+}
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"红军-山地步兵\" division_template = \"红军-骑兵师\" start_experience_factor = 0.1" 
+			owner = PRC
+					}
+		}
+
+}
+oob = "PRC_1936"
+set_stability = 0.6
+set_war_support = 0.7
+
+recruit_character = PRC_mao_zedong
+recruit_character = PRC_zhu_de
+recruit_character = PRC_chen_yi
+recruit_character = PRC_peng_dehuai
+recruit_character = PRC_lin_biao
+recruit_character = PRC_kwong_hu
+recruit_character = PRC_luo_zhao
+recruit_character = PRC_liang_ma_1
+recruit_character = PRC_ma_jin
+recruit_character = PRC_ziao_jingguang
+recruit_character = PRC_nie_rongzhen_1
+recruit_character = PRC_su_yu
+recruit_character = PRC_liu_bocheng_1
+recruit_character = PRC_chen_geng_1
+recruit_character = PRC_gao_qiu
+recruit_character = PRC_liang_shen_1
+recruit_character = PRC_otto_braun
+recruit_character = PRC_fang_zeyi
+recruit_character = PRC_xu_xiangqian_1
+recruit_character = PRC_deng_ye_peng
+recruit_character = PRC_ye_jianying_1
+recruit_character = PRC_hsia_tian
+recruit_character = PRC_zhang_wei
+recruit_character = PRC_lin_bojiu
+recruit_character = PRC_he_yuandang
+######################新增#############
+recruit_character = PRC_bo_gu#博古
+recruit_character = PRC_chen_geng#陈赓
+recruit_character = PRC_zhang_wen_tian#张闻天
+recruit_character = PRC_chen_yun#陈云
+recruit_character = PRC_daoshangfei#邓小平
+recruit_character = PRC_zhou_enlai#周恩来
+recruit_character = PRC_liu_shaoqi#刘少奇
+recruit_character = PRC_xi_zhong_xun#习仲勋
+recruit_character = PRC_wang_ming#王明
+recruit_character = PRC_ottobraun#李德
+recruit_character = PRC_lu_fu_tan#卢福坦
+recruit_character = PRC_li_zhu_sheng#李竹声
+recruit_character = PRC_zhang_lan#张澜
+recruit_character = PRC_huang_yuan_pei#黄炎培
+recruit_character = PRC_zhang_bo_jun#章伯君
+recruit_character = PRC_zhang_guo_tao_Vn#张国焘
+recruit_character = PRC_dong_biwu#董必武
+recruit_character = PRC_kang_sheng#康生
+recruit_character = PRC_liu_bocheng
+recruit_character = PRC_suyu
+recruit_character = PRC_helong
+recruit_character = PRC_yeting
+recruit_character = PRC_luo_ronghuan
+recruit_character = PRC_ye_jianying
+recruit_character = PRC_xu_xiangqian
+recruit_character = PRC_nie_rongzhen
+recruit_character = PRC_xiao_jingguang
+recruit_character = PRC_chengang
+recruit_character = PRC_zhang_aiping
+recruit_character = PRC_red_army_duoqua#工农红军革命委员会
+recruit_character = PRC_liu_zhi_dan
+
+
+
+save_global_event_target_as = WTT_communist_china
+
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	add_command_power = 100
+	oob = "PRC_1939"
+
+	if = {
+		limit = {
+			has_dlc = "Waking the Tiger"
+		}
+		complete_national_focus = PRC_strengthen_the_central_secretariat
+		complete_national_focus = PRC_land_redistribution
+		complete_national_focus = PRC_enforce_the_three_rules
+		complete_national_focus = PRC_agrarian_socialism
+		complete_national_focus = PRC_the_yanan_base_area
+		complete_national_focus = PRC_focus_on_china
+		complete_national_focus = PRC_infiltration
+		complete_national_focus = PRC_revolutionary_military_commission
+		complete_national_focus = PRC_literacy_programs
+		complete_national_focus = CHI_mission_to_the_soviet_union
+		complete_national_focus = PRC_ban_the_opium_trade
+		complete_national_focus = PRC_military_intelligence_department
+		complete_national_focus = PRC_prepare_for_war_with_japan
+		complete_national_focus = PRC_anti_japanese_expedition
+		complete_national_focus = PRC_provoke_japan
+		complete_national_focus = PRC_mobile_warfare
+
+		set_research_slots = 3
+
+		add_ideas = {
+			PRC_revolutionary_military_commission
+			PRC_low_popular_support_3
+			PRC_the_long_march_2
+			PRC_mobile_warfare
+			PRC_focus_on_china
+		}
+		remove_ideas = {
+			PRC_low_popular_support_1
+			PRC_the_long_march_1
+		}
+		else = {
+			#generic focuses
+			complete_national_focus = army_effort
+			complete_national_focus = equipment_effort
+			complete_national_focus = motorization_effort
+			complete_national_focus = aviation_effort
+			complete_national_focus = naval_effort
+			complete_national_focus = flexible_navy
+			complete_national_focus = industrial_effort
+			complete_national_focus = construction_effort
+			complete_national_focus = production_effort
+		}
+	}
+	
+	# Chinese Popular Front effects
+	add_to_war = {
+		targeted_alliance = CHI
+		enemy = JAP
+		hostility_reason = asked_to_join
+	}
+	set_country_flag = PRC_joined_CHI_against_JAP
+	remove_opinion_modifier = { target = CHI modifier = hostile_status }
+	add_state_claim = 612
+	add_state_claim = 611
+	add_state_claim = 714
+	add_state_claim = 717
+	add_state_claim = 328
+	add_state_claim = 716
+	add_state_claim = 715
+	add_state_claim = 610
+	add_state_claim = 609
+	add_state_claim = 597
+	add_state_claim = 614
+	add_state_claim = 525
+	add_state_claim = 608
+	add_state_claim = 615
+	add_state_claim = 527
+
+	add_ideas = {
+		#laws
+		partial_economic_mobilisation
+		extensive_conscription
+		free_trade
+	}
+	
+	set_technology = {
+		tech_mountaineers = 1
+		#doctrines
+		tech_support = 1
+		tech_engineers = 1
+		gw_artillery = 1
+		air_superiority = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1935.12.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 60
+	socialist = 10
+	democratic = 10
+	neutrality  = 20
+}
+
+add_ideas = {
+	free_trade
+		extensive_conscription
+	partial_economic_mobilisation
+}
+
+PRC = {
+	country_event = { id = PRC.20 days = 14862 }
+	country_event = { id = PRCXI.1 days = 2 }
+	}
+	add_ideas = {
+############经济制度############
+economy_cooperative_ownership
+
+##############################VNmod精神(只是这么排列好看)
+		PRC_countryside_surrounds_city
+############唤醒猛虎DLC精神############
+		PRC_low_popular_support_3
+		PRC_power_struggles
+		PRC_army_qution
+		
+
+##############################VNmod精神
+		PRC_Yan_an_Industry
+		PRC_red_amry
+		PRC_Agricultural
+		PRC_Low_literacy_rate
+		PRC_Opium_trade_VN
+		PRC_Land_reform
+		PRC_Kuomintang_economic_blockade
+		PRC_Yan_an_Industry_hidden
+
+	}
+	add_timed_idea = { idea = PRC_the_long_march_2 days = 150 }
+
+remove_ideas = One_party_state
+remove_ideas= Appointment_bureaucracy
+add_opinion_modifier = { target = CHI modifier = hostile_status }
+add_opinion_modifier = { target = ROC modifier = Revolutionary_comrades }

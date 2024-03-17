@@ -1,0 +1,1283 @@
+spriteTypes = {	
+
+	#### Generic continuous goal icons
+
+	SpriteType = { 
+		name = "GFX_INGSOC"
+		texturefile = "gfx/interface/goals/INGSOC.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_INGSOC_affluence"
+		texturefile = "gfx/interface/goals/INGSOC_affluence.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_INGSOC_bigbrother"
+		texturefile = "gfx/interface/goals/INGSOC_bigbrother.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_INGSOC_bigbrother_firend"
+		texturefile = "gfx/interface/goals/INGSOC_bigbrother_firend.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_EYES"
+		texturefile = "gfx/interface/goals/INGSOC_EYES.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_INGSOC_free"
+		texturefile = "gfx/interface/goals/INGSOC_free.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_INGSOC_friendship"
+		texturefile = "gfx/interface/goals/INGSOC_friendship.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_INGSOC_news"
+		texturefile = "gfx/interface/goals/INGSOC_news.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_peace"
+		texturefile = "gfx/interface/goals/INGSOC_peace.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_INGSOC_strength"
+		texturefile = "gfx/interface/goals/INGSOC_strength.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_INGSOC_truth"
+		texturefile = "gfx/interface/goals/INGSOC_truth.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_INGSOC_war"
+		texturefile = "gfx/interface/goals/INGSOC_war.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_market"
+		texturefile = "gfx/interface/goals/INGSOC_market.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_INGSOC_hand_union"
+		texturefile = "gfx/interface/goals/INGSOC_hand_union.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_trial"
+		texturefile = "gfx/interface/goals/INGSOC_trial.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_five1"
+		texturefile = "gfx/interface/goals/INGSOC_five1.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_five2"
+		texturefile = "gfx/interface/goals/INGSOC_five2.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_five3"
+		texturefile = "gfx/interface/goals/INGSOC_five3.png"
+	}
+	SpriteType = { 
+		name = "GFX_ban_unions"
+		texturefile = "gfx/interface/goals/ban_unions.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_plan"
+		texturefile = "gfx/interface/goals/INGSOC_plan.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_state"
+		texturefile = "gfx/interface/goals/INGSOC_state.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_warplan"
+		texturefile = "gfx/interface/goals/INGSOC_warplan.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_warplan_japen"
+		texturefile = "gfx/interface/goals/INGSOC_warplan_japen.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_warplan_nazi"
+		texturefile = "gfx/interface/goals/INGSOC_warplan_nazi.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_warplan_sov"
+		texturefile = "gfx/interface/goals/INGSOC_warplan_sov.png"
+	}
+	SpriteType = { 
+		name = "GFX_INGSOC_boom"
+		texturefile = "gfx/interface/goals/INGSOC_boom.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_Proletarian_hegemony"
+		texturefile = "gfx/interface/goals/AFS_Proletarian_hegemony.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_all_dictatorship_of_the_proletariat"
+		texturefile = "gfx/interface/goals/AFS_all_dictatorship_of_the_proletariat.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_dictatorship_of_the_proletariat"
+		texturefile = "gfx/interface/goals/AFS_dictatorship_of_the_proletariat.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_Farmers_Committees"
+		texturefile = "gfx/interface/goals/AFS_Farmers_Committees.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_Farmers_Committees_2"
+		texturefile = "gfx/interface/goals/AFS_Farmers_Committees_2.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_Soviet_Democracy"
+		texturefile = "gfx/interface/goals/AFS_Soviet_Democracy.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_red_flag"
+		texturefile = "gfx/interface/goals/AFS_red_flag.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_commune"
+		texturefile = "gfx/interface/goals/AFS_commune.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_eighthour"
+		texturefile = "gfx/interface/goals/AFS_eighthour.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_sovietTrial"
+		texturefile = "gfx/interface/goals/AFS_sovietTrial.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_Revolutionary_terror"
+		texturefile = "gfx/interface/goals/AFS_Revolutionary_terror.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_Syndical_economy"
+		texturefile = "gfx/interface/goals/AFS_Syndical_economy.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_Agricultural_Revolution"
+		texturefile = "gfx/interface/goals/AFS_Agricultural_Revolution.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_Industrial_Revolution"
+		texturefile = "gfx/interface/goals/AFS_Industrial_Revolution.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_Military_revolution"
+		texturefile = "gfx/interface/goals/AFS_Military_revolution.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_Social_Democratic_Party"
+		texturefile = "gfx/interface/goals/AFS_Social_Democratic_Party.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_SRP"
+		texturefile = "gfx/interface/goals/AFS_SRP.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_railway"
+		texturefile = "gfx/interface/goals/AFS_railway.png"
+	}
+	SpriteType = { 
+		name = "GFX_AFS_railway2"
+		texturefile = "gfx/interface/goals/AFS_railway2.png"
+	}
+	SpriteType = { 
+		name = "GFX_world_revolution"
+		texturefile = "gfx/interface/goals/world_revolution.png"
+	}
+	SpriteType = { 
+		name = "GFX_redHorror"
+		texturefile = "gfx/interface/goals/redHorror.png"
+	}
+	SpriteType = { 
+		name = "GFX_Socialist_democracy"
+		texturefile = "gfx/interface/goals/Socialist_democracy.png"
+	}
+	SpriteType = { 
+		name = "GFX_trial_2"
+		texturefile = "gfx/interface/goals/trial_2.png"
+	}
+	SpriteType = { 
+		name = "GFX_Socialist_revolution"
+		texturefile = "gfx/interface/goals/Socialist_revolution.png"
+	}
+	SpriteType = { 
+		name = "GFX_Syndical_International"
+		texturefile = "gfx/interface/goals/Syndical_International.png"
+	}
+	SpriteType = { 
+		name = "GFX_white_Horror"
+		texturefile = "gfx/interface/goals/white_Horror.png"
+	}
+	SpriteType = { 
+		name = "GFX_jail"
+		texturefile = "gfx/interface/goals/jail.png"
+	}
+	SpriteType = { 
+		name = "GFX_not_democracy"
+		texturefile = "gfx/interface/goals/not_democracy.png"
+	}
+	SpriteType = { 
+		name = "GFX_Amnesty_world"
+		texturefile = "gfx/interface/goals/Amnesty_world.png"
+	}
+	SpriteType = { 
+		name = "GFX_anarchsyndicalism"
+		texturefile = "gfx/interface/goals/anarchsyndicalism.png"
+	}
+	SpriteType = { 
+		name = "GFX_anarchism"
+		texturefile = "gfx/interface/goals/anarchism.png"
+	}
+	SpriteType = { 
+		name = "GFX_Communist_education"
+		texturefile = "gfx/interface/goals/Communist_education.png"
+	}
+	SpriteType = { 
+		name = "GFX_Horror"
+		texturefile = "gfx/interface/goals/Horror.png"
+	}
+	SpriteType = { 
+		name = "GFX_democracy"
+		texturefile = "gfx/interface/goals/democracy.png"
+	}
+	SpriteType = { 
+		name = "GFX_Military_factories"
+		texturefile = "gfx/interface/goals/Military_factories.png"
+	}
+	SpriteType = { 
+		name = "GFX_Military_factories2"
+		texturefile = "gfx/interface/goals/Military_factories2.png"
+	}
+	SpriteType = { 
+		name = "GFX_Military_factories3"
+		texturefile = "gfx/interface/goals/Military_factories3.png"
+	}
+	SpriteType = { 
+		name = "GFX_Civilian_factories"
+		texturefile = "gfx/interface/goals/Civilian_factories.png"
+	}
+	SpriteType = { 
+		name = "GFX_Civilian_factories2"
+		texturefile = "gfx/interface/goals/Civilian_factories2.png"
+	}
+	SpriteType = { 
+		name = "GFX_Civilian_factories3"
+		texturefile = "gfx/interface/goals/Civilian_factories3.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_NYJTH"
+		texturefile = "gfx/interface/goals/LTD_NYJTH.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_YYDJ"
+		texturefile = "gfx/interface/goals/LTD_YYDJ.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_torture"
+		texturefile = "gfx/interface/goals/LTD_torture.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_LLYHGHY"
+		texturefile = "gfx/interface/goals/LTD_LLYHGHY.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_LLJZ"
+		texturefile = "gfx/interface/goals/LTD_LLJZ.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_LLGS"
+		texturefile = "gfx/interface/goals/LTD_LLGS.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_LLGL"
+		texturefile = "gfx/interface/goals/LTD_LLGL.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_LL"
+		texturefile = "gfx/interface/goals/LTD_LL.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_DJNHG"
+		texturefile = "gfx/interface/goals/LTD_DJNHG.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_DJJJXCN"
+		texturefile = "gfx/interface/goals/LTD_DJJJXCN.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_DJJJG"
+		texturefile = "gfx/interface/goals/LTD_DJJJG.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_DJJJ"
+		texturefile = "gfx/interface/goals/LTD_DJJJ.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_DJCY"
+		texturefile = "gfx/interface/goals/LTD_DJCY.png"
+	}
+	SpriteType = { 
+		name = "GFX_LTD_DJ"
+		texturefile = "gfx/interface/goals/LTD_DJ.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Chairman_Lenin"
+		texturefile = "gfx/interface/goals/SOV_Chairman_Lenin.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_HOUSE"
+		texturefile = "gfx/interface/goals/SOV_HOUSE.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_railway_construction"
+		texturefile = "gfx/interface/goals/SOV_railway_construction.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Rural_Electro"
+		texturefile = "gfx/interface/goals/SOV_Rural_Electro.png"
+	}
+	SpriteType = { 
+		name = "GFX_jhjj_gern"
+		texturefile = "gfx/interface/goals/jhjj_gern.png"
+	}
+	SpriteType = { 
+		name = "GFX_GERN_social_democracy"
+		texturefile = "gfx/interface/goals/GERN_social_democracy.png"
+	}
+	SpriteType = { 
+		name = "GFX_socialist_market_economy"
+		texturefile = "gfx/interface/goals/socialist_market_economy.png"
+	}
+	SpriteType = { 
+		name = "GFX_economic_recovery"
+		texturefile = "gfx/interface/goals/economic_recovery.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_marx"
+		texturefile = "gfx/interface/goals/PRC_marx.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_red_army"
+		texturefile = "gfx/interface/goals/PRC_red_army.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_ban_the_opium_trade"
+		texturefile = "gfx/interface/goals/PRC_ban_the_opium_trade.png"
+	}
+	SpriteType = { 
+		name = "GFX_abolish_the_land_rent"
+		texturefile = "gfx/interface/goals/abolish_the_land_rent.png"
+	}
+	SpriteType = { 
+		name = "GFX_Communalization_of_land"
+		texturefile = "gfx/interface/goals/Communalization_of_land.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_Broken_four_old"
+		texturefile = "gfx/interface/goals/PRC_Broken_four_old.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_Criticize_Confucius"
+		texturefile = "gfx/interface/goals/PRC_Criticize_Confucius.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_Criticize_Confucius_2"
+		texturefile = "gfx/interface/goals/PRC_Criticize_Confucius_2.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_ok_the_opium_trade"
+		texturefile = "gfx/interface/goals/PRC_ok_the_opium_trade.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_United_front"
+		texturefile = "gfx/interface/goals/PRC_United_front.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_guerrilla_warfare"
+		texturefile = "gfx/interface/goals/PRC_guerrilla_warfare.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_Cultural_revolution_1"
+		texturefile = "gfx/interface/goals/PRC_Cultural_revolution_1.png"
+	}
+	SpriteType = { 
+		name = "GFX_PEK_fuckcup"
+		texturefile = "gfx/interface/goals/PEK_fuckcup.png"
+	}
+	SpriteType = { 
+		name = "GFX_PEK_M"
+		texturefile = "gfx/interface/goals/PEK_M.png"
+	}
+	SpriteType = { 
+		name = "GFX_PEK_fascit"
+		texturefile = "gfx/interface/goals/PEK_fascit.png"
+	}
+	SpriteType = { 
+		name = "GFX_newfocus_10_PEK"
+		texturefile = "gfx/interface/goals/newfocus_10_PEK.png"
+	}
+	SpriteType = { 
+		name = "GFX_newfocus_13_PEK"
+		texturefile = "gfx/interface/goals/newfocus_13_PEK.png"
+	}
+	SpriteType = { 
+		name = "GFX_newfocus_19_PEK"
+		texturefile = "gfx/interface/goals/newfocus_19_PEK.png"
+	}
+	SpriteType = { 
+		name = "GFX_newfocus_18_PEK"
+		texturefile = "gfx/interface/goals/newfocus_18_PEK.png"
+	}
+	SpriteType = { 
+		name = "GFX_newfocus_33_PEK"
+		texturefile = "gfx/interface/goals/newfocus_33_PEK.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_researchSOV"
+		texturefile = "gfx/interface/goals/PRC_researchSOV.png"
+	}
+	SpriteType = { 
+		name = "GFX_FKlienism"
+		texturefile = "gfx/interface/goals/FKlienism.png"
+	}
+	SpriteType = { 
+		name = "GFX_Soism_CHITS"
+		texturefile = "gfx/interface/goals/Soism_CHITS.png"
+	}
+	SpriteType = { 
+		name = "GFX_Large_envelope_system"
+		texturefile = "gfx/interface/goals/Large_envelope_system.png"
+	}
+	SpriteType = { 
+		name = "GFX_dictatorship_SOV"
+		texturefile = "gfx/interface/goals/dictatorship_SOV.png"
+	}
+	SpriteType = { 
+		name = "GFX_Soviet_model_SOV"
+		texturefile = "gfx/interface/goals/Soviet_model_SOV.png"
+	}
+	SpriteType = { 
+		name = "GFX_fuck_Trotsky"
+		texturefile = "gfx/interface/goals/fuck_Trotsky.png"
+	}
+	SpriteType = { 
+		name = "GFX_Troika_SOV"
+		texturefile = "gfx/interface/goals/Troika_SOV.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia_2"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia_2.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia_3"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia_3.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia_4"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia_4.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia_5"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia_5.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia_6"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia_6.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia_7"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia_7.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia_8"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia_8.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia_9"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia_9.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Collectivization_of_agriculture"
+		texturefile = "gfx/interface/goals/JAP_Collectivization_of_agriculture.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_NFP"
+		texturefile = "gfx/interface/goals/JAP_NFP.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_people_owned_mines"
+		texturefile = "gfx/interface/goals/JAP_people_owned_mines.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Syndical_economy"
+		texturefile = "gfx/interface/goals/JAP_Syndical_economy.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Heavy_industry_syndicalism"
+		texturefile = "gfx/interface/goals/JAP_Heavy_industry_syndicalism.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_destiny"
+		texturefile = "gfx/interface/goals/JAP_destiny.png"
+	}
+	SpriteType = { 
+		name = "GFX_goal_support_socialism"
+		texturefile = "gfx/interface/goals/goal_support_socialism.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_red_brigades"
+		texturefile = "gfx/interface/goals/JAP_red_brigades.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Empower_Senate"
+		texturefile = "gfx/interface/goals/JAP_Empower_Senate.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Restructuring_Congress"
+		texturefile = "gfx/interface/goals/JAP_Restructuring_Congress.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Restructuring_economy"
+		texturefile = "gfx/interface/goals/JAP_Restructuring_economy.png"
+	}
+	SpriteType = { 
+		name = "GFX_state"
+		texturefile = "gfx/interface/goals/state.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_rub"
+		texturefile = "gfx/interface/goals/JAP_rub.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_steel"
+		texturefile = "gfx/interface/goals/JAP_steel.png"
+	}
+	SpriteType = { 
+		name = "GFX_plan"
+		texturefile = "gfx/interface/goals/plan.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Asiacommunism"
+		texturefile = "gfx/interface/goals/JAP_Asiacommunism.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Authorized_Soviets"
+		texturefile = "gfx/interface/goals/JAP_Authorized_Soviets.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_CMC"
+		texturefile = "gfx/interface/goals/JAP_CMC.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_commissar"
+		texturefile = "gfx/interface/goals/JAP_commissar.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Foreign_experts"
+		texturefile = "gfx/interface/goals/JAP_Foreign_experts.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Industrial_Committee"
+		texturefile = "gfx/interface/goals/JAP_Industrial_Committee.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_JAPsoviet"
+		texturefile = "gfx/interface/goals/JAP_JAPsoviet.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_lighthousenew"
+		texturefile = "gfx/interface/goals/JAP_lighthousenew.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Militarization_labor"
+		texturefile = "gfx/interface/goals/JAP_Militarization_labor.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_mobilization"
+		texturefile = "gfx/interface/goals/JAP_mobilization.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_NAC"
+		texturefile = "gfx/interface/goals/JAP_NAC.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_NEC"
+		texturefile = "gfx/interface/goals/JAP_NEC.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_OLS"
+		texturefile = "gfx/interface/goals/JAP_OLS.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Political_Protection_Bureau"
+		texturefile = "gfx/interface/goals/JAP_Political_Protection_Bureau.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Proletarian_command"
+		texturefile = "gfx/interface/goals/JAP_Proletarian_command.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_repression"
+		texturefile = "gfx/interface/goals/JAP_repression.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_repression_2"
+		texturefile = "gfx/interface/goals/JAP_repression_2.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_repression_3"
+		texturefile = "gfx/interface/goals/JAP_repression_3.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_SOVcommunism"
+		texturefile = "gfx/interface/goals/JAP_SOVcommunism.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_support_SOVJAP"
+		texturefile = "gfx/interface/goals/JAP_support_SOVJAP.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Survival_Army"
+		texturefile = "gfx/interface/goals/JAP_Survival_Army.png"
+	}
+	SpriteType = { 
+		name = "GFX_JAP_Urbanization_new"
+		texturefile = "gfx/interface/goals/JAP_Urbanization_new.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_agriculture_modernization"
+		texturefile = "gfx/interface/goals/CHI_agriculture_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_air_modernization"
+		texturefile = "gfx/interface/goals/CHI_air_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_anti_communism"
+		texturefile = "gfx/interface/goals/CHI_anti_communism.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_collectivization"
+		texturefile = "gfx/interface/goals/CHI_collectivization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_collectivization_2"
+		texturefile = "gfx/interface/goals/CHI_collectivization_2.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_collectivization_3"
+		texturefile = "gfx/interface/goals/CHI_collectivization_3.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_constitutional_reform"
+		texturefile = "gfx/interface/goals/CHI_constitutional_reform.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_democracy"
+		texturefile = "gfx/interface/goals/CHI_democracy.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_democratic_centralism"
+		texturefile = "gfx/interface/goals/CHI_democratic_centralism.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_equipment_modernization"
+		texturefile = "gfx/interface/goals/CHI_equipment_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_executive_yuan"
+		texturefile = "gfx/interface/goals/CHI_executive_yuan.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_fire_modernization"
+		texturefile = "gfx/interface/goals/CHI_fire_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_fire_modernization"
+		texturefile = "gfx/interface/goals/CHI_fire_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_freely"
+		texturefile = "gfx/interface/goals/CHI_freely.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_gun_modernization"
+		texturefile = "gfx/interface/goals/CHI_gun_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_industrial_evacuations"
+		texturefile = "gfx/interface/goals/CHI_industrial_evacuations.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_industrial_evacuations_new"
+		texturefile = "gfx/interface/goals/industrial_evacuations_new.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Industrial_modernization"
+		texturefile = "gfx/interface/goals/CHI_Industrial_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Industrial_modernization"
+		texturefile = "gfx/interface/goals/CHI_Industrial_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Industrial_modernization_4"
+		texturefile = "gfx/interface/goals/CHI_Industrial_modernization_4.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Internal_and_external_troubles"
+		texturefile = "gfx/interface/goals/CHI_Internal_and_external_troubles.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Japan_threat"
+		texturefile = "gfx/interface/goals/CHI_Japan_threat.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_judicial_yuan"
+		texturefile = "gfx/interface/goals/CHI_judicial_yuan.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_left"
+		texturefile = "gfx/interface/goals/CHI_left.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_motorization_modernization"
+		texturefile = "gfx/interface/goals/CHI_motorization_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_National_atheism"
+		texturefile = "gfx/interface/goals/CHI_National_atheism.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_National_industry"
+		texturefile = "gfx/interface/goals/CHI_National_industry.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_democracy_new"
+		texturefile = "gfx/interface/goals/CHI_democracy_new.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_welfare"
+		texturefile = "gfx/interface/goals/CHI_welfare.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Industrial_modernization_2"
+		texturefile = "gfx/interface/goals/CHI_Industrial_modernization_2.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_right"
+		texturefile = "gfx/interface/goals/CHI_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_nationalism"
+		texturefile = "gfx/interface/goals/CHI_nationalism.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_subjugate_the_warlords"
+		texturefile = "gfx/interface/goals/CHI_subjugate_the_warlords.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_seizure"
+		texturefile = "gfx/interface/goals/CHI_seizure.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_refugee_relief_agency"
+		texturefile = "gfx/interface/goals/CHI_refugee_relief_agency.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_unemployment_assistance"
+		texturefile = "gfx/interface/goals/CHI_unemployment_assistance.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_tank_modernization"
+		texturefile = "gfx/interface/goals/CHI_tank_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_technology_modernization"
+		texturefile = "gfx/interface/goals/CHI_technology_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_technology_modernization_1"
+		texturefile = "gfx/interface/goals/CHI_technology_modernization_1.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_technology_modernization_2"
+		texturefile = "gfx/interface/goals/CHI_technology_modernization_2.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_technology_modernization_3"
+		texturefile = "gfx/interface/goals/CHI_technology_modernization_3.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_political_modernization"
+		texturefile = "gfx/interface/goals/CHI_political_modernization.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Five_modernizations"
+		texturefile = "gfx/interface/goals/CHI_Five_modernizations.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_control_yuan"
+		texturefile = "gfx/interface/goals/CHI_control_yuan.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_refugee_relief_agency"
+		texturefile = "gfx/interface/goals/CHI_refugee_relief_agency.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_National_atheism"
+		texturefile = "gfx/interface/goals/CHI_National_atheism.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Npc"
+		texturefile = "gfx/interface/goals/CHI_Npc.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_war_of_resistance"
+		texturefile = "gfx/interface/goals/CHI_war_of_resistance.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_worker"
+		texturefile = "gfx/interface/goals/CHI_worker.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_united_front"
+		texturefile = "gfx/interface/goals/CHI_united_front.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Abolition_elections"
+		texturefile = "gfx/interface/goals/CHI_Abolition_elections.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_antiCorruption"
+		texturefile = "gfx/interface/goals/CHI_antiCorruption.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_army_loyalty"
+		texturefile = "gfx/interface/goals/CHI_army_loyalty.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_chenguofu"
+		texturefile = "gfx/interface/goals/CHI_chenguofu.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_chenlifu"
+		texturefile = "gfx/interface/goals/CHI_chenlifu.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_control_yuan_right"
+		texturefile = "gfx/interface/goals/CHI_control_yuan_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_court"
+		texturefile = "gfx/interface/goals/CHI_court.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_democratic_centralism_right"
+		texturefile = "gfx/interface/goals/CHI_democratic_centralism_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_economies_right"
+		texturefile = "gfx/interface/goals/CHI_economies_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_economy_right"
+		texturefile = "gfx/interface/goals/CHI_economy_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_executive_yuan_right"
+		texturefile = "gfx/interface/goals/CHI_executive_yuan_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_gaozongwu_right"
+		texturefile = "gfx/interface/goals/CHI_gaozongwu_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Government_loyalty"
+		texturefile = "gfx/interface/goals/CHI_Government_loyalty.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_judicial_yuan_right"
+		texturefile = "gfx/interface/goals/CHI_judicial_yuan_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Kong_Xiangx"
+		texturefile = "gfx/interface/goals/CHI_Kong_Xiangx.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_legislative_yuan_right"
+		texturefile = "gfx/interface/goals/CHI_legislative_yuan_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Limit_Song"
+		texturefile = "gfx/interface/goals/CHI_Limit_Song.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Limit_Song_2"
+		texturefile = "gfx/interface/goals/CHI_Limit_Song_2.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_literate_right"
+		texturefile = "gfx/interface/goals/CHI_literate_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_media"
+		texturefile = "gfx/interface/goals/CHI_media.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Nationalization_right"
+		texturefile = "gfx/interface/goals/CHI_Nationalization_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Nippon_Daily_right"
+		texturefile = "gfx/interface/goals/CHI_Nippon_Daily_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Patriotic_right"
+		texturefile = "gfx/interface/goals/CHI_Patriotic_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Poverty_right"
+		texturefile = "gfx/interface/goals/CHI_Poverty_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_revolution_right"
+		texturefile = "gfx/interface/goals/CHI_revolution_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_rightjichu"
+		texturefile = "gfx/interface/goals/CHI_rightjichu.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Rural_construction_right"
+		texturefile = "gfx/interface/goals/CHI_Rural_construction_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_Special_Bureau_of_China"
+		texturefile = "gfx/interface/goals/CHI_Special_Bureau_of_China.png"
+	}
+	SpriteType = { 
+		name = "GFX_CHI_wjw_right"
+		texturefile = "gfx/interface/goals/CHI_wjw_right.png"
+	}
+	SpriteType = { 
+		name = "GFX_FRA_Corporatism"
+		texturefile = "gfx/interface/goals/FRA_Corporatism.png"
+	}
+	SpriteType = { 
+		name = "GFX_FRA_work"
+		texturefile = "gfx/interface/goals/FRA_work.png"
+	}
+	SpriteType = { 
+		name = "GFX_FRA_qiaozhi_waluwa"
+		texturefile = "gfx/interface/goals/FRA_qiaozhi_waluwa.png"
+	}
+	SpriteType = { 
+		name = "GFX_FRA_masaier_daiya"
+		texturefile = "gfx/interface/goals/FRA_masaier_daiya.png"
+	}
+	SpriteType = { 
+		name = "GFX_MAN_Police_Agency"
+		texturefile = "gfx/interface/goals/MAN_Police_Agency.png"
+	}
+	SpriteType = { 
+		name = "GFX_MAN_Militaristic_educatio"
+		texturefile = "gfx/interface/goals/MAN_Militaristic_educatio.png"
+	}
+	SpriteType = { 
+		name = "GFX_MAN_Hideki_Tojo"
+		texturefile = "gfx/interface/goals/MAN_Hideki_Tojo.png"
+	}
+	SpriteType = { 
+		name = "GFX_MAN_Forced_labor"
+		texturefile = "gfx/interface/goals/MAN_Forced_labor.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Soviet_railway"
+		texturefile = "gfx/interface/goals/SOV_Soviet_railway.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_optimize_production_lines_T"
+		texturefile = "gfx/interface/goals/SOV_optimize_production_lines_T.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Laying_power_grid"
+		texturefile = "gfx/interface/goals/SOV_Laying_power_grid.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_hydraulic_engineering_D"
+		texturefile = "gfx/interface/goals/SOV_hydraulic_engineering_D.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_hydraulic_engineering_C"
+		texturefile = "gfx/interface/goals/SOV_hydraulic_engineering_C.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_hydraulic_engineering_B"
+		texturefile = "gfx/interface/goals/SOV_hydraulic_engineering_B.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_hydraulic_engineering_A"
+		texturefile = "gfx/interface/goals/SOV_hydraulic_engineering_A.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Electrical_Authority"
+		texturefile = "gfx/interface/goals/SOV_Electrical_Authority.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia_paper"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia_paper.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Development_of_Siberia_4_1"
+		texturefile = "gfx/interface/goals/SOV_Development_of_Siberia_4_1.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_chairmanTrotsky"
+		texturefile = "gfx/interface/goals/SOV_chairmanTrotsky.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Carry_out_large_scale_electrification"
+		texturefile = "gfx/interface/goals/SOV_Carry_out_large_scale_electrification.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Authority_FYP"
+		texturefile = "gfx/interface/goals/SOV_Authority_FYP.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Affirmative_action"
+		texturefile = "gfx/interface/goals/SOV_Affirmative_action.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Agricultural_unions"
+		texturefile = "gfx/interface/goals/SOV_Agricultural_unions.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Amnesty_political_prisoners"
+		texturefile = "gfx/interface/goals/SOV_Amnesty_political_prisoners.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_aozhadongnnaya"
+		texturefile = "gfx/interface/goals/SOV_aozhadongnnaya.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Central_organ_newspaper"
+		texturefile = "gfx/interface/goals/SOV_Central_organ_newspaper.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Committee_Agriculture"
+		texturefile = "gfx/interface/goals/SOV_Committee_Agriculture.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Comrade_East"
+		texturefile = "gfx/interface/goals/SOV_Comrade_East.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_International_avant_garde_art"
+		texturefile = "gfx/interface/goals/SOV_International_avant_garde_art.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Internationalist_education"
+		texturefile = "gfx/interface/goals/SOV_Internationalist_education.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Kollontai_International"
+		texturefile = "gfx/interface/goals/SOV_Kollontai_International.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Liberation_Manchuria"
+		texturefile = "gfx/interface/goals/SOV_Liberation_Manchuria.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Liberation_Pseudomask"
+		texturefile = "gfx/interface/goals/SOV_Liberation_Pseudomask.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Literary_artistic_freedom"
+		texturefile = "gfx/interface/goals/SOV_Literary_artistic_freedom.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Literary_soldiers"
+		texturefile = "gfx/interface/goals/SOV_Literary_soldiers.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_LSRPR"
+		texturefile = "gfx/interface/goals/SOV_LSRPR.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Militarization_labor"
+		texturefile = "gfx/interface/goals/SOV_Militarization_labor.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Militarization_trade_union"
+		texturefile = "gfx/interface/goals/SOV_Militarization_trade_union.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Militarization_transport"
+		texturefile = "gfx/interface/goals/SOV_Militarization_transport.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_peasant_democracy"
+		texturefile = "gfx/interface/goals/SOV_peasant_democracy.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Production_Corps"
+		texturefile = "gfx/interface/goals/SOV_Production_Corps.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_red_guard"
+		texturefile = "gfx/interface/goals/SOV_red_guard.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Release_Tokuda_Yuichi"
+		texturefile = "gfx/interface/goals/SOV_Release_Tokuda_Yuichi.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_SFZZF"
+		texturefile = "gfx/interface/goals/SOV_SFZZF.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_SUWP"
+		texturefile = "gfx/interface/goals/SOV_SUWP.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Technological_revolution"
+		texturefile = "gfx/interface/goals/SOV_Technological_revolution.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Trotsky_redstar"
+		texturefile = "gfx/interface/goals/SOV_Trotsky_redstar.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Weaken_centralism"
+		texturefile = "gfx/interface/goals/SOV_Weaken_centralism.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Welfare_system"
+		texturefile = "gfx/interface/goals/SOV_Welfare_system.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Women_Department"
+		texturefile = "gfx/interface/goals/SOV_Women_Department.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_youth_party"
+		texturefile = "gfx/interface/goals/SOV_youth_party.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Indochina_Asia"
+		texturefile = "gfx/interface/goals/SOV_Indochina_Asia.png"
+	}
+	SpriteType = { 
+		name = "GFX_SOV_Arming_Chandra"
+		texturefile = "gfx/interface/goals/SOV_Arming_Chandra.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRCxi_KZ"
+		texturefile = "gfx/interface/goals/PRCxi_KZ.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRCxi_WATHCYOU"
+		texturefile = "gfx/interface/goals/PRCxi_WATHCYOU.png"
+	}
+	SpriteType = { 
+		name = "GFX_Trial_1"
+		texturefile = "gfx/interface/goals/Trial_1.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_Eliminate_Sheng_Shicai"
+		texturefile = "gfx/interface/goals/PRC_Eliminate_Sheng_Shicai.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_soviet_rep"
+		texturefile = "gfx/interface/goals/PRC_soviet_rep.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_news"
+		texturefile = "gfx/interface/goals/PRC_news.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_rectification_campaign"
+		texturefile = "gfx/interface/goals/PRC_rectification_campaign.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_rectification_campaign_learn"
+		texturefile = "gfx/interface/goals/PRC_rectification_campaign_learn.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_rectification_campaign_literature"
+		texturefile = "gfx/interface/goals/PRC_rectification_campaign_literature.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_rectification_campaign_party"
+		texturefile = "gfx/interface/goals/PRC_rectification_campaign_party.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_think"
+		texturefile = "gfx/interface/goals/PRC_think.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_zhi"
+		texturefile = "gfx/interface/goals/PRC_zhi.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_zhi_2"
+		texturefile = "gfx/interface/goals/PRC_zhi_2.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_Yunnan_strategy"
+		texturefile = "gfx/interface/goals/PRC_Yunnan_strategy.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_The_Great_War_of_Liberation"
+		texturefile = "gfx/interface/goals/PRC_The_Great_War_of_Liberation.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_shanxi_VN"
+		texturefile = "gfx/interface/goals/PRC_shanxi_VN.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_Qinghai_VN"
+		texturefile = "gfx/interface/goals/PRC_Qinghai_VN.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_guangxi_strategy"
+		texturefile = "gfx/interface/goals/PRC_guangxi_strategy.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_military_intelligence_department"
+		texturefile = "gfx/interface/goals/PRC_military_intelligence_department.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_confrontation_with_the_warlords"
+		texturefile = "gfx/interface/goals/PRC_confrontation_with_the_warlords.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_chairman_wangming"
+		texturefile = "gfx/interface/goals/PRC_chairman_wangming.png"
+	}
+	SpriteType = { 
+		name = "GFX_PRC_chairman_zhangguotao"
+		texturefile = "gfx/interface/goals/PRC_chairman_zhangguotao.png"
+	}
+	SpriteType = { 
+		name = "GFX_MEME_soy_milk"
+		texturefile = "gfx/interface/goals/MEME_soy_milk.png"
+	}
+}

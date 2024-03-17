@@ -1,0 +1,12 @@
+﻿l_simp_chinese:
+ manpower_building:0 "建筑工程"
+ manpower_building_desc:0 "通过调用本国国内的无家可归者，失业人员等，以不需要消耗民用工厂方式的建造建筑，但因绝大多数人员并不是专业建筑工人，因此需要较多人员与修建时间，同时会直接影响到适役人口。\n\n§Y过于苛刻的征兵法案或动员法案会因此导致本项政策不可使用§!。"
+ manpower_building_infrastructure:0 "翻修基建"
+ manpower_building_industrial_complex:0 "修建民用工厂"
+ manpower_building_arms_factory:0 "修建军用工厂"
+ manpower_building_air_base:0 "修建空军基地"
+ manpower_building_dockyard:0 "修建海军船坞"
+ manpower_building_anti_air_building:0 "修建防空炮阵"
+ manpower_building_synthetic_refinery:0 "修建合成炼油厂"
+ manpower_building_fuel_silo:0 "修建储油罐"
+ general_Under_construction:0 "正在修建建筑"

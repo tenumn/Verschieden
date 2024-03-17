@@ -1,0 +1,477 @@
+add_namespace = Vn_PRC
+country_event = {
+	id = Vn_PRC.1
+	title = Vn_PRC.1.t
+	desc = Vn_PRC.1.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.1.a
+		add_manpower = -4000
+
+		}
+}
+country_event = {
+	id = Vn_PRC.2
+	title = Vn_PRC.2.t
+	desc = Vn_PRC.2.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.2.a
+		ai_chance = {
+		factor = 100
+			}
+			add_ideas = CHI_Anti_Japanese_National_United_Front
+		PRC = {
+		country_event = Vn_PRC.3
+			}
+		}
+	option = {
+		name = Vn_PRC.2.b
+		ai_chance = {
+			factor = 0
+				}
+		add_opinion_modifier = { target = PRC modifier = PRC_Damage_relationships }
+		PRC = {
+		country_event = Vn_PRC.4
+			}
+		}
+}
+country_event = {
+	id = Vn_PRC.3
+	title = Vn_PRC.3.t
+	desc = Vn_PRC.3.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.3.a
+			set_rule = { can_create_factions = yes }
+			create_faction = chinese_united_front
+				CHI = {
+					add_to_faction = PRC
+					add_ideas = CHI_Anti_Japanese_National_United_Front
+				}
+		hidden_effect = {
+				PRC = {
+					add_to_faction = CHI
+				}
+			news_event = { id = news.288 days = 1 } # United Front forms
+			}
+		}
+}
+country_event = {
+	id = Vn_PRC.4
+	title = Vn_PRC.4.t
+	desc = Vn_PRC.4.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.4.a
+		add_opinion_modifier = { target = CHI modifier = PRC_Damage_relationships }
+
+		}
+}
+country_event = {
+	id = Vn_PRC.5
+	title = Vn_PRC.3.t
+	desc = Vn_PRC.3.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.3.a
+				set_cosmetic_tag = PRC_Government_Defense
+				add_opinion_modifier = { target = CHI modifier = PRC_Damage_relationships }
+		add_stability = 0.1
+		add_war_support = -0.1
+
+		}
+}
+country_event = {
+	id = Vn_PRC.6
+	title = Vn_PRC.6.t
+	desc = Vn_PRC.6.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.6.a
+	if = {
+		limit = { has_idea = civilian_economy }
+		swap_ideas = {
+			remove_idea = civilian_economy
+			add_idea = low_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = { has_idea = low_economic_mobilisation }
+		swap_ideas = {
+			remove_idea = low_economic_mobilisation
+			add_idea = partial_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = { has_idea = partial_economic_mobilisation }
+		swap_ideas = {
+			remove_idea = partial_economic_mobilisation
+			add_idea = war_economy
+		}
+	}
+	else_if = {
+		limit = { has_idea = war_economy }
+		swap_ideas = {
+			remove_idea = war_economy
+			add_idea = tot_economic_mobilisation
+			}		
+		}
+	}
+}
+country_event = {
+	id = Vn_PRC.7
+	title = Vn_PRC.7.t
+	desc = Vn_PRC.7.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.7.a
+		ai_chance = {
+		factor = 15
+		}
+		PRC = {
+		country_event = Vn_PRC.8
+			}
+		}
+	option = {
+		name = Vn_PRC.7.b
+		ai_chance = {
+		factor = 10
+		}
+		PRC = {
+		country_event = Vn_PRC.9
+			}
+		}
+}
+country_event = {
+	id = Vn_PRC.8
+	title = Vn_PRC.8.t
+	desc = Vn_PRC.8.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.8.a
+		add_stability = 0.05
+		annex_country = { 
+		target = GXC
+		transfer_troops = yes
+		 }
+		}
+}
+country_event = {
+	id = Vn_PRC.9
+	title = Vn_PRC.9.t
+	desc = Vn_PRC.9.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.9.a
+		add_stability = -0.05
+		add_timed_idea = { idea = PRC_FK_GXC days = 500 }
+		}
+}
+country_event = {
+	id = Vn_PRC.10
+	title = Vn_PRC.7.t
+	desc = Vn_PRC.7.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.7.a
+		ai_chance = {
+		factor = 15
+		}
+		PRC = {
+		country_event = Vn_PRC.11
+			}
+		}
+	option = {
+		name = Vn_PRC.7.b
+		ai_chance = {
+		factor = 10
+		}
+		PRC = {
+		country_event = Vn_PRC.12
+			}
+		}
+}
+country_event = {
+	id = Vn_PRC.11
+	title = Vn_PRC.8.t
+	desc = Vn_PRC.8.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.8.a
+		add_stability = 0.05
+		annex_country = { 
+		target = YUN
+		transfer_troops = yes
+		 }
+		}
+}
+country_event = {
+	id = Vn_PRC.12
+	title = Vn_PRC.9.t
+	desc = Vn_PRC.9.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.9.a
+		add_stability = -0.05
+		add_timed_idea = { idea = PRC_FK_YUN days = 500 }
+		}
+}
+country_event = {
+	id = Vn_PRC.13
+	title = Vn_PRC.13.t
+	desc = Vn_PRC.13.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		ai_chance = {
+		factor = 90
+			}
+		name = Vn_PRC.13.a
+		complete_national_focus = PRC_party_commands_gun
+		set_country_flag = PRC_party_commands_gun
+		add_war_support = -0.05
+		}
+	option = {
+		ai_chance = {
+		factor = 1
+			}
+		name = Vn_PRC.13.b
+		add_political_power = -25
+		country_event = Vn_PRC.14
+		}
+}
+country_event = {
+	id = Vn_PRC.14
+	title = Vn_PRC.14.t
+	desc = Vn_PRC.14.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.14.a
+		country_event = Vn_PRC.15
+		add_stability = -0.1
+		ai_chance = {
+		factor = 100
+			}
+		remove_ideas = PRC_countryside_surrounds_city
+		complete_national_focus = PRC_gun_commands_party
+		set_country_flag = PRC_gun_commands_party
+			add_country_leader_role = {
+   			character = PRC_red_army_duoqua
+   			promote_leader = yes
+			country_leader = {
+    			ideology = junta_communism
+    		  	expire = "1965.1.1.1"
+      		traits = {}
+    				}
+			}
+			swap_ideas = {
+				remove_idea = communism_democratic_polity
+				add_idea = communism_Centralized_government
+			}
+			swap_ideas = {
+				remove_idea = economy_Half_cent_planned_economy
+				add_idea = economy_junta_communism_economy
+			}
+		add_dynamic_modifier = {
+			modifier = PRC_junta_communism_idea
+			}
+		}
+	option = {
+		name = Vn_PRC.14.b
+		country_event = Vn_PRC.16
+		add_stability = -0.1
+		remove_ideas = PRC_countryside_surrounds_city
+		set_country_flag = PRC_Recommend_zhang
+		complete_national_focus = PRC_gun_commands_party
+		complete_national_focus = PRC_Recommend_zhang
+		}
+}
+country_event = {
+	id = Vn_PRC.15
+	title = Vn_PRC.15.t
+	desc = Vn_PRC.15.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.15.a
+		}
+}
+country_event = {
+	id = Vn_PRC.16
+	title = Vn_PRC.16.t
+	desc = Vn_PRC.16.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.16.a
+		}
+}
+country_event = {
+	id = Vn_PRC.17
+	title = Vn_PRC.17.t
+	desc = Vn_PRC.17.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.17.a
+		complete_national_focus = PRC_Recommend_Lin
+		}
+	option = {
+		name = Vn_PRC.17.b
+		complete_national_focus = PRC_Recommend_peng
+		}
+}
+country_event = {
+	id = Vn_PRC.18
+	title = Vn_PRC.18.t
+	desc = Vn_PRC.18.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.18.a
+		add_political_power = 150
+		set_country_flag = PRC_maos_leader
+		ai_chance = {
+		factor = 100
+			}
+		}
+	option = {
+		name = Vn_PRC.18.b
+		custom_effect_tooltip = PRC_luxian_meizuo
+		set_country_flag = PRC_not_maos_leader
+		add_political_power = -75
+		add_stability = -0.1
+		}
+}
+country_event = {
+	id = Vn_PRC.19
+	title = Vn_PRC.19.t
+	desc = Vn_PRC.19.d
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = Vn_PRC.19.a
+		add_political_power = -120
+		custom_effect_tooltip = PRC_luxian_meizuo
+		trigger = {
+		has_country_flag = PRC_not_maos_leader
+			}
+		}
+	option = {
+		name = Vn_PRC.19.b
+		add_timed_idea = { idea = PRC_stick_together days = 450 }
+		add_political_power = 75
+		trigger = {
+		has_country_flag = PRC_maos_leader
+			}
+		}
+}

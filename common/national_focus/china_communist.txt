@@ -1,0 +1,3259 @@
+focus_tree = {
+	id = china_communist_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRC
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 45 y = 2500 }
+	shared_focus = CHI_invite_foreign_investors
+	focus = {
+		id = PRC_Liberation_Daily#解放日报
+		icon = GFX_PRC_news
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_strengthen_the_central_secretariat#中央权威
+		}
+			relative_position_id = PRC_strengthen_the_central_secretariat#中央权威
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		ai_will_do = {
+			factor = 50
+			}
+		completion_reward = {
+		add_political_power = 25
+		add_ideas = PRC_Liberation_Daily
+	622 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_rectification_campaign#整风运动
+		icon = GFX_PRC_rectification_campaign
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_strengthen_the_central_secretariat#中央权威
+		}
+			relative_position_id = PRC_strengthen_the_central_secretariat#中央权威
+			x = -2
+			y = 2
+			ai_will_do = {
+				factor = 1
+			}
+		completion_reward = {
+				remove_ideas = PRC_power_struggles
+		}
+	}
+	focus = {
+		id = PRC_socialism_with_chinese_characteristics#中国化
+		icon = GFX_PRC_marx
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_rectification_campaign#整风运动
+		}
+		relative_position_id = PRC_rectification_campaign#整风运动
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = PRC_socialism_with_chinese_characteristics
+			set_rule = { can_create_factions = yes }
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = PRC_mao_faction
+			}
+		}
+	}
+	focus = {
+		id = PRC_Literature_art_serve_politics#文艺为政治服务
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Liberation_Daily#解放日报
+		}
+		relative_position_id = PRC_Liberation_Daily#解放日报
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+		add_political_power = 75
+		add_popularity = { ideology = communism popularity = 0.1 }
+			swap_ideas = {
+				remove_idea = PRC_Liberation_Daily
+				add_idea = PRC_Literature_art_serve_politics
+			}
+		}
+	}
+	focus = {
+		id = PRC_Wartime_crash_education#延安抗日军政大学
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Liberation_Daily#解放日报
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = PRC_Literature_art_serve_politics#文艺为政治服务
+		x = -1
+		y = 1
+		completion_reward = {
+			army_experience = 50
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+			}
+			if = {
+				limit = {has_idea = PRC_Low_literacy_rate}
+				swap_ideas = {
+					remove_idea = PRC_Low_literacy_rate
+					add_idea = PRC_Low_literacy_rate_B
+				}
+			}
+			else_if = {
+				limit = {has_idea = PRC_Low_literacy_rate_B}
+				swap_ideas = {
+					remove_idea = PRC_Low_literacy_rate_B
+					add_idea = PRC_Low_literacy_rate_C
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_maoism#毛泽东思想
+		icon = GFX_focus_prc_maoism
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_socialism_with_chinese_characteristics#中国化
+		}
+		relative_position_id = PRC_socialism_with_chinese_characteristics#中国化
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = { ideology = communism popularity = 0.1 }
+			swap_ideas = {
+				remove_idea = PRC_socialism_with_chinese_characteristics
+				add_idea = PRC_maoism_Vn
+			}
+		}
+	}
+	focus = {
+		id = PRC_Luochuan_Conference#洛川会议
+		icon = GFX_focus_AST_war_japan
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_gun_commands_party#枪指挥党
+			focus = PRC_party_commands_gun#党指挥枪
+		}
+		relative_position_id = PRC_Deepen_reform_armed_forces#深化军队改革
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 10	
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_command_power = 120
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = PRC_war_japan_United_front_VN#统一战线
+		icon = GFX_PRC_United_front
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Luochuan_Conference#洛川会议
+		}
+		relative_position_id = PRC_Luochuan_Conference#洛川会议
+		x = -3
+		y = 1
+		ai_will_do = {
+		factor = 100
+			}
+		bypass = {
+			or = {
+			is_in_faction_with = CHI
+			has_war_with = CHI
+			}
+		}
+		completion_reward = {
+			CHI = {
+				country_event = Vn_PRC.2
+			}
+		}
+	}
+	focus = {
+		id = PRC_focus_on_china#聚焦国内
+		icon = GFX_PRC_focus_on_china
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Luochuan_Conference#洛川会议
+		}
+		relative_position_id = PRC_Luochuan_Conference#洛川会议
+		x = 3
+		y =1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+		add_ideas = PRC_focus_on_china
+		}
+	}
+	focus = {
+		id = PRC_Maintain_status_quo#维持现状
+		icon = GFX_PRC_soviet_rep
+		cost = 2.20
+		ai_will_do = {
+		factor = 1
+		}
+		prerequisite = {
+			focus = PRC_focus_on_china#聚焦国内
+			focus = PRC_war_japan_United_front_VN#统一战线
+		}
+		mutually_exclusive = {
+			focus = PRC_government_of_national_defense#国防政府
+			focus = PRC_Reorganization_border_areas#改组边区政府
+		}
+		relative_position_id = PRC_war_japan_United_front_VN#统一战线
+		x = 3
+		y = 1
+		completion_reward = {
+		add_popularity = { ideology = communism popularity = 0.1 }
+		add_opinion_modifier = { target = CHI modifier = PRC_Damage_relationships }
+		CHI = {
+		add_opinion_modifier = { target = PRC modifier = PRC_Damage_relationships }
+		}
+		add_stability = 0.05
+		add_war_support = -0.05
+		}
+	}
+	focus = {
+		id = PRC_government_of_national_defense#国防政府
+		icon = GFX_focus_chi_united_front
+		cost = 2.20
+		ai_will_do = {
+		factor = 1
+		}
+		prerequisite = {
+			focus = PRC_focus_on_china#聚焦国内
+			focus = PRC_war_japan_United_front_VN#统一战线
+		}
+		mutually_exclusive = {
+			focus = PRC_Maintain_status_quo#维持现状
+			focus = PRC_Reorganization_border_areas#改组边区政府
+		}
+		relative_position_id = PRC_war_japan_United_front_VN#统一战线
+		x = 5
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					event_target:WTT_current_china_leader = {
+						is_puppet = no
+						exists = yes
+					}
+				}
+				event_target:WTT_current_china_leader = { country_event = wtt_prc.1 }
+			}
+			else = {
+				set_rule = { can_create_factions = yes }
+				create_faction = PRC_government_of_national_defense
+			}
+		}
+	}
+	focus = {
+		id = PRC_revolutionary_military_commission#革命军事委员会
+		icon = GFX_focus_generic_join_comintern
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_focus_on_china#聚焦国内
+		}
+		relative_position_id = PRC_focus_on_china#聚焦国内
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_red_amry_focus_tt_1
+			show_ideas_tooltip = PRC_revolutionary_military_commission
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = PRC_party_commands_gun}
+					swap_ideas = {
+						remove_idea = PRC_red_amry_1
+						add_idea = PRC_red_amry_2
+					}
+				}
+				if = {
+					limit = { has_completed_focus = PRC_gun_commands_party}
+					swap_ideas = {
+						remove_idea = PRC_red_amry
+						add_idea = PRC_red_amry_2_1
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_central_military_commission#中央军事委员会
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_revolutionary_military_commission#革命军事委员会
+		}
+		relative_position_id =  PRC_revolutionary_military_commission#革命军事委员会
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_red_amry_focus_tt_2
+			swap_ideas = {
+				remove_idea = PRC_revolutionary_military_commission
+				add_idea = PRC_central_military_commission
+			}
+			hidden_effect = {
+				remove_ideas = PRC_central_military_commission
+				if = {
+					limit = { has_completed_focus = PRC_party_commands_gun}
+					swap_ideas = {
+						remove_idea = PRC_red_amry_2
+						add_idea = PRC_red_amry_3
+					}
+				}
+				if = {
+					limit = { has_completed_focus = PRC_gun_commands_party}
+					swap_ideas = {
+						remove_idea = PRC_red_amry_2_1
+						add_idea = PRC_red_amry_3_1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PRC_peoples_liberation_army#解放军
+		icon = GFX_PRC_peoples_liberation_army
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_central_military_commission#中央军事委员会
+		}
+		available = {
+			NOT = {has_war_with = JAP}
+		}
+		relative_position_id = PRC_central_military_commission#中央军事委员会
+		x = 1
+		y = 2
+		ai_will_do = {
+			factor = 0.5
+		}
+		completion_reward = {
+			if = {
+				limit = { has_completed_focus = PRC_party_commands_gun}
+				swap_ideas = {
+					remove_idea = PRC_red_amry_3
+					add_idea = PRC_peoples_liberation_army
+				}
+			}
+			if = {
+				limit = { has_completed_focus = PRC_gun_commands_party}
+				swap_ideas = {
+					remove_idea = PRC_red_amry_3_1
+					add_idea = PRC_peoples_liberation_army_1
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_The_Great_War_of_Liberation#伟大的解放战争
+		icon = GFX_PRC_The_Great_War_of_Liberation
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_peoples_liberation_army#解放军
+		}
+		relative_position_id = PRC_peoples_liberation_army#解放军
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_war_support = 0.1
+		set_cosmetic_tag = PRC
+		add_timed_idea = { idea = PRC_FK_CHI days = 150 }
+		remove_from_faction = PRC
+		news_event = Vn_mod.2
+		CHI = {
+		declare_war_on = { target = PRC type = civil_war }
+			}
+		}
+	}
+	focus = {
+		id = PRC_Yunnan_strategy#云南战略
+		icon = GFX_PRC_Yunnan_strategy
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_The_Great_War_of_Liberation#伟大的解放战争
+		}
+		relative_position_id = PRC_The_Great_War_of_Liberation#伟大的解放战争
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			YUN = {exists = yes}
+		}
+		completion_reward = {
+		YUN = {
+		country_event = { id = Vn_PRC.10 days = 1 }
+			}
+		}
+	}
+	focus = {
+		id = PRC_guangxi_strategy#广西战略
+		icon = GFX_PRC_guangxi_strategy
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_The_Great_War_of_Liberation#伟大的解放战争
+		}
+		relative_position_id = PRC_The_Great_War_of_Liberation#伟大的解放战争
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			GXC = {exists = yes}
+		}
+		completion_reward = {
+		GXC = {
+		country_event = { id = Vn_PRC.7 days = 1 }
+			}
+		}
+	}
+	focus = {
+		id = PRC_proclaim_the_peoples_republic#新中国
+		icon = GFX_focus_prc_proclaim_the_peoples_republic
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_The_Great_War_of_Liberation
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		relative_position_id =PRC_The_Great_War_of_Liberation
+		available = {
+			strength_ratio = {
+				tag = event_target:WTT_current_china_leader
+				ratio > 0.5
+			}
+			num_of_factories > 59
+			NOT = { has_idea = PRC_the_long_march_1 }
+		}
+		x = 0
+		y = 2
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = PRC_Yan_an_Industry_hidden
+			}
+		add_stability = 0.1
+		if = {
+			limit = {has_idea = PRC_Yan_an_Industry }
+			remove_ideas = PRC_Yan_an_Industry 
+		}
+		if = {
+			limit = {has_idea = PRC_Yan_an_Industry_1 }
+			remove_ideas = PRC_Yan_an_Industry_1
+		}
+		if = {
+		limit = {
+				has_country_leader = { ruling_only = yes 
+		character = PRC_mao_zedong }
+			}
+		set_country_leader_ideology = Maoism
+		set_country_leader_portrait = {
+			ideology = communism
+			portrait = GFX_portrait_PRC_maozedong_old
+			}
+		}
+			#if = {
+			#	limit = { has_country_flag = People_democracy_flag_start }
+				set_cosmetic_tag = PRC_proclaimed
+			#}
+			#if = {
+			#	limit = { has_country_flag = PRC_Soviet_Republic_flag}
+			#	set_cosmetic_tag = PRC_soviet
+			#}
+			if = {
+				limit = { has_idea = PRC_Agriculturalg }
+		swap_ideas = {
+			remove_idea = PRC_Agricultural
+			add_idea = PRC_Agricultural_A
+					}
+			}
+			if = {
+				limit = { has_idea = PRC_Agricultural_junta_A }
+		swap_ideas = {
+			remove_idea = PRC_Agricultural_junta_A
+			add_idea = PRC_Agricultural_junta_B
+					}
+			}
+			hidden_effect = {
+				news_event = { id = wtt_news.37 days = 3 random_days = 3 }
+			}
+		}
+	}
+	focus = {
+		id = PRC_peoples_volunteer_army#志愿军
+		icon = GFX_PRC_peoples_volunteer_army
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_peoples_liberation_army
+		}
+		relative_position_id = PRC_peoples_liberation_army#解放军
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_red_amry_focus_tt_1
+			show_ideas_tooltip = PRC_peoples_volunteer_army
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = PRC_party_commands_gun}
+					swap_ideas = {
+						remove_idea = PRC_peoples_liberation_army
+						add_idea = PRC_peoples_liberation_army_2
+					}
+				}
+				if = {
+					limit = { has_completed_focus = PRC_gun_commands_party}
+					swap_ideas = {
+						remove_idea = PRC_peoples_liberation_army_1
+						add_idea = PRC_peoples_liberation_army_2_1
+					}
+				}
+			}
+		set_rule = {
+			can_send_volunteers = yes
+			}
+		}
+	}
+
+	focus = {
+		id = PRC_military_intelligence_department#军委情报部
+		icon = GFX_PRC_military_intelligence_department
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_central_military_commission#中央军事委员会
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		relative_position_id = PRC_central_military_commission#中央军事委员会
+		x = -1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = PRC_kang_sheng_political_advisor
+		}
+	}
+	focus = {
+		id = PRC_central_security_bureau#中央政治保卫局
+		icon = GFX_focus_SOV_military_purge
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_military_intelligence_department#军委情报部
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		relative_position_id = PRC_military_intelligence_department#军委情报部
+		x = 0
+		y = 2
+		completion_reward = {
+			add_stability = 0.1
+					create_intelligence_agency = yes
+		}
+	}
+
+	focus = {
+		id = PRC_Reorganization_border_areas#改组边区政府
+		icon = GFX_focus_prc_social_democracy
+		cost = 2.20
+		ai_will_do = {
+		factor = 50
+		}
+		relative_position_id = PRC_war_japan_United_front_VN#统一战线
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = PRC_focus_on_china#聚焦国内
+			focus = PRC_war_japan_United_front_VN#统一战线
+		}
+		mutually_exclusive = {
+			focus = PRC_Maintain_status_quo#维持现状
+			focus = PRC_government_of_national_defense#国防政府
+		}
+		available = {
+			is_in_faction_with = CHI
+		}
+		completion_reward = {
+		set_cosmetic_tag = PRC_Reorganization_border_areas
+		add_opinion_modifier = { target = CHI modifier = PRC_Border_District_Government }
+		CHI = {
+		add_opinion_modifier = { target = PRC modifier = PRC_Border_District_Government }
+		}
+		add_popularity = { ideology = democratic popularity = 0.1 }
+		add_stability = -0.05
+		add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = PRC_Anti_Japanese_mobilization#抗日动员
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 5.00
+		ai_will_do = {
+		factor = 50
+		}
+		prerequisite = {
+			focus = PRC_Reorganization_border_areas#改组边区政府
+			focus = PRC_Maintain_status_quo#维持现状
+			focus = PRC_government_of_national_defense#国防政府
+		}
+		relative_position_id =  PRC_Reorganization_border_areas#改组边区政府
+		x = -1
+		y = 1
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+					is_in_faction_with = PRC
+					tag = PRC
+					}
+					OR = {
+						tag = PRC
+						tag = HBJ
+						tag = CHI
+						tag = SHX
+						tag = SCS
+						tag = XSM
+						tag = GXC
+						tag = YUN 
+					}
+				}
+			country_event = Vn_PRC.6
+			}
+			if = {
+				limit = {
+					is_in_faction_with = CHI
+				}
+				activate_mission = PRC_Kuomintang_salaries
+				add_dynamic_modifier = {
+					modifier = PRC_Anti_Japanese_National_United_Front
+					}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Northern_Shaanxi_defense#陕北防御
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Anti_Japanese_mobilization#抗日动员
+		}
+		relative_position_id = PRC_Anti_Japanese_mobilization
+		x = -4
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+		custom_effect_tooltip = PRC_Northern_Shaanxi_defense_tt
+		add_to_variable = { PGW_production_speed_bunker_factor = 0.1 }
+		 756= {
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 7803
+			instant_build = yes
+				}
+			}
+		 616= {
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 8055
+			instant_build = yes
+				}
+			}
+		746= {
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 1959
+			instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 1959
+			instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 4960
+			instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 10451
+			instant_build = yes
+				}
+			}
+		 622= {
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 5007
+			instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 7208
+			instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 1458
+			instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 7659
+			instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 7314
+			instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 3
+			province = 10880
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Wartime_industrialization#战时工业化
+		icon = GFX_focus_generic_reorient_production
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Northern_Shaanxi_defense#陕北防御
+		}
+		available = {
+			has_war_with = JAP
+		}
+		relative_position_id = PRC_Northern_Shaanxi_defense#陕北防御
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_anti_japanese_expedition_VN#敌后抗战
+		icon = GFX_PRC_guerrilla_warfare
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Anti_Japanese_mobilization#抗日动员
+		}
+		available = {
+			has_war_with = JAP
+		}
+		relative_position_id = PRC_Anti_Japanese_mobilization
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+		custom_effect_tooltip = PRC_anti_japanese_expedition_VN_tt
+		add_to_variable = { PAJNU_enemy_army_bonus_air_superiority_factor = -0.1 }
+		add_ideas = PRC_Guerrilla_central_1
+		add_command_power = 120
+		add_ideas = PRC_Guerrilla_warfare
+		every_country = {
+			limit = {
+				or = {
+					TAG = CHI
+					TAG = HBJ
+					TAG = SHX
+					TAG = GXC
+					TAG = YUN
+					TAG = SCS
+					TAG = HBJ
+				}
+			}
+			add_ideas = PRC_CHIGuerrilla_warfare
+		}
+		custom_effect_tooltip = PRC_anti_japanese_expedition_VNyjd_tt
+		hidden_effect = {
+			division_template = { 
+				name = "游击队" 
+				division_names_group = PRC_INF_01 
+				is_locked = yes
+				regiments = { 
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				  } 
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_anti_japanese_expedition_big#扩大游击战争
+		icon = GFX_focus_prc_infiltration
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_anti_japanese_expedition_VN#敌后抗战
+		}
+		available = {
+			has_war_with = JAP
+		}
+		relative_position_id = PRC_anti_japanese_expedition_VN#敌后抗战
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+		custom_effect_tooltip = PRC_anti_japanese_expedition_big_tt
+		add_command_power = 120
+		swap_ideas = {
+			remove_idea = PRC_Guerrilla_central_1
+			add_idea = PRC_Guerrilla_central_2
+			}
+		swap_ideas = {
+			remove_idea = PRC_Guerrilla_warfare
+			add_idea = PRC_Guerrilla_warfare_2
+			}
+			every_country = {
+				limit = {
+					or = {
+						TAG = CHI
+						TAG = HBJ
+						TAG = SHX
+						TAG = GXC
+						TAG = YUN
+						TAG = SCS
+						TAG = HBJ
+					}
+				}
+				swap_ideas = {
+					remove_idea = PRC_CHIGuerrilla_warfare
+					add_idea = PRC_CHIGuerrilla_warfare_2
+					}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Tunnel_warfare#地道战
+		icon = GFX_focus_FIN_weapon_caches
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_anti_japanese_expedition_big#扩大游击战争
+		}
+
+		relative_position_id = PRC_anti_japanese_expedition_big#扩大游击战争
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PRC_Tunnel_warfare
+				bonus = 1
+				uses = 1
+				category = engineers_tech
+				}
+		custom_effect_tooltip = PRC_Tunnel_warfare_tt
+		add_to_variable = { PAJNU_army_core_attack_factor = 0.05 }
+		add_to_variable = { PAJNU_army_speed_factor = 0.05 }
+		add_to_variable = { PAJNU_enemy_army_bonus_air_superiority_factor = -0.1 }
+		add_command_power = 120
+		swap_ideas = {
+			remove_idea = PRC_Guerrilla_central_2
+			add_idea = PRC_Guerrilla_central_3
+			}
+		swap_ideas = {
+			remove_idea = PRC_Guerrilla_warfare_2
+			add_idea = PRC_Guerrilla_warfare_3
+			}
+			every_country = {
+				limit = {
+					or = {
+						TAG = CHI
+						TAG = HBJ
+						TAG = SHX
+						TAG = GXC
+						TAG = YUN
+						TAG = SCS
+						TAG = HBJ
+					}
+				}
+				swap_ideas = {
+					remove_idea = PRC_CHIGuerrilla_warfare_2
+					add_idea = PRC_CHIGuerrilla_warfare_3
+					}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Frontal_battlefield#支援正面战场
+		icon = GFX_focus_SWE_varnplikt
+		cost = 5.00
+		available = {
+			has_war_with = JAP
+		}
+		prerequisite = {
+			focus = PRC_Anti_Japanese_mobilization#抗日动员
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		relative_position_id = PRC_Anti_Japanese_mobilization#抗日动员
+		x = -2
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = PRC_Frontal_battlefield_NEW_tt
+			add_to_variable = { PAJNU_breakthrough_factor = 0.1 }
+			add_war_support = 0.1
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = PRC_pertinence#针对性进攻
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Frontal_battlefield#支援正面战场
+		}
+		available = {
+			has_war_with = JAP
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		relative_position_id = PRC_Frontal_battlefield#支援正面战场
+		x = 1
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = PRC_Frontal_battlefield_NEW_2_tt
+			add_to_variable = { PAJNU_breakthrough_factor = 0.05 }
+		}
+	}
+	focus = {
+		id = PRC_no_guns#没枪没炮敌人造
+		icon = GFX_focus_generic_combined_arms
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Frontal_battlefield#支援正面战场
+		}
+		available = {
+			has_war_with = JAP
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = PRC_Frontal_battlefield#支援正面战场
+		x = -1
+		y = 2
+		completion_reward = {
+		custom_effect_tooltip = PRC_no_guns_TT
+			add_to_variable = { PAJNU_equipment_capture = 0.25 }
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = PRC_big_army#扩大红军
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Anti_Japanese_mobilization#抗日动员
+		}
+		relative_position_id = PRC_Anti_Japanese_mobilization
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+		custom_effect_tooltip = PRC_big_army_TT
+		add_to_variable = { PAJNU_training_time_factor = -0.1 }
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			}
+		}
+	}
+	focus = {
+		id = PRC_AJMAPU#抗日军政大学
+		icon = GFX_focus_NOR_moscows_education_centers
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_big_army#扩大红军
+		}
+		relative_position_id = PRC_big_army#扩大红军
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+		army_experience = 75
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 2
+			category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = PRC_AJMAPU
+				bonus = 1
+				uses = 1
+				category = support_tech
+				}
+			add_tech_bonus = {
+				name = PRC_AJMAPU
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+				}
+		}
+	}
+	focus = {
+		id = PRC_Artillery_production#火炮生产
+		icon = GFX_focus_SWE_let_fly_all_guns
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_AJMAPU#抗日军政大学
+		}
+		relative_position_id = PRC_AJMAPU#抗日军政大学
+		x = -1
+		y = 1
+		completion_reward = {
+		add_equipment_to_stockpile = {
+		type = artillery_equipment_1
+		amount = 400
+				}
+				add_tech_bonus = {
+					name = PRC_Artillery_production
+					bonus = 1
+					uses = 1
+					category = artillery
+					}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_peoples_war#人民战争
+		icon = GFX_focus_ITA_peasants_rise
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_AJMAPU#抗日军政大学
+		}
+		available = {
+			has_war_with = JAP
+		}
+		prerequisite = {
+			focus = PRC_central_military_commission#中央军事委员会
+		}
+		relative_position_id = PRC_AJMAPU#抗日军政大学
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+		if = {
+		limit = {
+				has_country_leader = { ruling_only = yes 
+		character = PRC_mao_zedong }
+			}
+		set_country_leader_portrait = {
+			ideology = communism
+			portrait = GFX_portrait_PRC_maozedong_yong_3
+			}
+		}
+		custom_effect_tooltip = PRC_people_war_TT_B
+		add_dynamic_modifier = { modifier = PRC_people_war }
+		}
+	}
+	focus = {
+		id = PRC_protracted_warfare#持久战
+		icon = GFX_focus_generic_population_growth
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_peoples_war#人民战争
+		}
+		available = {
+			has_war_with = JAP
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = PRC_peoples_war#人民战争
+		x = -1
+		y = 1
+		completion_reward = {
+		custom_effect_tooltip = PRC_protracted_warfare_TT
+		add_to_variable = { PPW_army_core_defence_factor = 0.1 }
+		add_to_variable = { PPW_conscription = 0.01 }
+
+		}
+	}
+	focus = {
+		id = PRC_mobile_warfare#运动战
+		icon = GFX_ogf_focus_army_tank_guardian
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_peoples_war#人民战争
+		}
+		available = {
+			has_war_with = JAP
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = PRC_peoples_war#人民战争
+		x = 1
+		y = 1
+		completion_reward = {
+		custom_effect_tooltip = PRC_mobile_warfare_TT
+		add_to_variable = { PPW_army_core_attack_factor = 0.1 }
+		add_to_variable = { PPW_army_speed_factor = 0.10 }
+		add_to_variable = { PPW_army_morale_factor = 0.10 }
+		}
+	}
+	focus = {
+		id = PRC_100_regiments_campaign#百团大战
+		icon = ogf_focus_army_men_wave
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_mobile_warfare#运动战
+		}
+		relative_position_id = PRC_protracted_warfare#持久战
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			unlock_decision_tooltip = PRC_launch_100_regiments_campaign
+			custom_effect_tooltip = PRC_mobile_warfare_2_TT
+		add_to_variable = { PPW_army_core_attack_factor = 0.1 }
+		add_to_variable = { PPW_army_morale_factor = 0.10 }
+		add_to_variable = { PPW_land_reinforce_rate = 0.05 }
+		}
+	}
+	focus = {
+		id = PRC_peoples_war_B#军民合作
+		icon = GFX_focus_generic_limited_social_mobilization
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_protracted_warfare#持久战
+		}
+		bypass = {
+			has_country_flag = PRC_gun_commands_party
+				}
+				ai_will_do = {
+					factor = 5
+				}
+		relative_position_id = PRC_protracted_warfare#持久战
+		x = 0
+		y = 1
+		completion_reward = {
+			set_country_flag = PRC_peoples_war_C_flag
+		custom_effect_tooltip = PRC_peoples_war_C_flag
+			if = {
+				limit = { has_idea = PRC_Understaffed_factories }
+				swap_ideas = {
+					remove_idea = PRC_Understaffed_factories
+					add_idea = PRC_Militarization_of_labors_idea
+				}
+			}
+
+			custom_effect_tooltip = PRC_peoples_war_B_TT
+		add_to_variable = { PPW_army_core_defence_factor = 0.1 }
+		add_to_variable = { PPW_conscription_factor = 0.25 }
+		
+			622 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			754 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 617
+				}
+				617 = {
+					add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PRC_Deepen_reform_armed_forces#深化军队改革
+		icon = GFX_ogf_focus_secret_rearmament
+		cost = 5.00
+		x = 20
+		y = 0
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		country_event = Vn_PRC.13
+		custom_effect_tooltip = PRC_Deepen_reform_armed_forces_TT
+		}
+	}
+	focus = {
+		id = PRC_party_commands_gun#党指挥枪
+		icon = GFX_ogf_focus_SOV_builder_of_the_red_army
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Deepen_reform_armed_forces#深化军队改革
+		}
+		available = {
+		has_country_flag = PRC_party_commands_gun
+			}
+		mutually_exclusive = {
+			focus = PRC_gun_commands_party#枪指挥党
+		}
+		relative_position_id = PRC_Deepen_reform_armed_forces#深化军队改革
+		x = 9
+		y = 1
+		completion_reward = {
+				remove_ideas = PRC_army_qution
+
+			swap_ideas = {
+				remove_idea = PRC_red_amry
+				add_idea = PRC_red_amry_1
+			}
+		}
+	}
+	focus = {
+		id = PRC_strengthen_the_central_secretariat#中央权威
+		icon = GFX_focus_NOR_empower_sivorg
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_party_commands_gun#党指挥枪
+		}
+		relative_position_id = PRC_party_commands_gun#党指挥枪
+			x = 0
+			y = 1
+		ai_will_do = {
+			factor = 35
+			}
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = PRC_End_land_reform#暂停土地改革
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_democratic_centralism#民主集中制
+		}
+		mutually_exclusive = { focus = PRC_jixu_land_reform }
+		relative_position_id = PRC_strengthen_the_central_secretariat#中央权威
+		available = {
+		 has_war = yes
+		}
+		x = 1
+		y = 3
+		ai_will_do = {
+			factor = 5
+			}
+		completion_reward = {
+			add_war_support = 0.1
+			add_political_power = 120
+			add_popularity = { ideology = neutrality popularity = 0.1 }
+			remove_ideas =PRC_Land_reform
+		CHI = {
+		add_opinion_modifier = { target = PRC modifier = PRC_Keep_promises }
+		}
+		}
+	}
+	focus = {
+		id = PRC_jixu_land_reform#继续土地改革
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 5.00
+		mutually_exclusive = { focus = PRC_End_land_reform }
+		prerequisite = {
+			focus = PRC_democratic_centralism#民主集中制
+		}
+		relative_position_id = PRC_strengthen_the_central_secretariat#中央权威
+		available = {
+			has_war = yes
+		   }
+		x = 3
+		y = 3
+		ai_will_do = {
+			factor = 0
+			}
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = { ideology = neutrality popularity = -0.15 }
+			add_political_power = 120
+			every_state= {
+				limit = {
+					is_controlled_by = PRC
+				OR = {
+					has_state_category = town
+				has_state_category = rural
+					}
+				}
+				add_extra_state_shared_building_slots =1
+				add_resource = { type = food amount = 2 }
+			}
+			custom_effect_tooltip = PRC_jixu_land_reform_tt
+		CHI = {
+		add_opinion_modifier = { target = PRC modifier = PRC_Damage_relationships }
+		}
+		}
+	}
+	focus = {
+		id = PRC_abolish_the_land_rent#废除地租
+		icon = GFX_focus_generic_agricultural_subsidies
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_jixu_land_reform
+			focus = PRC_End_land_reform
+		}
+		relative_position_id = PRC_jixu_land_reform
+
+		x = -1
+		y = 2
+		ai_will_do = {
+			factor = 0.1
+			}
+		completion_reward = {
+			every_state= {
+				limit = {
+					is_controlled_by = PRC
+				OR = {
+					has_state_category = town
+				has_state_category = rural
+					}
+				}
+				add_extra_state_shared_building_slots =1
+				add_resource = { type = food amount = 2 }
+			}
+			if = {
+				limit = {has_idea =PRC_Land_reform}
+				remove_ideas =PRC_Land_reform
+			}
+			swap_ideas = {
+				remove_idea = PRC_Yan_an_Industry
+				add_idea = PRC_Yan_an_Industry_1
+			}
+		}
+	}
+	focus = {
+		id = PRC_Base#根据地建设
+		icon = GFX_ogf_commie_construct
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_democratic_centralism#民主集中制
+		}
+		relative_position_id = PRC_strengthen_the_central_secretariat#中央权威
+
+		x = 7
+		y = 3
+		ai_will_do = {
+			factor = 5
+			}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_controlled_by = PRC
+					or = {
+						state = 622
+						state = 756
+						state = 616
+						state = 746
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+			}
+		}
+	}
+	focus = {
+		id = PRC_literacy_programs#扫盲运动
+		icon = GFX_focus_FIN_socialist_welfare
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Base#根据地建设
+		}
+		relative_position_id =  PRC_Base#根据地建设
+
+		x = 4
+		y = 1
+		ai_will_do = {
+			factor = 50
+			}
+		completion_reward = {
+		add_research_slot = 1
+		if = {
+			limit = {has_idea = PRC_Low_literacy_rate}
+			swap_ideas = {
+				remove_idea = PRC_Low_literacy_rate
+				add_idea = PRC_Low_literacy_rate_B
+			}
+		}
+		else_if = {
+			limit = {has_idea = PRC_Low_literacy_rate_B}
+			swap_ideas = {
+				remove_idea = PRC_Low_literacy_rate_B
+				add_idea = PRC_Low_literacy_rate_C
+			}
+		}
+		}
+	}
+		focus = {
+			id = PRC_state_run_industry#公营工业
+			icon = GFX_focus_generic_communist_industry
+			prerequisite = { focus = PRC_Base }
+			relative_position_id = PRC_Base
+			x = -2
+			y = 1
+	
+			cost = 8
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_INDUSTRY }
+			completion_reward = {
+				add_cic = 150
+				622 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				754 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						has_full_control_of_state = 617
+					}
+					617 = {
+						add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+						}
+					}
+				}
+			}
+		}
+		focus = {
+			id = PRC_huangya_cave_arsenal#黄崖洞兵工厂
+			icon = GFX_focus_SOV_organize_wreckers
+			prerequisite = { focus = PRC_state_run_industry }
+			relative_position_id = PRC_state_run_industry
+			x = 0
+			y = 1
+	
+			cost = 10
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_INDUSTRY }
+			completion_reward = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 2
+				}
+
+			}
+		}
+		
+		focus = {
+			id = PRC_state_run_commerce#公营商业
+			icon = GFX_focus_DEN_limited_regulations
+			prerequisite = { focus = PRC_state_run_industry }
+			relative_position_id = PRC_state_run_industry
+			x = -1
+			y = 3
+	
+			cost = 10
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_INDUSTRY }
+			completion_reward = {
+				add_cic = 300
+				622 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				754 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						has_full_control_of_state = 617
+					}
+					617 = {
+						add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+						}
+					}
+				}
+				if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade
+						add_idea =PRC_Kuomintang_economic_blockade_2
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_2}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_2
+						add_idea =PRC_Kuomintang_economic_blockade_3
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_3}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_3
+						add_idea =PRC_Kuomintang_economic_blockade_4
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_4}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_4
+						add_idea =PRC_Kuomintang_economic_blockade_5
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_5}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_5
+						add_idea =PRC_Kuomintang_economic_blockade_6
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_6}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_6
+						add_idea =PRC_Kuomintang_economic_blockade_7
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_7}
+					remove_ideas = PRC_Kuomintang_economic_blockade_7
+				}
+			}
+		}
+		focus = {
+			id = PRC_co_operative#合作社
+			icon = GFX_focus_generic_full_employment
+			prerequisite = { focus = PRC_state_run_industry }
+			relative_position_id = PRC_state_run_industry
+			x = 1
+			y = 3
+	
+			cost = 10
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_INDUSTRY }
+			completion_reward = {
+				add_cic = 150
+				622 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				754 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						has_full_control_of_state = 617
+					}
+					617 = {
+						add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+						}
+					}
+				}
+				if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade
+						add_idea =PRC_Kuomintang_economic_blockade_2
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_2}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_2
+						add_idea =PRC_Kuomintang_economic_blockade_3
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_3}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_3
+						add_idea =PRC_Kuomintang_economic_blockade_4
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_4}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_4
+						add_idea =PRC_Kuomintang_economic_blockade_5
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_5}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_5
+						add_idea =PRC_Kuomintang_economic_blockade_6
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_6}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_6
+						add_idea =PRC_Kuomintang_economic_blockade_7
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_7}
+					remove_ideas = PRC_Kuomintang_economic_blockade_7
+				}
+			}
+		}
+		focus = {
+			id = PRC_border_region_bank#边区银行
+			icon = GFX_focus_generic_improve_the_administration
+			prerequisite = { focus = PRC_Base }
+			relative_position_id = PRC_Base
+			x = 0
+			y = 1
+	
+			cost = 10
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_INDUSTRY }
+			completion_reward = {
+				add_cic = 200
+				622 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				754 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						has_full_control_of_state = 617
+					}
+					617 = {
+						add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+						}
+					}
+				}
+				if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade
+						add_idea =PRC_Kuomintang_economic_blockade_2
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_2}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_2
+						add_idea =PRC_Kuomintang_economic_blockade_3
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_3}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_3
+						add_idea =PRC_Kuomintang_economic_blockade_4
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_4}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_4
+						add_idea =PRC_Kuomintang_economic_blockade_5
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_5}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_5
+						add_idea =PRC_Kuomintang_economic_blockade_6
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_6}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_6
+						add_idea =PRC_Kuomintang_economic_blockade_7
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_7}
+					remove_ideas = PRC_Kuomintang_economic_blockade_7
+				}
+			}
+		}
+		focus = {
+			id = PRC_issue_border_region_currency#发行边币
+			icon = GFX_focus_ETH_adopt_the_lira
+			prerequisite = { focus = PRC_border_region_bank }
+			relative_position_id = PRC_border_region_bank
+			x = 0
+			y = 1
+	
+			cost = 10
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_INDUSTRY }
+			completion_reward = {
+				add_cic = 250
+				if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade
+						add_idea =PRC_Kuomintang_economic_blockade_2
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_2}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_2
+						add_idea =PRC_Kuomintang_economic_blockade_3
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_3}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_3
+						add_idea =PRC_Kuomintang_economic_blockade_4
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_4}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_4
+						add_idea =PRC_Kuomintang_economic_blockade_5
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_5}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_5
+						add_idea =PRC_Kuomintang_economic_blockade_6
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_6}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_6
+						add_idea =PRC_Kuomintang_economic_blockade_7
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_7}
+					remove_ideas = PRC_Kuomintang_economic_blockade_7
+				}
+			}
+		}
+		focus = {
+			id = PRC_salt_tax#公盐代金
+			icon = GFX_focus_hol_abandon_the_gold_standard
+			prerequisite = { focus = PRC_issue_border_region_currency }
+			relative_position_id = PRC_issue_border_region_currency
+			x = 0
+			y = 1
+	
+			cost = 8
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_INDUSTRY }
+			completion_reward = {
+				add_cic = 200
+				if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade
+						add_idea =PRC_Kuomintang_economic_blockade_2
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_2}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_2
+						add_idea =PRC_Kuomintang_economic_blockade_3
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_3}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_3
+						add_idea =PRC_Kuomintang_economic_blockade_4
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_4}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_4
+						add_idea =PRC_Kuomintang_economic_blockade_5
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_5}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_5
+						add_idea =PRC_Kuomintang_economic_blockade_6
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_6}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_6
+						add_idea =PRC_Kuomintang_economic_blockade_7
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_7}
+					remove_ideas = PRC_Kuomintang_economic_blockade_7
+				}
+			}
+		}
+		focus = {
+			id = PRC_anti_drug_campaign#禁毒运动
+			icon = GFX_focus_generic_workers
+			prerequisite = { focus = PRC_Base }
+			relative_position_id = PRC_Base
+			x = 2
+			y = 1
+	
+			cost = 8
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = PRC_Opium_trade_VN
+					add_idea = PRC_Opium_trade_VN_2
+				}
+			}
+		}
+		focus = {
+			id = PRC_raise_grain_levies#扩大征粮
+			icon = GFX_focus_generic_coffee
+			prerequisite = { focus = PRC_anti_drug_campaign }
+			relative_position_id = PRC_anti_drug_campaign
+			x = 0
+			y = 2
+	
+			cost = 5
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_INDUSTRY }
+			completion_reward = {
+				add_ideas = PRC_raise_grain_levies
+				if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade
+						add_idea =PRC_Kuomintang_economic_blockade_2
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_2}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_2
+						add_idea =PRC_Kuomintang_economic_blockade_3
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_3}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_3
+						add_idea =PRC_Kuomintang_economic_blockade_4
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_4}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_4
+						add_idea =PRC_Kuomintang_economic_blockade_5
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_5}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_5
+						add_idea =PRC_Kuomintang_economic_blockade_6
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_6}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_6
+						add_idea =PRC_Kuomintang_economic_blockade_7
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_7}
+					remove_ideas = PRC_Kuomintang_economic_blockade_7
+				}
+				every_state= {
+					limit = {
+						is_controlled_by = PRC
+					OR = {
+						has_state_category = town
+					has_state_category = rural
+						}
+					}
+					add_resource = { type = food amount = 2 }
+				}
+			}
+		}
+		focus = {
+			id = PRC_reclaim_nanniwan#南泥湾屯垦
+			icon = GFX_focus_generic_land_reclamation
+			prerequisite = { focus = PRC_anti_drug_campaign }
+			relative_position_id = PRC_anti_drug_campaign
+			x = 2
+			y = 1
+	
+			cost = 8
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_INDUSTRY }
+			completion_reward = {
+				add_cic = 100
+				622 = {
+					add_extra_state_shared_building_slots = 2
+					add_resource = { type = food amount = 3 }
+				}
+				if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade
+						add_idea =PRC_Kuomintang_economic_blockade_2
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_2}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_2
+						add_idea =PRC_Kuomintang_economic_blockade_3
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_3}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_3
+						add_idea =PRC_Kuomintang_economic_blockade_4
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_4}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_4
+						add_idea =PRC_Kuomintang_economic_blockade_5
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_5}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_5
+						add_idea =PRC_Kuomintang_economic_blockade_6
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_6}
+					swap_ideas = {
+						remove_idea = PRC_Kuomintang_economic_blockade_6
+						add_idea =PRC_Kuomintang_economic_blockade_7
+					}
+				}
+				else_if = {
+					limit = {has_idea = PRC_Kuomintang_economic_blockade_7}
+					remove_ideas = PRC_Kuomintang_economic_blockade_7
+				}
+			}
+		}
+		focus = {
+			id = PRC_export_opium#特货外销
+			icon = GFX_PRC_ok_the_opium_trade
+			prerequisite = { focus = PRC_reclaim_nanniwan }
+			mutually_exclusive = { focus = PRC_ban_the_opium_trade }
+			relative_position_id = PRC_reclaim_nanniwan
+			x = -1
+			y = 2
+	
+			cost = 5
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_INDUSTRY }
+			completion_reward = {
+				add_stability = -0.1
+				swap_ideas = {
+					remove_idea = PRC_Opium_trade_VN_2
+					add_idea = PRC_Opium_trade_VN_3
+				}
+			}
+		}
+		focus = {
+			id = PRC_ban_the_opium_trade#特货销毁
+			icon = GFX_PRC_ban_the_opium_trade
+			prerequisite = { focus = PRC_reclaim_nanniwan }
+			mutually_exclusive = { focus = PRC_export_opium }
+			relative_position_id = PRC_reclaim_nanniwan
+			x = 1
+			y = 2
+	
+			cost = 5
+	
+			ai_will_do = {
+				factor = 1
+			}
+	
+			available = {
+	
+			}
+	
+			bypass = {
+	
+			}
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+	
+			complete_tooltip = {
+	
+			}
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_stability = 0.1
+				remove_ideas = PRC_Opium_trade_VN_2
+			}
+		}
+	focus = {
+		id = PRC_democratic_centralism#民主集中制
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_strengthen_the_central_secretariat#中央权威
+		}
+		ai_will_do = {
+			factor = 5
+		}
+			relative_position_id = PRC_strengthen_the_central_secretariat#中央权威
+			x = 4
+			y = 1
+		ai_will_do = {
+			factor = 50
+			}
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.1
+			add_popularity = { ideology = communism popularity = 0.1 }
+		}
+	}
+	focus = {
+		id = PRC_Commissioner_s_Office#专员行政公署
+		icon = GFX_focus_generic_soviet_politics
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_democratic_centralism#民主集中制
+		}
+
+		ai_will_do = {
+			factor = 5
+			}
+			relative_position_id = PRC_democratic_centralism#民主集中制
+			x = -2
+			y = 1
+		completion_reward = {
+			add_political_power = 120
+			PRC_low_popular_support_level_down = yes
+			add_ideas = Appointment_bureaucracy
+		}
+	}
+	focus = {
+		id = PRC_Peoples_court#工农法院
+		icon = GFX_focus_generic_court
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_democratic_centralism#民主集中制
+		}
+		x = 10
+		y = 3
+		ai_will_do = {
+			factor = 5
+			}
+			relative_position_id = PRC_democratic_centralism#民主集中制
+			x = 0
+			y = 1
+		completion_reward = {
+			PRC_low_popular_support_level_down = yes
+			custom_effect_tooltip = available_political_advisor#启用执政顾问
+		show_ideas_tooltip = PRC_xi_zhong_xun
+		}
+	}
+	focus = {
+		id = PRC_Three_three_system#三三制
+		icon = GFX_focus_spr_unify_the_london_bureau
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_democratic_centralism#民主集中制
+		}
+		x = 12
+		y = 3
+		ai_will_do = {
+			factor = 5
+			}
+			relative_position_id = PRC_democratic_centralism#民主集中制
+			x = 2
+			y = 1
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = { ideology = democratic popularity = 0.1 }
+		PRC_low_popular_support_level_down = yes
+		add_ideas = people_democracy
+		}
+	}
+	focus = {
+		id = PRC_gun_commands_party#枪指挥党
+		icon = GFX_ogf_focus_fas_civil_war
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Deepen_reform_armed_forces#深化军队改革
+		}
+		available = {
+		has_country_flag = PRC_gun_commands_party
+			}
+		mutually_exclusive = {
+			focus = PRC_party_commands_gun#党指挥枪
+		}
+		relative_position_id = PRC_Deepen_reform_armed_forces#深化军队改革
+		x = -9
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PRC_army_qution
+				add_idea = PRC_amry_lader_party
+			}
+		}
+	}
+	focus = {
+		id = PRC_army_seizes_power#红军夺权
+		icon = GFX_ogf_focus_SOV_mobilization_plan
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_gun_commands_party#枪指挥党
+		}
+		bypass = {
+		has_completed_focus = PRC_Recommend_zhang
+		}
+		relative_position_id = PRC_gun_commands_party
+		x = 0
+		y = 1
+		completion_reward = {
+		country_event = Vn_PRC.17
+		}
+	}
+	focus = {
+		id = PRC_Recommend_peng#彭德怀
+		icon = GFX_PRC_Recommend_peng
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_army_seizes_power#红军夺权
+		}
+		mutually_exclusive = {
+			focus = PRC_Recommend_zhang#张国焘
+			focus = PRC_Recommend_Lin#推举林彪
+		}
+		relative_position_id = PRC_army_seizes_power#红军夺权
+		x = -4
+		y = 1
+		completion_reward = {
+			add_country_leader_role = {
+   			character = PRC_peng_dehuai
+   			promote_leader = yes
+			country_leader = {
+    			ideology = junta_communism
+    		  	expire = "1965.1.1.1"
+      		traits = {}
+    				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Military_centralism#军事集中制
+		icon = GFX_ogf_focus_shield_commie
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Recommend_peng#彭德怀
+		}
+		x = 7
+		y = 10
+		relative_position_id = PRC_Recommend_peng#彭德怀
+		x = 0
+		y = 1
+		completion_reward = {
+		add_ideas = PRC_Military_centralism
+		}
+	}
+	focus = {
+		id = PRC_Civilian_government#文官政府
+		icon = GFX_ogf_focus_reform
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Military_centralism#军事集中制
+		}
+		relative_position_id = PRC_Military_centralism#军事集中制
+		x = 0
+		y = 2
+		completion_reward = {
+		custom_effect_tooltip = PRC_PRC_Civilian_governmen_TT
+		}
+	}
+	focus = {
+		id = PRC_Recommend_Lin#推举林彪
+		icon = GFX_PRC_Recommend_Lin
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_army_seizes_power#红军夺权
+		}
+		mutually_exclusive = {
+			focus = PRC_Recommend_zhang#张国焘
+			focus = PRC_Recommend_peng#彭德怀
+		}
+		relative_position_id = PRC_Recommend_peng#彭德怀
+		x = 4
+		y = 0
+		completion_reward = {
+			add_country_leader_role = {
+   			character = PRC_lin_biao
+   			promote_leader = yes
+			country_leader = {
+    			ideology = junta_communism
+    		  	expire = "1965.1.1.1"
+      		traits = {}
+    				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Great_commander#伟大的统帅
+		icon = GFX_focus_generic_military_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Recommend_Lin#推举林彪
+			focus = PRC_Recommend_peng#彭德怀
+		}
+		relative_position_id = PRC_Recommend_peng#彭德怀
+		x = 2
+		y = 1
+		completion_reward = {
+		add_country_leader_trait = PRC_Great_commander
+		}
+	}
+	focus = {
+		id = PRC_Militarize_economy#军事化经济
+		icon = GFX_focus_generic_tank_production
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Great_commander#伟大的统帅
+		}
+		relative_position_id = PRC_Great_commander#伟大的统帅
+		x = 0
+		y = 1
+		completion_reward = {
+		custom_effect_tooltip = PRC_Militarize_economy_TT
+		add_to_variable = { PJC_production_speed_arms_factory_factor = 0.1 }
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = PRC_strong_Revolutionary_committees#强化革命委员会
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Militarize_economy#军事化经济
+		}
+		relative_position_id = PRC_Militarize_economy#军事化经济
+		x = 0
+		y = 1
+		completion_reward = {
+		custom_effect_tooltip = PRC_strong_Revolutionary_committees_TT
+		add_to_variable = { PJC_political_power_factor = 0.15 }
+		add_to_variable = { PJC_max_command_power = 30 }
+		add_to_variable = { PJC_command_power_gain_mult = 0.25 }
+		add_to_variable = { PJC_economy_cost_factor = -0.15 }
+		add_to_variable = { PJC_mobilization_laws_cost_factor = -0.15 }
+		}
+	}
+	focus = {
+		id = PRC_Marshal_Lin_Biao#林彪大元帅
+		icon = GFX_PRC_Marshal_Lin_Biao
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Recommend_Lin#推举林彪
+		}
+		relative_position_id = PRC_Recommend_Lin#推举林彪
+		x = 0
+		y = 1
+		completion_reward = {
+		add_country_leader_trait = PRC_BIG_Marshal
+		}
+	}
+	focus = {
+		id = PRC_Recommend_zhang#张国焘
+		icon = GFX_PRC_Recommend_zhang
+		cost = 5.00
+		available = {
+		has_country_flag = PRC_Recommend_zhang
+			}
+		prerequisite = {
+			focus = PRC_army_seizes_power#红军夺权
+		}
+		mutually_exclusive = {
+			focus = PRC_Recommend_Lin#推举林彪
+			focus = PRC_Recommend_peng#彭德怀
+		}
+		relative_position_id = PRC_Recommend_peng#彭德怀
+		x = 8
+		y = 0
+		completion_reward = {
+			add_country_leader_role = {
+   			character = PRC_zhang_guo_tao_Vn
+   			promote_leader = yes
+			country_leader = {
+    			ideology = stalinism
+    		  	expire = "1965.1.1.1"
+      		traits = {}
+    				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Qing_party#党内大清洗
+		icon = GFX_focus_SWE_neither_death_nor_dishonor
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Recommend_Lin#推举林彪
+			focus = PRC_Recommend_zhang#张国焘
+		}
+		relative_position_id = PRC_Recommend_Lin#推举林彪
+		x = 2
+		y = 1
+		completion_reward = {
+		remove_ideas = PRC_power_struggles
+		custom_effect_tooltip = PRC_Qing_party_TT
+		show_ideas_tooltip = PRC_zhang_wen_tian
+		show_ideas_tooltip = PRC_bo_gu
+		show_ideas_tooltip = PRC_zhou_enlai
+		show_ideas_tooltip = PRC_wang_ming
+		show_ideas_tooltip = PRC_ottobraun
+		show_ideas_tooltip = PRC_zhang_lan
+		show_ideas_tooltip = PRC_huang_yuan_pei
+		show_ideas_tooltip = PRC_zhang_bo_jun
+		show_ideas_tooltip = PRC_zhang_guo_tao_Vn
+		show_ideas_tooltip = PRC_li_zhu_sheng
+		custom_effect_tooltip = PRC_Qing_party_B_TT
+		show_ideas_tooltip = PRC_chen_geng
+		show_ideas_tooltip = PRC_chen_yun
+		show_ideas_tooltip = PRC_daoshangfei
+		show_ideas_tooltip = PRC_liu_shaoqi
+		show_ideas_tooltip = PRC_xi_zhong_xun
+		show_ideas_tooltip = PRC_lu_fu_tan
+		}
+	}
+	focus = {
+		id = PRC_New_Revolutionary_Theory#新革命理论
+		icon = GFX_PRC_zhi
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Marshal_Lin_Biao#林彪大元帅
+		}
+		prerequisite = {
+			focus = PRC_Qing_party#党内大清洗
+		}
+		relative_position_id = PRC_Marshal_Lin_Biao#林彪大元帅
+		x = 0
+		y = 1
+		completion_reward = {
+		add_ideas = PRC_New_Revolutionary_Theory
+		}
+	}
+	focus = {
+		id = PRC_Authoritarian_regimes#专制化
+		icon = GFX_newfocus_18_PEK
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_New_Revolutionary_Theory#新革命理论
+		}
+		relative_position_id = PRC_New_Revolutionary_Theory#新革命理论
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PRC_Agricultural
+				add_idea = PRC_Agricultural_junta_A
+			}
+		}
+	}
+	focus = {
+		id = PRC_A_sea_of_people#人民的汪洋大海
+		icon = GFX_PRC_confrontation_with_the_warlords
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Civilian_government#文官政府
+			focus = PRC_Authoritarian_regimes#专制化
+		}
+		prerequisite = {
+			focus = PRC_strong_Revolutionary_committees#强化革命委员会
+		}
+		relative_position_id = PRC_Civilian_government#文官政府
+		x = 1
+		y = 1
+		completion_reward = {
+		custom_effect_tooltip = PRC_A_sea_of_people_TT
+		add_to_variable = { PJC_conscription = 0.02 }
+		add_to_variable = { PJC_training_time_factor = -0.1 }
+		}
+	}
+	focus = {
+		id = PRC_fortification#防御工事
+		icon = GFX_goal_generic_military_sphere
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Civilian_government#文官政府
+			focus = PRC_Authoritarian_regimes#专制化
+		}
+		prerequisite = {
+			focus = PRC_strong_Revolutionary_committees#强化革命委员会
+		}
+		relative_position_id = PRC_Civilian_government#文官政府
+		x = 3
+		y = 1
+		completion_reward = {
+		custom_effect_tooltip = PRC_fortification_TT
+		add_to_variable = { PJC_dig_in_speed_factor = 0.15 }
+		add_to_variable = { PJC_max_dig_in = 1 }
+		add_to_variable = { PJC_army_defence_factor = 0.1 }
+		}
+	}
+	focus = {
+		id = PRC_Resource_industry#资源工业
+		icon = GFX_focus_generic_steel
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_A_sea_of_people#人民的汪洋大海
+		}
+		prerequisite = {
+			focus = PRC_fortification#防御工事
+		}
+		relative_position_id =PRC_A_sea_of_people#人民的汪洋大海
+		x = 1
+		y = 1
+		completion_reward = {
+		custom_effect_tooltip = PRC_Resource_industry_TT
+		add_to_variable = { PJC_local_resources_factor = 0.15 }
+		add_to_variable = { PJC_industrial_capacity_factory = 0.05 }
+		add_to_variable = { PJC_production_factory_max_efficiency_factor = 0.05 }
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Militarization_of_labors_JUNTA#劳动军事化
+		icon = GFX_JAP_Militarization_labor
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_A_sea_of_people#人民的汪洋大海
+		}
+		relative_position_id =PRC_A_sea_of_people#人民的汪洋大海
+		x = -1
+		y = 1
+		completion_reward = {
+		set_country_flag = PRC_peoples_war_C_flag
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+		custom_effect_tooltip = PRC_peoples_war_C_flag
+			if = {
+				limit = { has_idea = PRC_Understaffed_factories }
+				swap_ideas = {
+					remove_idea = PRC_Understaffed_factories
+					add_idea = PRC_Militarization_of_labors_idea
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_One_gun_per_person#人手一支枪
+		icon = GFX_PRC_confrontation_with_the_warlords
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Militarization_of_labors_JUNTA#劳动军事化
+		}
+		relative_position_id =PRC_Militarization_of_labors_JUNTA#劳动军事化
+		x = -1
+		y = 1
+		completion_reward = {
+		add_ideas = PRC_One_gun_per_person
+		}
+	}
+	focus = {
+		id = PRC_Military_industry#强化军事工业
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_One_gun_per_person#人手一支枪
+		}
+		relative_position_id =PRC_One_gun_per_person#人手一支枪
+		x = 0
+		y = 1
+		completion_reward = {
+		custom_effect_tooltip = PRC_Military_industry_TT
+		add_to_variable = { PJC_production_speed_arms_factory_factor = 0.15 }
+		add_to_variable = { PJC_industrial_capacity_factory = 0.05 }
+		add_to_variable = { PJC_production_factory_max_efficiency_factor = 0.05 }
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Armed_militias#治安赤卫队
+		icon = GFX_focus_generic_manpower
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_fortification#防御工事
+		}
+		relative_position_id =PRC_fortification#防御工事
+		x = 1
+		y = 1
+		completion_reward = {
+		add_ideas = PRC_Armed_militias
+		}
+	}
+	focus = {
+		id = PRC_Train_pilots_advance#提前培养飞行员
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Resource_industry#资源工业
+		}
+		relative_position_id =PRC_Resource_industry#资源工业
+		x = -1
+		y = 1
+		completion_reward = {
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			engines_1 = 1
+			engines_2 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_small_airframe = 1
+			basic_medium_airframe = 1
+		}
+		air_experience = 50
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	622 = {
+		add_building_construction = {
+			type = air_base#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Railways_and_trains#铁路与火车
+		icon = GFX_focus_generic_railroad
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Resource_industry#资源工业
+		}
+		relative_position_id =PRC_Resource_industry#资源工业
+		x = 1
+		y = 1
+		completion_reward = {
+		set_technology = { basic_train = 1 }
+	add_equipment_to_stockpile = {
+		type = train_equipment
+		amount = 30
+	}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Deepening_Soviet_cooperation#深化苏联合作
+		icon = GFX_SOV_Comrade_East
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Train_pilots_advance#提前培养飞行员
+		}
+		prerequisite = {
+			focus = PRC_Railways_and_trains#铁路与火车
+		}
+		relative_position_id =PRC_Railways_and_trains#铁路与火车
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+			name = infantry_weapons_bonus #(取研究类型名开头即可)
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+			}
+			add_tech_bonus = {
+			name = artillery_bonus #(取研究类型名开头即可)
+			bonus = 1
+			uses = 1
+			category = artillery
+			}
+			add_tech_bonus = {
+			name = armor_bonus #(取研究类型名开头即可)
+			bonus = 1
+			uses = 2
+			category = armor
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 5000
+			producer = SOV
+			}
+			add_equipment_to_stockpile = {
+			type = artillery_equipment_1 
+			amount = 600
+			producer = SOV
+			}
+			add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 700
+			producer = SOV
+			}
+			add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 1200
+			producer = SOV
+			}
+		}
+	}
+	focus = {
+		id = PRC_Reunification_Tibet#武统西藏
+		icon = GFX_goal_generic_position_armies
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Deepening_Soviet_cooperation#深化苏联合作
+		}
+		prerequisite = {
+			focus = PRC_Armed_militias#治安赤卫队
+		}
+		relative_position_id =PRC_Armed_militias#治安赤卫队
+		x = 0
+		y = 3
+		completion_reward = {
+		if = {
+			limit = {
+				322 = { is_owned_and_controlled_by = TIB }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = take_state_focus
+					target = TIB
+					expire = 0
+					generator = { 322 }
+				}
+			}
+		}
+		else = {
+			create_wargoal = {
+				type = annex_everything
+				target = TIB				
+				expire = 0
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_oneCHI#一个中国政策
+		icon = GFX_focus_chi_one_china_policy
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Reunification_Tibet#武统西藏
+		}
+		relative_position_id =PRC_Reunification_Tibet#武统西藏
+		x = 0
+		y = 1
+		completion_reward = {
+
+		if = {
+			limit = {
+				any_other_country = {
+					is_literally_china = yes
+					is_in_faction_with = ROOT
+				} 
+			} 
+			remove_from_faction = ROOT
+		}
+		hidden_effect = {
+			news_event = { id = wtt_news.46 days = 3 }
+		}
+		every_other_country = {
+			limit = {
+				is_literally_china = yes
+				NOT = { has_war_with = ROOT }
+				NOT = { is_subject_of = ROOT }
+				NOT = { ROOT = { has_wargoal_against = PREV } }
+				NOT = { tag = ROOT }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = civil_war
+					target = PREV
+					expire = 0
+					}
+				}
+			}
+		}
+	}
+
+#####################################
+#######################################
+#############################新中国
+#####################################
+#######################################
+
+}
