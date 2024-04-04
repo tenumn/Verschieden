@@ -1,0 +1,694 @@
+focus_tree = {
+	id = indonesia_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = INS
+		}
+	}
+	default = no
+	focus = {
+		id = INS_reorganize_air_force
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 1
+		y = 0
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+	focus = {
+		id = INS_royal_australian_air_force_assistance
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_reorganize_air_force
+		}
+		relative_position_id = INS_reorganize_air_force
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			# TODO: 事件
+		}
+	}
+	focus = {
+		id = INS_east_indies_bomber
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_royal_australian_air_force_assistance
+		}
+		mutually_exclusive = {
+			focus = INS_east_indies_fighter
+		}
+		relative_position_id = INS_royal_australian_air_force_assistance
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1
+				uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = INS_east_indies_fighter
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_royal_australian_air_force_assistance
+		}
+		mutually_exclusive = {
+			focus = INS_east_indies_bomber
+		}
+		relative_position_id = INS_royal_australian_air_force_assistance
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	focus = {
+		id = INS_expand_airport
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_east_indies_bomber
+			focus = INS_east_indies_fighter
+		}
+		relative_position_id = INS_royal_australian_air_force_assistance
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = INS_investing_in_fokker
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_expand_airport
+		}
+		relative_position_id = INS_expand_airport
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			air_experience = 50
+			# TODO: 提升制造商等级
+		}
+	}
+	focus = {
+		id = INS_fokker_fighter_jet
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_investing_in_fokker
+		}
+		relative_position_id = INS_investing_in_fokker
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1
+				uses = 2
+				category = light_fighter
+			}
+		}
+	}
+	focus = {
+		id = INS_fokker_sky_cruiser
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_investing_in_fokker
+		}
+		prerequisite = {
+			focus = INS_expand_batavia_dockyard
+		}
+		relative_position_id = INS_investing_in_fokker
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1
+				uses = 2
+				category = naval_bomber
+			}
+		}
+	}
+	focus = {
+		id = INS_combating_pirates_in_strait_of_malacca
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_east_india_railway
+		}
+		relative_position_id = INS_east_india_railway
+		cost = 5
+		x = -2
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_allied_trade_agreement
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_combating_pirates_in_strait_of_malacca
+		}
+		mutually_exclusive = {
+			focus = INS_japan_trade_agreement
+		}
+		relative_position_id = INS_combating_pirates_in_strait_of_malacca
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_allied_technology_assistance
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_allied_trade_agreement
+		}
+		relative_position_id = INS_allied_trade_agreement
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_japan_trade_agreement
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_combating_pirates_in_strait_of_malacca
+		}
+		mutually_exclusive = {
+			focus = INS_allied_trade_agreement
+		}
+		relative_position_id = INS_combating_pirates_in_strait_of_malacca
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_expand_batavia_dockyard
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_allied_trade_agreement
+			focus = INS_japan_trade_agreement
+		}
+		relative_position_id = INS_combating_pirates_in_strait_of_malacca
+		cost = 5
+		x = 0
+		y = 3
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_southeast_asian_trade_center
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_expand_batavia_dockyard
+		}
+		prerequisite = {
+			focus = INS_expand_jakarta_port
+		}
+		prerequisite = {
+			focus = INS_batavia_capital
+		}
+		relative_position_id = INS_expand_jakarta_port
+		cost = 5
+		x = 0
+		y = 4
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_east_india_railway
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 7
+		y = 0
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_improving_administrative_agencies
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_rebuilding_infrastructure
+		}
+		relative_position_id = INS_rebuilding_infrastructure
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_batavia_university
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_improving_administrative_agencies
+		}
+		relative_position_id = INS_improving_administrative_agencies
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_expand_jakarta_port
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_east_india_railway
+		}
+		relative_position_id = INS_east_india_railway
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_rebuilding_infrastructure
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_east_india_railway
+		}
+		relative_position_id = INS_east_india_railway
+		cost = 5
+		x = 2
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_batavia_capital
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_improving_administrative_agencies
+			focus = INS_expand_rubber_production
+		}
+		relative_position_id = INS_rebuilding_infrastructure
+		cost = 5
+		x = 0
+		y = 3
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_expand_rubber_production
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_rebuilding_infrastructure
+		}
+		relative_position_id = INS_rebuilding_infrastructure
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_investing_in_shell
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_expand_rubber_production
+		}
+		relative_position_id = INS_expand_rubber_production
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_reorganize_army
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 13
+		y = 0
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_east_indian_army
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_reorganize_army
+		}
+		mutually_exclusive = {
+			focus = INS_exile_army
+		}
+		relative_position_id = INS_reorganize_army
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_exile_army
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_fiery_protest
+		}
+		prerequisite = {
+			focus = INS_reorganize_army
+		}
+		mutually_exclusive = {
+			focus = INS_east_indian_army
+		}
+		relative_position_id = INS_reorganize_army
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_lessons_of_war
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_exile_army
+		}
+		relative_position_id = INS_exile_army
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_jungle_operations
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_east_indian_army
+		}
+		relative_position_id = INS_east_indian_army
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_modern_weapons
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_lessons_of_war
+			focus = INS_jungle_operations
+		}
+		relative_position_id = INS_reorganize_army
+		cost = 5
+		x = 0
+		y = 3
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_expand_military
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_modern_weapons
+		}
+		relative_position_id = INS_modern_weapons
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_east_india_war_machine
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_expand_military
+		}
+		relative_position_id = INS_expand_military
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_officer_training
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_modern_weapons
+		}
+		relative_position_id = INS_modern_weapons
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_island_hopping
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_officer_training
+		}
+		relative_position_id = INS_officer_training
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_officer_collective_coup
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_japan_trade_agreement
+		}
+		relative_position_id = INS_japan_trade_agreement
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_fiery_protest
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 18
+		y = 0
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_suppressing_resistance_in_java
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_fiery_protest
+		}
+		relative_position_id = INS_fiery_protest
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_reconstruction_of_dutch_central_intelligence_agency
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_fiery_protest
+		}
+		relative_position_id = INS_fiery_protest
+		cost = 5
+		x = -2
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_contact_dutch_resistance_organization
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_reconstruction_of_dutch_central_intelligence_agency
+		}
+		relative_position_id = INS_reconstruction_of_dutch_central_intelligence_agency
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_declare_independence
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 20
+		y = 0
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_pancasila
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_declare_independence
+		}
+		relative_position_id = INS_declare_independence
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_pan_malayism
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_declare_independence
+		}
+		relative_position_id = INS_declare_independence
+		cost = 5
+		x = 3
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_maphilindo
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_pan_malayism
+		}
+		relative_position_id = INS_pan_malayism
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_political_unity
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_pan_malayism
+		}
+		relative_position_id = INS_pan_malayism
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_military_unity
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_political_unity
+		}
+		relative_position_id = INS_political_unity
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_economic_unity
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_political_unity
+		}
+		relative_position_id = INS_political_unity
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_bandung_conference
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_pancasila
+		}
+		relative_position_id = INS_pancasila
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_asean
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_bandung_conference
+		}
+		mutually_exclusive = {
+			focus = INS_join_allied_powers
+		}
+		relative_position_id = INS_bandung_conference
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_join_allied_powers
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_bandung_conference
+		}
+		mutually_exclusive = {
+			focus = INS_asean
+		}
+		relative_position_id = INS_bandung_conference
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_linggajati_agreement
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_suppressing_resistance_in_java
+		}
+		relative_position_id = INS_suppressing_resistance_in_java
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_re_cooperation_with_germany
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_reconstruction_of_dutch_central_intelligence_agency
+		}
+		relative_position_id = INS_reconstruction_of_dutch_central_intelligence_agency
+		cost = 5
+		x = 1
+		y = 2
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_requesting_military_assistance
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_re_cooperation_with_germany
+		}
+		relative_position_id = INS_re_cooperation_with_germany
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = INS_purchase_german_weapons
+		icon = GFX_goal_unknown
+		prerequisite = {
+			focus = INS_re_cooperation_with_germany
+		}
+		relative_position_id = INS_re_cooperation_with_germany
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+}

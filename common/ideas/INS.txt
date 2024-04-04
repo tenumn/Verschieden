@@ -1,0 +1,51 @@
+ideas = {
+	country = {
+		INS_wave_of_independence = {
+			allowed = {
+				original_tag = INS
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_INS_wave_of_independence
+
+			modifier = { }
+		}
+
+		INS_colonial_government = {
+			allowed = {
+				original_tag = INS
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_INS_colonial_government
+
+			modifier = { }
+		}
+
+		INS_disloyal_army = {
+			allowed = {
+				original_tag = INS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		
+			picture = GFX_idea_INS_disloyal_army
+
+			modifier = { }
+		}
+	}
+}

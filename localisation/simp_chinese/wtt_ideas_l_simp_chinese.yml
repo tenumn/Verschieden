@@ -94,3 +94,7 @@
  MAN_underground_gun_shops_desc: "我们已经在诸如后院或是酒窖这样的地方建立了一批勉强可用的小作坊以扩大装备生产，这些地方出产的装备也许质量不怎么的，但数量包管够。"
  MAN_xian_yuan: "宪原"
  LUX_alexander_von_falkenhausen: "亚历山大·冯·法肯豪森"
+	INS_wave_of_independence: "印尼独立浪潮"
+ 	INS_wave_of_independence_desc: "印尼人民对荷兰殖民统治的不满情绪日益高涨，他们渴望摆脱殖民统治，争取独立。"
+	INS_colonial_government: "荷兰殖民政府"
+	INS_colonial_government_desc: "荷属东印度对印尼的统治已经持续了数百年，随着流亡政府的建立，印尼人民对殖民统治的不满情绪日益高涨。"

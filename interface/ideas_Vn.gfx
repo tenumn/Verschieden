@@ -2028,4 +2028,18 @@ spriteTypes = {
 		name = "GFX_idea_JAP_cutrual_revolution"
 		texturefile = "gfx/interface/ideas/JAP_cutrual_revolution.png"
 	}
+
+	# 荷属东印度
+	spriteType = {
+		name = "GFX_idea_INS_wave_of_independence"
+		texturefile = "gfx/interface/ideas/INS/INS_wave_of_independence.png"
+	}
+	spriteType = {
+		name = "GFX_idea_INS_colonial_government"
+		texturefile = "gfx/interface/ideas/INS/INS_colonial_government.png"
+	}
+	spriteType = {
+		name = "GFX_idea_INS_disloyal_army"
+		texturefile = "gfx/interface/ideas/INS/INS_disloyal_army.png"
+	}
 }
